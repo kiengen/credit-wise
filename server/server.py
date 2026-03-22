@@ -201,11 +201,11 @@ def get_chase(attempt=0):
 
 def main():
 	load_dotenv()
-	#cards = get_chase()
-	cards = get_wells_fargo()
-	print(cards)
+	cards = get_chase()
+	#cards = get_wells_fargo()
 	#print(cards)
-	return
+	#print(cards)
+	#return
 
 # 	cards = get_chase()
 # 	#cards = get_capital_one()
@@ -227,7 +227,7 @@ def main():
 # 	#return
 # 	#print(json.dumps(parse_unknown_attributes(cards), indent=4, ensure_ascii=False))
 
-	cards = get_bank_of_america()
+	#cards = get_bank_of_america()
 	with open('output.json', 'w') as f:
 		json.dump(cards, f, indent=2, ensure_ascii=False)
 

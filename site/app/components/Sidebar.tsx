@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import AmountInput from "./AmountInput";
 import ProfileRow from "./ProfileRow";
-import { spendingCategories, airlines, alliances, type useFilters } from "../hooks/useFilters";
+import { spendingCategories, airlines, alliances, networks, type useFilters } from "../hooks/useFilters";
 
 type Filters = ReturnType<typeof useFilters>;
 
@@ -35,6 +35,9 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
 
   return (
     <aside className="w-84 shrink-0">
+
+      {/* Spending Section */}
+
       <div className="rounded-lg border border-[var(--color-border)] bg-white">
         <div className="flex items-center justify-between border-b border-[var(--color-border)] px-5 py-3">
           <span className="text-sm font-bold text-[var(--color-primary)]">Spending</span>
@@ -104,11 +107,40 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
         </div>
       </div>
 
+      {/* Profile Section */}
+
       <div className="mt-4 rounded-lg border border-[var(--color-border)] bg-white shadow-md divide-y divide-[var(--color-border)]">
         <ProfileRow type="creditScore" label="Credit Score" selected={filters.creditScore} onSelect={filters.setCreditScore} />
         <ProfileRow type="income" label="Personal Income" selected={filters.personalIncome} onSelect={filters.setPersonalIncome} />
         <ProfileRow type="income" label="Household Income" selected={filters.householdIncome} onSelect={filters.setHouseholdIncome} />
       </div>
+
+      {/* Network Section */}
+
+      <div className="mt-4 rounded-lg border border-[var(--color-border)] bg-white shadow-md overflow-hidden">
+        <div className="border-b border-[var(--color-border)] px-5 py-3">
+          <span className="text-sm font-bold text-[var(--color-primary)]">Card Network</span>
+        </div>
+        <div className="px-5 py-3 space-y-0.5">
+          {networks.map((n) => (
+            <label
+              key={n.key}
+              className="flex cursor-pointer items-center gap-2.5 rounded px-2 py-2 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-surface)]"
+            >
+              <input
+                type="checkbox"
+                checked={filters.selectedNetworks.has(n.key)}
+                onChange={() => filters.toggleNetwork(n.key)}
+                className="h-3.5 w-3.5 rounded"
+              />
+              <img src={n.logo} alt={n.label} className="h-5 w-5 object-contain" />
+              {n.label}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      {/* Airlines Section */}
 
       <div className="mt-4 rounded-lg border border-[var(--color-border)] bg-white shadow-md overflow-hidden">
         <div className="border-b border-[var(--color-border)] px-5 py-3">

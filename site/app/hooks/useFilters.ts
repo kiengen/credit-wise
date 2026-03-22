@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useMemo, useCallback } from "react";
-import creditCards from "../data/credit-cards.json";
+import data from "../data/credit-cards.json";
+
+const rawCards = data.cards;
 
 // --- Spending categories ---
 
@@ -65,9 +67,16 @@ export const alliances = [
 export type AirlineKey = (typeof airlines)[number]["key"];
 export type AllianceKey = (typeof alliances)[number]["key"];
 
+export const networks = [
+  { key: "visa", label: "Visa", logo: "/networks/visa-logo.png" },
+  { key: "mastercard", label: "Mastercard", logo: "/networks/mastercard-logo.svg" },
+  { key: "amex", label: "Amex", logo: "/networks/amex-logo.png" },
+  { key: "discover", label: "Discover", logo: "/networks/discover-logo.png" },
+] as const;
+
 // --- Credit card type & parsing ---
 
-export type CreditCard = (typeof creditCards)[number];
+export type CreditCard = (typeof rawCards)[number];
 
 // --- Hook ---
 
@@ -81,6 +90,7 @@ export function useFilters() {
   const [personalIncome, setPersonalIncome] = useState("unknown");
   const [householdIncome, setHouseholdIncome] = useState("unknown");
   const [creditScore, setCreditScore] = useState("good");
+  const [selectedNetworks, setSelectedNetworks] = useState<Set<string>>(new Set());
 
   const rewardsMap = useMemo(() => {
     const map: Record<string, number> = {};
@@ -89,9 +99,9 @@ export function useFilters() {
       const input = spending[cat.key];
       totalAnnual += (input.period === "monthly" ? input.amount * 12 : input.amount);
     }
-    for (let i = 0; i < creditCards.length; i++) {
+    for (let i = 0; i < rawCards.length; i++) {
       const rate = [1, 1.5, 2, 1.25, 3, 1.5, 2][i % 7];
-      map[creditCards[i].name] = totalAnnual * (rate / 100);
+      map[rawCards[i].name] = totalAnnual * (rate / 100);
     }
     return map;
   }, [spending]);
@@ -101,6 +111,15 @@ export function useFilters() {
       const next = new Set(prev);
       if (next.has(key)) next.delete(key);
       else next.add(key);
+      return next;
+    });
+  }, []);
+
+  const toggleNetwork = useCallback((network: string) => {
+    setSelectedNetworks((prev) => {
+      const next = new Set(prev);
+      if (next.has(network)) next.delete(network);
+      else next.add(network);
       return next;
     });
   }, []);
@@ -129,7 +148,7 @@ export function useFilters() {
   const useAverageSpending = useCallback(() => setSpending(defaultSpending), []);
 
   const filtered = useMemo(() => {
-    let cards = [...creditCards];
+    let cards = [...rawCards];
 
     if (search.trim()) {
       const q = search.toLowerCase();
@@ -138,16 +157,21 @@ export function useFilters() {
       );
     }
 
+    if (selectedNetworks.size > 0) {
+      cards = cards.filter((c) => selectedNetworks.has(c.network));
+    }
+
     switch (sortBy) {
       case "bestValue":
         cards.sort((a, b) => (rewardsMap[b.name] ?? 0) - (rewardsMap[a.name] ?? 0));
         break;
       case "annualFee":
+        cards.sort((a, b) => a.annual_fee - b.annual_fee);
         break;
     }
 
     return cards;
-  }, [rewardsMap, search, sortBy]);
+  }, [rewardsMap, search, sortBy, selectedNetworks]);
 
   return {
     spending,
@@ -167,6 +191,8 @@ export function useFilters() {
     selectedAirlines,
     toggleAirline,
     selectAlliance,
+    selectedNetworks,
+    toggleNetwork,
     rewardsMap,
     filtered,
   };

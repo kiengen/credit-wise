@@ -62,7 +62,10 @@
             "Bank of America Preferred Rewards members earn 25%-75% more cash back on every purchase",
             "Balance Connect for overdraft protection helps prevent declined purchases, returned checks or other overdrafts when linking an eligible checking account"
         ],
-        "reward_type": "cash"
+        "reward_type": "cash",
+        "first_year_cash_back": {
+            "other": 0.02
+        }
     },
     {
         "name": "BankAmericard Credit Card",
@@ -190,12 +193,30 @@
                 "description": "75,000 online bonus points after making at least $5,000 in purchases in the first 90 days of account opening",
                 "is_welcome": true,
                 "bonus_type": "points"
+            },
+            {
+                "bonus": 300.0,
+                "min_spend": 0.0,
+                "description": "Receive up to $300 annually in Airline Incidental Statement Credits",
+                "is_welcome": false,
+                "bonus_type": "cash"
+            },
+            {
+                "bonus": 150.0,
+                "min_spend": 0.0,
+                "description": "Receive up to $150 annually for lifestyle conveniences",
+                "is_welcome": false,
+                "bonus_type": "cash"
+            },
+            {
+                "bonus": 30.0,
+                "min_spend": 0.0,
+                "description": "Receive up to $120 in statement credits for Global Entry or TSA PreCheck application fees every four years",
+                "is_welcome": false,
+                "bonus_type": "cash"
             }
         ],
         "other": [
-            "Receive up to $300 annually in Airline Incidental Statement Credits",
-            "Receive up to $150 annually for lifestyle conveniences",
-            "Receive up to $120 in statement credits for Global Entry or TSA PreCheck application fees every four years",
             "Complimentary Priority Pass Select Memberships for unlimited access to airport lounges"
         ],
         "reward_type": "points"
@@ -271,7 +292,10 @@
             "Preferred Rewards members earn 25% to 75% more cash back on every purchase",
             "Optional Balance Connect for overdraft protection when linked to an eligible checking account"
         ],
-        "reward_type": "cash"
+        "reward_type": "cash",
+        "first_year_cash_back": {
+            "other": 0.02
+        }
     },
     {
         "name": "BankAmericard Credit Card for Students",
@@ -383,7 +407,10 @@
             "Periodic account reviews may qualify you to have your security deposit returned",
             "Access to credit education on topics like using credit cards responsibly and budgeting"
         ],
-        "reward_type": "cash"
+        "reward_type": "cash",
+        "first_year_cash_back": {
+            "other": 0.02
+        }
     },
     {
         "name": "BankAmericard Secured Credit Card",

@@ -1,473 +1,253 @@
 {
   "cards": [
     {
-      "name": "Platinum Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 895.0,
+      "name": "Citi Strata Elite Card",
+      "provider": "citi",
+      "network": "mastercard",
+      "credit": "good-excellent",
+      "annual_fee": 595.0,
       "cash_back": {
-        "prepaid hotel bookings and flights booked directly with airlines through Amex Travel": 0.05,
-        "other": 0.01
+        "cititravel_hotels_car_rentals_attractions": 0.12,
+        "cititravel_air_travel": 0.06,
+        "restaurants_weekend_nights": 0.06,
+        "restaurants": 0.03,
+        "other": 0.015
       },
       "cash_back_type": "points",
-      "apr": 0.0,
-      "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/platinum-card.png",
+      "apr": 20.49,
+      "has_ftf": false,
+      "image": "images/strata-elite-dsk.fc987627983eaaf8cdd3.png",
       "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/platinum-card/25330-10-0?pmccode=137&intlink=US-Axp-Shop-Consumer-VAC-Platinum-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/platinum/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-Platinum-Prospect-Viewdetails-CardTile",
+      "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3131",
+      "details_link": "terms-0a7aa062-8382-4c16-b523-8998cc00a5d5",
       "bonus": [
         {
-          "bonus": 175000.0,
-          "min_spend": 12000.0,
-          "description": "Earn up to 175,000 Membership Rewards points after spending $12,000 in purchases within the first 6 months of Card Membership",
-          "is_welcome": true,
-          "bonus_type": "points"
-        }
-      ],
-      "other": [
-        "Access to 1,550+ airport lounges worldwide with American Express Global Lounge Collection"
-      ],
-      "reward_type": "points"
-    },
-    {
-      "name": "American Express Gold Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 325.0,
-      "cash_back": {
-        "restaurants worldwide": 0.04,
-        "US supermarkets": 0.04,
-        "flights booked directly with airlines or on AmexTravel.com": 0.03,
-        "other": 0.01
-      },
-      "cash_back_type": "points",
-      "apr": 0.0,
-      "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/gold-card.png",
-      "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/gold-card/25330-10-0?pmccode=784&intlink=US-Axp-Shop-Consumer-VAC-GoldCard-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/gold-card/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-GoldCard-Prospect-Viewdetails-CardTile",
-      "bonus": [
-        {
-          "bonus": 100000.0,
+          "bonus": 750.0,
           "min_spend": 6000.0,
-          "description": "Earn up to 100,000 Membership Rewards points after spending $6,000 in purchases within the first 6 months of Card Membership",
+          "description": "Earn 75,000 bonus points after spending $6,000 within 3 months of account opening",
           "is_welcome": true,
           "bonus_type": "points"
         }
       ],
       "other": [
-        "Up to $600 back annually ($300 back semi-annually) on select prepaid hotel bookings through American Express Travel",
-        "Earn up to $20 per month in statement credits on eligible Resy purchases using enrolled Card"
+        "Up to $300 annual hotel benefit on stays of two nights or more booked through cititravel.com",
+        "Up to $200 annual statement credits on choice of up to two select brands",
+        "Up to $200 annual statement credits for Blacklane global chauffeur service",
+        "Complimentary access to 1,500+ airport lounges worldwide with Priority Pass Select membership"
       ],
       "reward_type": "points"
     },
     {
-      "name": "Blue Cash Preferred Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 95.0,
-      "cash_back": {
-        "US supermarkets": 0.06,
-        "select US streaming subscriptions": 0.06,
-        "transit purchases": 0.03,
-        "US gas stations": 0.03,
-        "other": 0.01
-      },
-      "cash_back_type": "cashback",
-      "apr": 0.0,
-      "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/blue-cash-preferred.png",
-      "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/blue-cash-preferred-credit-card/25330-10-0?pmccode=796&intlink=US-Axp-Shop-Consumer-VAC-BCP-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-BCP-Prospect-Viewdetails-CardTile",
-      "bonus": [
-        {
-          "bonus": 300.0,
-          "min_spend": 3000.0,
-          "description": "Earn up to $300 Cash Back after spending $3,000 in purchases within the first 6 months of Card Membership",
-          "is_welcome": true,
-          "bonus_type": "cashback"
-        },
-        {
-          "bonus": 95.0,
-          "min_spend": 0.0,
-          "description": "$0 intro annual fee for the first year",
-          "is_welcome": true,
-          "bonus_type": "cash"
-        }
-      ],
-      "other": [],
-      "reward_type": "cashback"
-    },
-    {
-      "name": "Blue Cash Everyday Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
+      "name": "Citi Strata Card",
+      "provider": "citi",
+      "network": "mastercard",
+      "credit": "good-excellent",
       "annual_fee": 0.0,
       "cash_back": {
-        "US supermarkets": 0.03,
-        "US online retail purchases": 0.03,
-        "US gas stations": 0.03,
-        "other": 0.01
-      },
-      "cash_back_type": "cashback",
-      "apr": 0.0,
-      "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/blue-cash-everyday.png",
-      "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/blue-cash-everyday-credit-card/25330-10-0?pmccode=795&intlink=US-Axp-Shop-Consumer-VAC-BCE-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-everyday/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-BCE-Prospect-Viewdetails-CardTile",
-      "bonus": [
-        {
-          "bonus": 200.0,
-          "min_spend": 2000.0,
-          "description": "Earn up to $200 Cash Back after spending $2,000 in purchases within the first 6 months of Card Membership",
-          "is_welcome": true,
-          "bonus_type": "cashback"
-        }
-      ],
-      "other": [],
-      "reward_type": "cashback"
-    },
-    {
-      "name": "Delta SkyMiles Gold American Express Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 150.0,
-      "cash_back": {
-        "Delta Purchases": 0.02,
+        "cititravel_hotels_car_rentals_attractions": 0.05,
+        "supermarkets": 0.03,
+        "transit_gas_ev_charging": 0.03,
+        "self_select_category": 0.03,
         "restaurants": 0.02,
-        "US supermarkets": 0.02,
         "other": 0.01
       },
       "cash_back_type": "points",
-      "apr": 0.0,
+      "apr": 18.49,
       "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/gold-delta-skymiles.png",
+      "image": "images/strata-dsk.b939008e2de3f136f6cf.png",
       "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/delta-skymiles-gold-american-express-card/25330-10-0?pmccode=113&intlink=US-Axp-Shop-Consumer-VAC-DeltaGold-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-gold-american-express-card/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-DeltaGold-Prospect-Viewdetails-CardTile",
+      "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3131",
+      "details_link": "terms-e01ad03c-41c2-40bc-ab23-3ad82991b531",
       "bonus": [
-        {
-          "bonus": 90000.0,
-          "min_spend": 5000.0,
-          "description": "Earn 70,000 Bonus Miles after spending $3,000 in purchases within the first 6 months, and an additional 20,000 bonus miles after making an additional $2,000 in purchases within the first 6 months",
-          "is_welcome": true,
-          "bonus_type": "points"
-        },
-        {
-          "bonus": 150.0,
-          "min_spend": 0.0,
-          "description": "$0 introductory annual fee for the first year",
-          "is_welcome": true,
-          "bonus_type": "cash"
-        },
         {
           "bonus": 200.0,
-          "min_spend": 10000.0,
-          "description": "Earn a $200 Delta Flight Credit toward next trip after spending $10,000 in purchases in a year",
-          "is_welcome": false,
-          "bonus_type": "cash"
-        }
-      ],
-      "other": [
-        "Save 15% when booking Award Travel on Delta and Delta Connection carrier-operated flights",
-        "First checked bag free on Delta flights",
-        "Zone 5 Priority Boarding"
-      ],
-      "reward_type": "points"
-    },
-    {
-      "name": "Delta SkyMiles Platinum American Express Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 350.0,
-      "cash_back": {
-        "other": 0.01
-      },
-      "cash_back_type": "points",
-      "apr": 0.0,
-      "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/platinum-delta-skymiles.png",
-      "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/delta-skymiles-platinum-american-express-card/25330-64-0?pmccode=142&intlink=US-Axp-Shop-Consumer-VAC-DeltaPlatinum-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-platinum-american-express-card/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-DeltaPlatinum-Prospect-Viewdetails-CardTile",
-      "bonus": [
-        {
-          "bonus": 100000.0,
-          "min_spend": 6000.0,
-          "description": "Earn 80,000 bonus miles after spending $4,000 in purchases within the first 6 months, and an additional 20,000 bonus miles after an additional $2,000 in purchases within the first 6 months",
+          "min_spend": 1000.0,
+          "description": "Earn 20,000 bonus points after spending $1,000 within 3 months of account opening",
           "is_welcome": true,
           "bonus_type": "points"
         }
       ],
       "other": [
-        "Get closer to Status with MQD Headstart and MQD Boost",
-        "Take 15% off Award Travel on Delta flights",
-        "First checked bag free on Delta flights",
-        "Zone 5 Priority Boarding"
+        "0% introductory APR for 15 months on purchases",
+        "0% introductory APR for 15 months on balance transfers",
+        "Transfer points to participating airline and hotel partners"
       ],
       "reward_type": "points"
     },
     {
-      "name": "Marriott Bonvoy Bevy American Express Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 250.0,
+      "name": "Citi Double Cash Card",
+      "provider": "citi",
+      "network": "mastercard",
+      "credit": "good-excellent",
+      "annual_fee": 0.0,
       "cash_back": {
-        "hotels participating in Marriott Bonvoy": 0.06,
-        "restaurants worldwide & US Supermarkets": 0.04,
+        "cititravel_hotels_car_rentals_attractions": 0.05,
         "other": 0.02
       },
-      "cash_back_type": "points",
-      "apr": 0.0,
+      "cash_back_type": "cash",
+      "apr": 17.49,
       "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/marriott-bonvoy-bevy-card.png",
+      "image": "images/double-cash-dsk.2d4ef4f13bb063243a7a.webp",
       "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/marriott-bonvoy-bevy-card/25330-10-0?pmccode=1222&intlink=US-Axp-Shop-Consumer-VAC-MarriottBonvoyBevy-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-bevy/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-MarriottBonvoyBevy-Prospect-Viewdetails-CardTile",
+      "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3000",
+      "details_link": "terms-eda30ca7-af48-45a6-8dda-65eb94eb2133",
       "bonus": [
         {
-          "bonus": 175000.0,
-          "min_spend": 5000.0,
-          "description": "Earn 175,000 Marriott Bonvoy Bonus Points after spending $5,000 in purchases within the first 6 months of Card Membership",
+          "bonus": 200.0,
+          "min_spend": 1500.0,
+          "description": "Earn $200 cash back bonus after spending $1,500 on purchases in the first 6 months",
           "is_welcome": true,
-          "bonus_type": "points"
-        }
-      ],
-      "other": [],
-      "reward_type": "points"
-    },
-    {
-      "name": "Marriott Bonvoy Brilliant American Express Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 650.0,
-      "cash_back": {
-        "hotels participating in Marriott Bonvoy": 0.06,
-        "other": 0.01
-      },
-      "cash_back_type": "points",
-      "apr": 0.0,
-      "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/marriott-bonvoy-brilliant-card.png",
-      "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/marriott-bonvoy-brilliant-card/25330-10-0?pmccode=1150&intlink=US-Axp-Shop-Consumer-VAC-MarriottBonvoyBrilliant-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-brilliant/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-MarriottBonvoyBrilliant-Prospect-Viewdetails-CardTile",
-      "bonus": [
-        {
-          "bonus": 200000.0,
-          "min_spend": 6000.0,
-          "description": "Earn 200,000 Marriott Bonvoy Bonus Points after spending $6,000 in purchases within the first 6 months of Card Membership",
-          "is_welcome": true,
-          "bonus_type": "points"
+          "bonus_type": "cash"
         }
       ],
       "other": [
-        "Earn up to $300 in statement credits each calendar year for eligible purchases at restaurants worldwide"
+        "0% introductory APR for 18 months on balance transfers",
+        "Earn 1% cash back on purchases and 1% as purchases are paid"
       ],
-      "reward_type": "points"
+      "reward_type": "cash"
     },
     {
-      "name": "Hilton Honors American Express Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
+      "name": "Citi Diamond Preferred Card",
+      "provider": "citi",
+      "network": "mastercard",
+      "credit": "good-excellent",
       "annual_fee": 0.0,
       "cash_back": {
-        "eligible Hilton purchases": 0.07,
-        "US restaurants, US gas stations, and US supermarkets": 0.05,
-        "other": 0.01
+        "other": 0.0
       },
-      "cash_back_type": "points",
-      "apr": 0.0,
+      "cash_back_type": "cash",
+      "apr": 16.49,
       "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/hilton-honors.png",
+      "image": "images/diamond-preferred-dsk.fbe1be3c40340108d6e8.webp",
       "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/hilton-honors-credit-card/25330-10-0?pmccode=117&intlink=US-Axp-Shop-Consumer-VAC-HiltonHonors-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-HiltonHonors-Prospect-Viewdetails-CardTile",
-      "bonus": [
-        {
-          "bonus": 70000.0,
-          "min_spend": 2000.0,
-          "description": "Earn 70,000 Hilton Honors Bonus Points + A Free Night Reward after spending $2,000 in purchases within the first 6 months of Card Membership",
-          "is_welcome": true,
-          "bonus_type": "points"
-        }
-      ],
+      "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3000",
+      "details_link": "terms-d30294a6-d7a4-4baf-ac8a-ab4fece195c5",
+      "bonus": [],
       "other": [
-        "Complimentary Hilton Honors Silver Status"
+        "0% introductory APR for 21 months on balance transfers",
+        "0% introductory APR for 12 months on purchases",
+        "Access to purchase tickets to exclusive events through Citi Entertainment",
+        "Free access to FICO score online"
       ],
-      "reward_type": "points"
+      "reward_type": "cash"
     },
     {
-      "name": "Hilton Honors American Express Surpass Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 150.0,
+      "name": "Citi Strata Premier Card",
+      "provider": "citi",
+      "network": "mastercard",
+      "credit": "good-excellent",
+      "annual_fee": 95.0,
       "cash_back": {
-        "eligible Hilton purchases": 0.12,
-        "US restaurants, US gas stations, and US supermarkets": 0.06,
-        "US Online Retail Purchases": 0.04,
+        "cititravel_hotels_car_rentals_attractions": 0.1,
+        "air_travel_and_other_hotels": 0.03,
+        "restaurants": 0.03,
+        "supermarkets": 0.03,
+        "gas_and_ev_charging": 0.03,
         "other": 0.01
       },
       "cash_back_type": "points",
-      "apr": 0.0,
-      "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/hilton-honors-surpass.png",
-      "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/hilton-honors-surpass-credit-card/25330-10-0?pmccode=774&intlink=US-Axp-Shop-Consumer-VAC-HiltonSurpass-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-surpass/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-HiltonSurpass-Prospect-Viewdetails-CardTile",
-      "bonus": [
-        {
-          "bonus": 130000.0,
-          "min_spend": 3000.0,
-          "description": "Earn 130,000 Hilton Honors Bonus Points + A Free Night Reward after spending $3,000 in purchases within the first 6 months of Card Membership",
-          "is_welcome": true,
-          "bonus_type": "points"
-        }
-      ],
-      "other": [
-        "Complimentary Hilton Honors Gold Status"
-      ],
-      "reward_type": "points"
-    },
-    {
-      "name": "Delta SkyMiles Reserve American Express Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 650.0,
-      "cash_back": {
-        "other": 0.01
-      },
-      "cash_back_type": "points",
-      "apr": 0.0,
-      "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/delta-reserve.png",
-      "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/delta-skymiles-reserve-american-express-card/25330-10-0?pmccode=106&intlink=US-Axp-Shop-Consumer-VAC-DeltaReserve-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-reserve-american-express-card/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-DeltaReserve-Prospect-Viewdetails-CardTile",
-      "bonus": [
-        {
-          "bonus": 125000.0,
-          "min_spend": 9000.0,
-          "description": "Earn 100,000 bonus miles after spending $6,000 in the first 6 months and an additional 25,000 bonus miles after an additional $3,000 in purchases within the first 6 months",
-          "is_welcome": true,
-          "bonus_type": "points"
-        }
-      ],
-      "other": [
-        "Delta Sky Club Access",
-        "Get closer to Medallion Status With MQD Headstart and MQD Boost",
-        "Take 15% off Award Travel on Delta flights"
-      ],
-      "reward_type": "points"
-    },
-    {
-      "name": "American Express Green Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 150.0,
-      "cash_back": {
-        "Travel": 0.03,
-        "Transit": 0.03,
-        "Restaurants": 0.03,
-        "other": 0.01
-      },
-      "cash_back_type": "points",
-      "apr": 0.0,
-      "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/green-card.png",
-      "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/american-express-green-card/25330-10-0?pmccode=145&intlink=US-Axp-Shop-Consumer-VAC-Green-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/green/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-Green-Prospect-Viewdetails-CardTile",
-      "bonus": [
-        {
-          "bonus": 40000.0,
-          "min_spend": 3000.0,
-          "description": "Earn 40,000 Membership Rewards Points after spending $3,000 on eligible purchases within the first 6 months of Card Membership",
-          "is_welcome": true,
-          "bonus_type": "points"
-        }
-      ],
-      "other": [],
-      "reward_type": "points"
-    },
-    {
-      "name": "Hilton Honors American Express Aspire Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 550.0,
-      "cash_back": {
-        "eligible Hilton purchases": 0.14,
-        "US Restaurants and on Select Travel Purchases": 0.07,
-        "other": 0.01
-      },
-      "cash_back_type": "points",
-      "apr": 0.0,
-      "has_ftf": true,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/hilton-honors-aspire.png",
-      "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/hilton-honors-aspire-credit-card/25330-10-0?pmccode=1130&intlink=US-Axp-Shop-Consumer-VAC-HiltonAspire-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-HiltonAspire-Prospect-Viewdetails-CardTile",
-      "bonus": [
-        {
-          "bonus": 175000.0,
-          "min_spend": 6000.0,
-          "description": "Earn 175,000 Hilton Honors Bonus Points after spending $6,000 in purchases within the first 6 months of Card Membership",
-          "is_welcome": true,
-          "bonus_type": "points"
-        }
-      ],
-      "other": [
-        "Complimentary Hilton Honors Diamond Status"
-      ],
-      "reward_type": "points"
-    },
-    {
-      "name": "Delta SkyMiles Blue American Express Card",
-      "provider": "american_express",
-      "network": "amex",
-      "credit": "other",
-      "annual_fee": 0.0,
-      "cash_back": {
-        "Restaurants and on Delta Purchases": 0.02,
-        "other": 0.01
-      },
-      "cash_back_type": "points",
-      "apr": 0.0,
+      "apr": 19.49,
       "has_ftf": false,
-      "image": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/delta-blue.png",
+      "image": "images/premier-dsk.f49109440d275b671813.webp",
       "preapproval_link": "",
-      "application_link": "https://www.americanexpress.com/us/credit-cards/card-application/apply/delta-skymiles-blue-american-express-card/25330-10-0?pmccode=105&intlink=US-Axp-Shop-Consumer-VAC-DeltaBlue-Prospect-ApplyNow-CardTile&eep=25330",
-      "details_link": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-blue-american-express-card/?eep=25330&intlink=US-Axp-Shop-Consumer-VAC-DeltaBlue-Prospect-Viewdetails-CardTile",
+      "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3131",
+      "details_link": "terms-f9e44f6b-2dcd-4a26-96c0-c5f5202d9d81",
       "bonus": [
         {
-          "bonus": 10000.0,
-          "min_spend": 1000.0,
-          "description": "Earn 10,000 Bonus Miles after spending $1,000 on eligible purchases within the first 6 months of Card Membership",
+          "bonus": 600.0,
+          "min_spend": 4000.0,
+          "description": "Earn 60,000 bonus points after spending $4,000 within 3 months of account opening",
           "is_welcome": true,
           "bonus_type": "points"
         }
       ],
       "other": [
-        "20% Back on In-Flight Purchases"
+        "$100 annual discount on a single hotel stay of $500 or more booked through CitiTravel.com",
+        "Trip delay protection and common carrier trip cancellation coverage",
+        "Lost or damaged luggage protection",
+        "Car rental insurance coverage"
       ],
       "reward_type": "points"
+    },
+    {
+      "name": "Citi Simplicity Card",
+      "provider": "citi",
+      "network": "mastercard",
+      "credit": "good-excellent",
+      "annual_fee": 0.0,
+      "cash_back": {
+        "other": 0.0
+      },
+      "cash_back_type": "cash",
+      "apr": 17.49,
+      "has_ftf": true,
+      "image": "images/simplicity-dsk.1c600ef48468165f9406.webp",
+      "preapproval_link": "",
+      "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3018",
+      "details_link": "terms-c95e9269-788f-4955-af82-fdff3c8fc250",
+      "bonus": [],
+      "other": [
+        "0% introductory APR for 18 months on purchases",
+        "0% introductory APR for 18 months on balance transfers",
+        "No late fees and no penalty rates",
+        "Flexible payment due dates"
+      ],
+      "reward_type": "cash"
+    },
+    {
+      "name": "Costco Anywhere Visa Card by Citi",
+      "provider": "citi",
+      "network": "visa",
+      "credit": "good-excellent",
+      "annual_fee": 0.0,
+      "cash_back": {
+        "costco_gas": 0.05,
+        "other_gas_and_ev_charging": 0.04,
+        "restaurants_and_travel": 0.03,
+        "costco_and_costco_com": 0.02,
+        "other": 0.01
+      },
+      "cash_back_type": "cashback",
+      "apr": 18.74,
+      "has_ftf": false,
+      "image": "images/costco-consumer-dsk.aa0d81d06d29d68966a1.webp",
+      "preapproval_link": "",
+      "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3405",
+      "details_link": "terms-5e1afb98-b8c9-44ed-b1a5-d75fa99b07c2",
+      "bonus": [],
+      "other": [
+        "Cash back rewards are distributed annually as a reward certificate redeemable at Costco",
+        "Costco membership required"
+      ],
+      "reward_type": "cashback"
+    },
+    {
+      "name": "Costco Anywhere Visa Business Card by Citi",
+      "provider": "citi",
+      "network": "visa",
+      "credit": "good-excellent",
+      "annual_fee": 0.0,
+      "cash_back": {
+        "costco_gas": 0.05,
+        "other_gas_and_ev_charging": 0.04,
+        "restaurants_and_travel": 0.03,
+        "costco_and_costco_com": 0.02,
+        "other": 0.01
+      },
+      "cash_back_type": "cashback",
+      "apr": 18.74,
+      "has_ftf": false,
+      "image": "images/costco-business-dsk.3a149c0b297bfa998c01.webp",
+      "preapproval_link": "",
+      "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3406",
+      "details_link": "terms-50e6f1df-8271-423a-838b-75e8cd2010d7",
+      "bonus": [],
+      "other": [
+        "Cash back rewards are distributed annually as a reward certificate redeemable at Costco",
+        "Costco membership required",
+        "Add employees as authorized users"
+      ],
+      "reward_type": "cashback"
     }
   ]
 }

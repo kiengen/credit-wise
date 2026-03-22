@@ -47,7 +47,6 @@ const ComparePage = () => {
               >
                 <option value="bestValue">Best Ongoing Value</option>
                 <option value="bestFirstYear">Best First Year Value</option>
-                <option value="bestFirstYearBonus">Best Welcome Bonus</option>
                 <option value="annualFee">Lowest Annual Fee</option>
                 <option value="lowestInterest">Lowest Interest Rate</option>
               </select>
@@ -67,8 +66,7 @@ const ComparePage = () => {
                     firstYearReward={filters.firstYearMap[card.name]}
                     monthlySpend={filters.monthlySpend}
                     spending={filters.spending}
-                    centsPerPoint={filters.centsPerPoint}
-                    pointsReason={filters.pointsReason}
+                    pointValueMap={filters.pointValueMap}
                   />
                 ))}
               </div>

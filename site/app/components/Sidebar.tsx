@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { usePlaidLink } from "react-plaid-link";
 import AmountInput from "./AmountInput";
 import ProfileRow from "./ProfileRow";
 import { spendingCategories, airlines, alliances, networks, type useFilters, type SpendingKey } from "../hooks/useFilters";
@@ -14,8 +15,46 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
   const [airlinesExpanded, setAirlinesExpanded] = useState(false);
   const [airlinesMounted, setAirlinesMounted] = useState(false);
   const [airlinesAnimateIn, setAirlinesAnimateIn] = useState(false);
+  const [importMenuOpen, setImportMenuOpen] = useState(false);
+  const [plaidToken, setPlaidToken] = useState<string | null>(null);
   const { spending } = filters;
   const fileRef = useRef<HTMLInputElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const onPlaidSuccess = useCallback(
+    (publicToken: string) => {
+      filters.importFromPlaid(publicToken);
+    },
+    [filters.importFromPlaid]
+  );
+
+  const { open: openPlaid, ready: plaidReady } = usePlaidLink({
+    token: plaidToken,
+    onSuccess: onPlaidSuccess,
+  });
+
+  const handlePlaidClick = useCallback(async () => {
+    setImportMenuOpen(false);
+    const token = await filters.createPlaidLinkToken();
+    setPlaidToken(token);
+  }, [filters.createPlaidLinkToken]);
+
+  useEffect(() => {
+    if (plaidToken && plaidReady) {
+      openPlaid();
+      setPlaidToken(null);
+    }
+  }, [plaidToken, plaidReady, openPlaid]);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setImportMenuOpen(false);
+      }
+    };
+    if (importMenuOpen) document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [importMenuOpen]);
 
   useEffect(() => {
     if (airlinesExpanded) {
@@ -178,13 +217,31 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
             >
               Reset
             </button>
-            <button
-              onClick={() => fileRef.current?.click()}
-              disabled={filters.importing}
-              className="flex-1 rounded-md cursor-pointer border border-[var(--color-border)] py-1.5 text-xs font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-surface)] disabled:opacity-50"
-            >
-              {filters.importing ? "Parsing..." : "Import"}
-            </button>
+            <div className="relative flex-1" ref={menuRef}>
+              <button
+                onClick={() => !filters.importing && setImportMenuOpen(!importMenuOpen)}
+                disabled={filters.importing}
+                className="w-full rounded-md cursor-pointer border border-[var(--color-border)] py-1.5 text-xs font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-surface)] disabled:opacity-50"
+              >
+                {filters.importing ? "Importing..." : "Import ▾"}
+              </button>
+              {importMenuOpen && (
+                <div className="absolute left-0 right-0 top-full mt-1 z-10 rounded-md border border-[var(--color-border)] bg-white shadow-lg overflow-hidden">
+                  <button
+                    onClick={() => { setImportMenuOpen(false); fileRef.current?.click(); }}
+                    className="w-full px-3 py-2 text-left text-xs font-semibold text-[var(--color-primary)] hover:bg-[var(--color-surface)] cursor-pointer transition-colors"
+                  >
+                    Upload Statement
+                  </button>
+                  <button
+                    onClick={handlePlaidClick}
+                    className="w-full px-3 py-2 text-left text-xs font-semibold text-[var(--color-primary)] hover:bg-[var(--color-surface)] cursor-pointer transition-colors border-t border-[var(--color-border)]"
+                  >
+                    Connect Bank (Plaid)
+                  </button>
+                </div>
+              )}
+            </div>
             <input
               ref={fileRef}
               type="file"

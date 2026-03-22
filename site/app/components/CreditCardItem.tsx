@@ -14,18 +14,18 @@ const CreditCardItem = ({
   firstYearReward,
   monthlySpend,
   spending,
-  centsPerPoint,
-  pointsReason,
+  pointValueMap,
 }: {
   card: CreditCard;
   estimatedReward: number;
   firstYearReward: number;
   monthlySpend: number;
   spending: SpendingInput;
-  centsPerPoint: number;
-  pointsReason: string;
+  pointValueMap: Record<string, { centsPerPoint: number; reason: string }>;
 }) => {
   if (!card.application_link) return null;
+
+  const { centsPerPoint, reason: pointsReason } = pointValueMap[card.provider] ?? { centsPerPoint: 1, reason: "Statement credit" };
 
   const [showBreakdown, setShowBreakdown] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -58,11 +58,11 @@ const CreditCardItem = ({
 
   const cashBackEntries = Object.entries(card.cash_back);
   const otherRate = card.cash_back.other ?? 0;
-  const bonusCategories = cashBackEntries.filter(([k]) => k !== "other");
+  const bonusCategories = cashBackEntries.filter(([k]) => k !== "other" && k !== "choice");
   const isPoints = (card as any).reward_type === "points";
   const multiplier = isPoints ? centsPerPoint : 1;
+  const hasFirstYearRates = !!(card as any).first_year_cash_back;
 
-  const welcomeBonus = firstYearReward - estimatedReward;
   const perkValue = (card.bonus as any[])
     .filter((b: any) => !b.is_welcome && b.bonus > 0)
     .reduce((sum: number, b: any) => {
@@ -70,6 +70,14 @@ const CreditCardItem = ({
       return sum + val;
     }, 0);
   const cashBackRewards = estimatedReward + card.annual_fee - perkValue;
+
+  const welcomeBonusValue = (card.bonus as any[])
+    .filter((b: any) => b.is_welcome && b.bonus > 0)
+    .reduce((sum: number, b: any) => {
+      const val = b.bonus_type === "points" ? b.bonus * (centsPerPoint / 100) : b.bonus;
+      return sum + val;
+    }, 0);
+  const firstYearCashBack = firstYearReward + card.annual_fee - perkValue - welcomeBonusValue;
 
   return (
     <div className="rounded-lg bg-[var(--color-card)] shadow-md transition-all duration-200 hover:shadow-xl">
@@ -116,7 +124,14 @@ const CreditCardItem = ({
                 }`}>
                   <div className="flex items-center justify-between text-xs text-[var(--color-primary)]">
                     <span>{isPoints ? "Points Value" : "Cash Back"}</span>
-                    <span>${cashBackRewards.toLocaleString("en-US", { maximumFractionDigits: 0 })}</span>
+                    <span>
+                      ${cashBackRewards.toLocaleString("en-US", { maximumFractionDigits: 0 })}
+                      {hasFirstYearRates && firstYearCashBack !== cashBackRewards && (
+                        <span className="ml-1 text-[var(--color-muted)]">
+                          (${firstYearCashBack.toLocaleString("en-US", { maximumFractionDigits: 0 })} 1st yr)
+                        </span>
+                      )}
+                    </span>
                   </div>
                   {isPoints && (
                     <p className="text-[0.625rem] text-[var(--color-muted)]">
@@ -126,6 +141,7 @@ const CreditCardItem = ({
                   <div className="space-y-0.5 mt-0.5">
                     {(() => {
                       const cb = card.cash_back as unknown as Record<string, number>;
+                      const fyCb = (card as any).first_year_cash_back as Record<string, number> | undefined;
                       const baseRate = cb.other ?? 0;
                       const choiceRate = cb.choice;
                       let bestChoiceKey: string | null = null;
@@ -146,7 +162,7 @@ const CreditCardItem = ({
 
                       let otherAnnual = 0;
                       let otherReward = 0;
-                      const rows: { label: string; annual: number; rate: number; reward: number; isChoice?: boolean }[] = [];
+                      const rows: { label: string; annual: number; rate: number; fyRate?: number; reward: number; isChoice?: boolean }[] = [];
 
                       for (const cat of spendingCategories) {
                         const input = spending[cat.key];
@@ -155,9 +171,10 @@ const CreditCardItem = ({
                         let rate = cb[cat.key] ?? baseRate;
                         const isChoice = bestChoiceKey === cat.key;
                         if (isChoice) rate = choiceRate!;
+                        const fyRate = fyCb ? (fyCb[cat.key] ?? fyCb.other ?? rate) : undefined;
                         const reward = annual * rate * multiplier;
-                        if ((cb[cat.key] !== undefined && cb[cat.key] !== baseRate) || isChoice) {
-                          rows.push({ label: cat.label, annual, rate, reward, isChoice });
+                        if ((cb[cat.key] !== undefined && cb[cat.key] !== baseRate) || isChoice || (fyRate !== undefined && fyRate !== rate)) {
+                          rows.push({ label: cat.label, annual, rate, fyRate: fyRate !== rate ? fyRate : undefined, reward, isChoice });
                         } else {
                           otherAnnual += annual;
                           otherReward += annual * baseRate * multiplier;
@@ -167,6 +184,9 @@ const CreditCardItem = ({
                       const rateLabel = (rate: number) =>
                         isPoints ? `${(rate * 100).toFixed(1)}x` : `${(rate * 100).toFixed(1)}%`;
 
+                      const fyOtherRate = fyCb?.other;
+                      const showFyOther = fyOtherRate !== undefined && fyOtherRate !== baseRate;
+
                       return (
                         <>
                           {rows.map((r) => (
@@ -174,13 +194,17 @@ const CreditCardItem = ({
                               <span>
                                 {r.label} (${r.annual.toLocaleString()} x {rateLabel(r.rate)})
                                 {r.isChoice && <span className="ml-1 text-[var(--color-accent)]">★ Choice</span>}
+                                {r.fyRate !== undefined && <span className="ml-1 text-[var(--color-accent)]">→ {rateLabel(r.fyRate)} 1st yr</span>}
                               </span>
                               <span>${r.reward.toLocaleString("en-US", { maximumFractionDigits: 0 })}</span>
                             </div>
                           ))}
                           {otherAnnual > 0 && (
                             <div className="flex items-center justify-between text-[0.625rem] text-[var(--color-muted)]">
-                              <span>Other spending (${otherAnnual.toLocaleString()} x {rateLabel(baseRate)})</span>
+                              <span>
+                                Other spending (${otherAnnual.toLocaleString()} x {rateLabel(baseRate)})
+                                {showFyOther && <span className="ml-1 text-[var(--color-accent)]">→ {rateLabel(fyOtherRate!)} 1st yr</span>}
+                              </span>
                               <span>${otherReward.toLocaleString("en-US", { maximumFractionDigits: 0 })}</span>
                             </div>
                           )}
@@ -197,13 +221,13 @@ const CreditCardItem = ({
                     </div>
                   )}
 
-                  {welcomeBonus > 0 && (
+                  {welcomeBonusValue > 0 && (
                     <div className="flex items-center justify-between border-t border-[var(--color-border)] pt-1.5 mt-1.5 text-xs text-[var(--color-primary)]">
                       <div>
                         <span>Welcome Bonus</span>
                         <p className="text-[0.625rem] text-[var(--color-muted)]">First year only</p>
                       </div>
-                      <span>+ ${welcomeBonus.toLocaleString("en-US", { maximumFractionDigits: 0 })}</span>
+                      <span>+ ${welcomeBonusValue.toLocaleString("en-US", { maximumFractionDigits: 0 })}</span>
                     </div>
                   )}
 

@@ -105,10 +105,26 @@ def get_american_express() -> dict:
 				continue
 
 			print("doing", card['name'])
-			# page.goto(card["details_link"])
+			page.goto(card["details_link"])
+			sleep(10)
 			# page.wait_for_load_state('networkidle')
-			# detail_html = page.inner_html('body')
-			# result["cards"][idx] = parse_unknown_attributes(detail_html)
+			detail_html = page.inner_html('body')
+			result["cards"][idx] = parse_unknown_attributes(detail_html)
+
+		browser.close()
+
+	return result
+
+
+def get_citigroup() -> dict:
+	with sync_playwright() as p:
+		browser = p.chromium.launch()
+		page = browser.new_page()
+		page.goto('https://citicards.citi.com/usc/Multi/Featured/default.htm?tab=all-cards&BT_TX=1')
+		page.wait_for_load_state('networkidle')
+		html = page.inner_html('body')
+
+		result = parse_unknown_attributes(html, multiple=True)
 
 		browser.close()
 

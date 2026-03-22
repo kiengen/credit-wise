@@ -3,8 +3,10 @@
 import { useState, useMemo, useCallback } from "react";
 import capitalOneCards from "../data/capital-one.json";
 import boaCards from "../data/bank-of-america.json";
+import amexCards from "../data/american-express.json";
+import citiCards from "../data/citigroup.json";
 
-const rawCards = [...capitalOneCards, ...boaCards];
+const rawCards = [...capitalOneCards, ...boaCards, ...amexCards, ...citiCards];
 
 
 export const spendingCategories = [
@@ -62,19 +64,50 @@ export const airlines = [
   { key: "british-airways", label: "British Airways", alliance: "oneworld" },
   { key: "cathay-pacific", label: "Cathay Pacific", alliance: "oneworld" },
   { key: "qantas", label: "Qantas", alliance: "oneworld" },
+  { key: "jetblue", label: "JetBlue", alliance: "none" },
   { key: "emirates", label: "Emirates", alliance: "none" },
+  { key: "virgin-atlantic", label: "Virgin Atlantic", alliance: "none" },
 ] as const;
 
-// Cents per point when transferred to each airline
-const pointValuation: Record<string, number> = {
-  "air-canada": 1.1,
-  "air-france": 0.8,
-  "klm": 0.8,
-  "avianca": 1.6,
-  "british-airways": 1.2,
-  "emirates": 1.0,
-  "singapore": 1.1,
-  "turkish": 0.7,
+const transferPartners: Record<string, Record<string, number>> = {
+  capital_one: {
+    "air-canada": 1.1,
+    "air-france": 0.8,
+    "klm": 0.8,
+    "avianca": 1.6,
+    "british-airways": 1.2,
+    "emirates": 1.0,
+    "singapore": 1.1,
+    "turkish": 0.7,
+  },
+  american_express: {
+    "air-canada": 1.1,
+    "british-airways": 1.2,
+    "delta": 1.2,
+    "emirates": 1.0,
+    "air-france": 0.8,
+    "klm": 0.8,
+    "jetblue": 0.96,
+    "virgin-atlantic": 1.4,
+  },
+  citi: {
+    "air-france": 0.8,
+    "klm": 0.8,
+    "singapore": 1.1,
+    "turkish": 0.7,
+    "emirates": 1.0,
+    "virgin-atlantic": 1.4,
+    "jetblue": 1.2,
+    "qantas": 1.0,
+    "cathay-pacific": 1.0,
+  },
+};
+
+const fixedPointValue: Record<string, { value: number; reason: string; requiresAirline?: string }> = {
+  bank_of_america: { value: 1.0, reason: "Travel redemption" },
+  delta: { value: 1.2, reason: "Delta SkyMiles", requiresAirline: "delta" },
+  hilton: { value: 0.5, reason: "Hilton Honors" },
+  marriott: { value: 0.7, reason: "Marriott Bonvoy" },
 };
 
 export const alliances = [
@@ -97,7 +130,7 @@ export const networks = [
 export type CreditCard = (typeof rawCards)[number];
 
 
-export type SortBy = "bestValue" | "bestFirstYear" | "bestFirstYearBonus" | "annualFee" | "lowestInterest";
+export type SortBy = "bestValue" | "bestFirstYear" | "annualFee" | "lowestInterest";
 
 export function useFilters() {
   const [spending, setSpending] = useState<SpendingInput>(defaultSpending);
@@ -109,25 +142,44 @@ export function useFilters() {
   const [creditScore, setCreditScore] = useState("unknown");
   const [selectedNetworks, setSelectedNetworks] = useState<Set<string>>(new Set());
 
-  // Best cents-per-point based on selected airlines (0.5c default if none selected)
-  const pointsInfo = useMemo(() => {
-    if (selectedAirlines.size === 0) {
-      return { centsPerPoint: 0.5, reason: "Statement credit" };
-    }
-    let best = 1;
-    let bestKey = "";
-    for (const key of selectedAirlines) {
-      const val = pointValuation[key] ?? 1;
-      if (val >= best) {
-        best = val;
-        bestKey = key;
+  const pointValueMap = useMemo(() => {
+    const map: Record<string, { centsPerPoint: number; reason: string }> = {};
+
+    for (const [provider, info] of Object.entries(fixedPointValue)) {
+      if (info.requiresAirline && !selectedAirlines.has(info.requiresAirline as AirlineKey)) {
+        map[provider] = { centsPerPoint: 0, reason: `Select ${info.reason} to value` };
+      } else {
+        map[provider] = { centsPerPoint: info.value, reason: info.reason };
       }
     }
-    const label = airlines.find((a) => a.key === bestKey)?.label ?? bestKey;
-    return { centsPerPoint: best, reason: `Transfer to ${label}` };
+
+    for (const [provider, partners] of Object.entries(transferPartners)) {
+      if (selectedAirlines.size === 0) {
+        map[provider] = { centsPerPoint: 0.5, reason: "Statement credit" };
+        continue;
+      }
+      let best = 0;
+      let bestKey = "";
+      for (const key of selectedAirlines) {
+        const val = partners[key];
+        if (val !== undefined && val > best) {
+          best = val;
+          bestKey = key;
+        }
+      }
+      if (best > 0) {
+        const label = airlines.find((a) => a.key === bestKey)?.label ?? bestKey;
+        map[provider] = { centsPerPoint: best, reason: `Transfer to ${label}` };
+      } else {
+        map[provider] = { centsPerPoint: 0.5, reason: "Statement credit" };
+      }
+    }
+
+    return map;
   }, [selectedAirlines]);
 
-  const centsPerPoint = pointsInfo.centsPerPoint;
+  const getPointValue = (provider: string) =>
+    pointValueMap[provider] ?? { centsPerPoint: 1, reason: "Statement credit" };
 
   const { rewardsMap, firstYearMap } = useMemo(() => {
     const rewards: Record<string, number> = {};
@@ -137,11 +189,11 @@ export function useFilters() {
       const cb = card.cash_back as unknown as Record<string, number>;
       const baseRate = cb.other ?? 0;
       const isPoints = (card as any).reward_type === "points";
+      const { centsPerPoint } = getPointValue(card.provider);
       const multiplier = isPoints ? centsPerPoint : 1;
       let totalAnnualSpend = 0;
       let totalRewards = 0;
 
-      // For choice category cards, find which category benefits most
       const choiceRate = cb.choice;
       let bestChoiceKey: string | null = null;
       if (choiceRate) {
@@ -188,11 +240,25 @@ export function useFilters() {
 
       const net = totalRewards + perkValue - card.annual_fee;
       rewards[card.name] = net;
-      firstYear[card.name] = net + welcomeBonus;
+
+      const fyCb = (card as any).first_year_cash_back as Record<string, number> | undefined;
+      let firstYearRewards = totalRewards;
+      if (fyCb) {
+        const fyBaseRate = fyCb.other ?? baseRate;
+        firstYearRewards = 0;
+        for (const cat of spendingCategories) {
+          const input = spending[cat.key];
+          const annual = input.period === "monthly" ? input.amount * 12 : input.amount;
+          let rate = fyCb[cat.key] ?? cb[cat.key] ?? fyBaseRate;
+          if (bestChoiceKey && cat.key === bestChoiceKey) rate = Math.max(rate, choiceRate!);
+          firstYearRewards += annual * rate * multiplier;
+        }
+      }
+      firstYear[card.name] = firstYearRewards + perkValue - card.annual_fee + welcomeBonus;
     }
 
     return { rewardsMap: rewards, firstYearMap: firstYear };
-  }, [spending, centsPerPoint]);
+  }, [spending, pointValueMap]);
 
   const toggleAirline = useCallback((key: AirlineKey) => {
     setSelectedAirlines((prev) => {
@@ -287,6 +353,30 @@ export function useFilters() {
 
   const cancelImport = useCallback(() => setPendingTransactions(null), []);
 
+  const createPlaidLinkToken = useCallback(async (): Promise<string> => {
+    const res = await fetch("/api/plaid/create-link-token", { method: "POST" });
+    const json = await res.json();
+    return json.link_token;
+  }, []);
+
+  const importFromPlaid = useCallback(async (publicToken: string) => {
+    setImporting(true);
+    setPendingTransactions([]);
+    setDetectedAirlines([]);
+    setImportProgress({ done: 0, total: 1 });
+
+    const res = await fetch("/api/plaid/exchange-token", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ public_token: publicToken }),
+    });
+    const json = await res.json();
+
+    setPendingTransactions(json.transactions);
+    setDetectedAirlines(json.airlines ?? []);
+    setImportProgress({ done: 1, total: 1 });
+    setImporting(false);
+  }, []);
 
   const creditRank: Record<string, number> = {
     "rebuilding": 1,
@@ -323,9 +413,6 @@ export function useFilters() {
         break;
       case "bestFirstYear":
         cards.sort((a, b) => (firstYearMap[b.name] ?? 0) - (firstYearMap[a.name] ?? 0));
-        break;
-      case "bestFirstYearBonus":
-        cards.sort((a, b) => (firstYearMap[b.name] ?? 0) - (rewardsMap[b.name] ?? 0) - ((firstYearMap[a.name] ?? 0) - (rewardsMap[a.name] ?? 0)));
         break;
       case "annualFee":
         cards.sort((a, b) => a.annual_fee - b.annual_fee);
@@ -376,10 +463,11 @@ export function useFilters() {
     pendingTransactions,
     applyTransactionSpending,
     cancelImport,
+    createPlaidLinkToken,
+    importFromPlaid,
     rewardsMap,
     firstYearMap,
-    centsPerPoint,
-    pointsReason: pointsInfo.reason,
+    pointValueMap,
     filtered,
   };
 }

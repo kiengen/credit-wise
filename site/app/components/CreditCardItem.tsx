@@ -14,12 +14,16 @@ const CreditCardItem = ({
   firstYearReward,
   monthlySpend,
   spending,
+  centsPerPoint,
+  pointsReason,
 }: {
   card: CreditCard;
   estimatedReward: number;
   firstYearReward: number;
   monthlySpend: number;
   spending: SpendingInput;
+  centsPerPoint: number;
+  pointsReason: string;
 }) => {
   if (!card.application_link) return null;
 
@@ -55,11 +59,16 @@ const CreditCardItem = ({
   const cashBackEntries = Object.entries(card.cash_back);
   const otherRate = card.cash_back.other ?? 0;
   const bonusCategories = cashBackEntries.filter(([k]) => k !== "other");
+  const isPoints = (card as any).reward_type === "points";
+  const multiplier = isPoints ? centsPerPoint : 1;
 
   const welcomeBonus = firstYearReward - estimatedReward;
   const perkValue = (card.bonus as any[])
     .filter((b: any) => !b.is_welcome && b.bonus > 0)
-    .reduce((sum: number, b: any) => sum + b.bonus, 0);
+    .reduce((sum: number, b: any) => {
+      const val = b.bonus_type === "points" ? b.bonus * (centsPerPoint / 100) : b.bonus;
+      return sum + val;
+    }, 0);
   const cashBackRewards = estimatedReward + card.annual_fee - perkValue;
 
   return (
@@ -106,41 +115,72 @@ const CreditCardItem = ({
                   animateIn ? "opacity-100 scale-y-100 translate-y-0" : "opacity-0 scale-y-95 -translate-y-1"
                 }`}>
                   <div className="flex items-center justify-between text-xs text-[var(--color-primary)]">
-                    <span>Cash Back Total</span>
+                    <span>{isPoints ? "Points Value" : "Cash Back"}</span>
                     <span>${cashBackRewards.toLocaleString("en-US", { maximumFractionDigits: 0 })}</span>
                   </div>
+                  {isPoints && (
+                    <p className="text-[0.625rem] text-[var(--color-muted)]">
+                      Valued at {centsPerPoint}¢/point ({pointsReason})
+                    </p>
+                  )}
                   <div className="space-y-0.5 mt-0.5">
                     {(() => {
-                      const cb = card.cash_back as Record<string, number>;
+                      const cb = card.cash_back as unknown as Record<string, number>;
                       const baseRate = cb.other ?? 0;
+                      const choiceRate = cb.choice;
+                      let bestChoiceKey: string | null = null;
+
+                      if (choiceRate) {
+                        let bestGain = 0;
+                        for (const cat of spendingCategories) {
+                          if ("sub" in cat && cat.sub) continue;
+                          const input = spending[cat.key];
+                          const annual = input.period === "monthly" ? input.amount * 12 : input.amount;
+                          const currentRate = cb[cat.key] ?? baseRate;
+                          if (choiceRate > currentRate) {
+                            const gain = annual * (choiceRate - currentRate);
+                            if (gain > bestGain) { bestGain = gain; bestChoiceKey = cat.key; }
+                          }
+                        }
+                      }
+
                       let otherAnnual = 0;
                       let otherReward = 0;
-                      const rows: { label: string; annual: number; rate: number; reward: number }[] = [];
+                      const rows: { label: string; annual: number; rate: number; reward: number; isChoice?: boolean }[] = [];
 
                       for (const cat of spendingCategories) {
                         const input = spending[cat.key];
                         const annual = input.period === "monthly" ? input.amount * 12 : input.amount;
                         if (annual === 0) continue;
-                        const rate = cb[cat.key] ?? baseRate;
-                        if (cb[cat.key] !== undefined && cb[cat.key] !== baseRate) {
-                          rows.push({ label: cat.label, annual, rate, reward: annual * rate });
+                        let rate = cb[cat.key] ?? baseRate;
+                        const isChoice = bestChoiceKey === cat.key;
+                        if (isChoice) rate = choiceRate!;
+                        const reward = annual * rate * multiplier;
+                        if ((cb[cat.key] !== undefined && cb[cat.key] !== baseRate) || isChoice) {
+                          rows.push({ label: cat.label, annual, rate, reward, isChoice });
                         } else {
                           otherAnnual += annual;
-                          otherReward += annual * baseRate;
+                          otherReward += annual * baseRate * multiplier;
                         }
                       }
+
+                      const rateLabel = (rate: number) =>
+                        isPoints ? `${(rate * 100).toFixed(1)}x` : `${(rate * 100).toFixed(1)}%`;
 
                       return (
                         <>
                           {rows.map((r) => (
                             <div key={r.label} className="flex items-center justify-between text-[0.625rem] text-[var(--color-muted)]">
-                              <span>{r.label} (${r.annual.toLocaleString()} x {(r.rate * 100).toFixed(1)}%)</span>
+                              <span>
+                                {r.label} (${r.annual.toLocaleString()} x {rateLabel(r.rate)})
+                                {r.isChoice && <span className="ml-1 text-[var(--color-accent)]">★ Choice</span>}
+                              </span>
                               <span>${r.reward.toLocaleString("en-US", { maximumFractionDigits: 0 })}</span>
                             </div>
                           ))}
                           {otherAnnual > 0 && (
                             <div className="flex items-center justify-between text-[0.625rem] text-[var(--color-muted)]">
-                              <span>Other spending (${otherAnnual.toLocaleString()} x {(baseRate * 100).toFixed(1)}%)</span>
+                              <span>Other spending (${otherAnnual.toLocaleString()} x {rateLabel(baseRate)})</span>
                               <span>${otherReward.toLocaleString("en-US", { maximumFractionDigits: 0 })}</span>
                             </div>
                           )}

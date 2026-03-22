@@ -1,7 +1,10 @@
 "use client";
 
 import { useState, useMemo, useCallback } from "react";
-import rawCards from "../data/capital-one.json";
+import capitalOneCards from "../data/capital-one.json";
+import boaCards from "../data/bank-of-america.json";
+
+const rawCards = [...capitalOneCards, ...boaCards];
 
 
 export const spendingCategories = [
@@ -12,7 +15,10 @@ export const spendingCategories = [
   { key: "gas", label: "Gas", color: "bg-purple-200", description: "Fuel" },
   { key: "entertainment", label: "Entertainment", color: "bg-pink-200", description: "Movies, Concerts, Events" },
   { key: "foreign", label: "Foreign Purchases", color: "bg-indigo-200", description: "Non-domestic currency" },
-  { key: "travel", label: "Travel", color: "bg-rose-200", description: "Flights, Hotels, Car Rentals" },
+  { key: "travel", label: "Travel", color: "bg-rose-200", description: "General travel" },
+  { key: "flights", label: "Flights", color: "bg-rose-100", description: "Airfare", sub: true },
+  { key: "hotels", label: "Hotels", color: "bg-rose-100", description: "Accommodation", sub: true },
+  { key: "rental_cars", label: "Rental Cars", color: "bg-rose-100", description: "Car rentals", sub: true },
   { key: "pharmacy", label: "Pharmacy", color: "bg-emerald-200", description: "Drugstores, Prescriptions" },
   { key: "shopping", label: "Online Shopping", color: "bg-lime-200", description: "Amazon, Retail, Electronics" },
   { key: "other", label: "All Other Spending", color: "bg-orange-200", description: "Everything else" },
@@ -30,6 +36,9 @@ const defaultSpending: SpendingInput = {
   entertainment: { amount: 50, period: "monthly" },
   foreign: { amount: 0, period: "monthly" },
   travel: { amount: 100, period: "monthly" },
+  flights: { amount: 50, period: "monthly" },
+  hotels: { amount: 30, period: "monthly" },
+  rental_cars: { amount: 20, period: "monthly" },
   pharmacy: { amount: 50, period: "monthly" },
   shopping: { amount: 0, period: "monthly" },
   other: { amount: 100, period: "monthly" },
@@ -88,7 +97,7 @@ export const networks = [
 export type CreditCard = (typeof rawCards)[number];
 
 
-export type SortBy = "bestValue" | "annualFee";
+export type SortBy = "bestValue" | "bestFirstYear" | "bestFirstYearBonus" | "annualFee" | "lowestInterest";
 
 export function useFilters() {
   const [spending, setSpending] = useState<SpendingInput>(defaultSpending);
@@ -100,35 +109,79 @@ export function useFilters() {
   const [creditScore, setCreditScore] = useState("unknown");
   const [selectedNetworks, setSelectedNetworks] = useState<Set<string>>(new Set());
 
+  // Best cents-per-point based on selected airlines (0.5c default if none selected)
+  const pointsInfo = useMemo(() => {
+    if (selectedAirlines.size === 0) {
+      return { centsPerPoint: 0.5, reason: "Statement credit" };
+    }
+    let best = 1;
+    let bestKey = "";
+    for (const key of selectedAirlines) {
+      const val = pointValuation[key] ?? 1;
+      if (val >= best) {
+        best = val;
+        bestKey = key;
+      }
+    }
+    const label = airlines.find((a) => a.key === bestKey)?.label ?? bestKey;
+    return { centsPerPoint: best, reason: `Transfer to ${label}` };
+  }, [selectedAirlines]);
+
+  const centsPerPoint = pointsInfo.centsPerPoint;
+
   const { rewardsMap, firstYearMap } = useMemo(() => {
     const rewards: Record<string, number> = {};
     const firstYear: Record<string, number> = {};
 
     for (const card of rawCards) {
-      const cb = card.cash_back as Record<string, number>;
+      const cb = card.cash_back as unknown as Record<string, number>;
       const baseRate = cb.other ?? 0;
+      const isPoints = (card as any).reward_type === "points";
+      const multiplier = isPoints ? centsPerPoint : 1;
       let totalAnnualSpend = 0;
       let totalRewards = 0;
+
+      // For choice category cards, find which category benefits most
+      const choiceRate = cb.choice;
+      let bestChoiceKey: string | null = null;
+      if (choiceRate) {
+        let bestGain = 0;
+        for (const cat of spendingCategories) {
+          if ("sub" in cat && cat.sub) continue;
+          const input = spending[cat.key];
+          const annual = input.period === "monthly" ? input.amount * 12 : input.amount;
+          const currentRate = cb[cat.key] ?? baseRate;
+          if (choiceRate > currentRate) {
+            const gain = annual * (choiceRate - currentRate);
+            if (gain > bestGain) {
+              bestGain = gain;
+              bestChoiceKey = cat.key;
+            }
+          }
+        }
+      }
 
       for (const cat of spendingCategories) {
         const input = spending[cat.key];
         const annual = input.period === "monthly" ? input.amount * 12 : input.amount;
         totalAnnualSpend += annual;
-        const rate = cb[cat.key] ?? baseRate;
-        totalRewards += annual * rate;
+        let rate = cb[cat.key] ?? baseRate;
+        if (bestChoiceKey && cat.key === bestChoiceKey) rate = choiceRate!;
+        totalRewards += annual * rate * multiplier;
       }
 
-      const bonuses = (card as any).bonus as { bonus: number; min_spend: number; is_welcome: boolean }[] | undefined;
+      const bonuses = (card as any).bonus as { bonus: number; bonus_type: string; min_spend: number; is_welcome: boolean }[] | undefined;
       let perkValue = 0;
       let welcomeBonus = 0;
       const monthlySpend = totalAnnualSpend / 12;
 
       if (bonuses) {
         for (const b of bonuses) {
+          const val = b.bonus_type === "points" ? b.bonus * (centsPerPoint / 100) : b.bonus;
           if (b.is_welcome && monthlySpend >= b.min_spend) {
-            welcomeBonus += b.bonus;
-          } else if (!b.is_welcome && b.bonus > 0) {
-            perkValue += b.bonus;
+            welcomeBonus += val;
+          } else if (!b.is_welcome && val > 0) {
+            perkValue += val;
           }
         }
       }
@@ -139,7 +192,7 @@ export function useFilters() {
     }
 
     return { rewardsMap: rewards, firstYearMap: firstYear };
-  }, [spending]);
+  }, [spending, centsPerPoint]);
 
   const toggleAirline = useCallback((key: AirlineKey) => {
     setSelectedAirlines((prev) => {
@@ -268,13 +321,22 @@ export function useFilters() {
       case "bestValue":
         cards.sort((a, b) => (rewardsMap[b.name] ?? 0) - (rewardsMap[a.name] ?? 0));
         break;
+      case "bestFirstYear":
+        cards.sort((a, b) => (firstYearMap[b.name] ?? 0) - (firstYearMap[a.name] ?? 0));
+        break;
+      case "bestFirstYearBonus":
+        cards.sort((a, b) => (firstYearMap[b.name] ?? 0) - (rewardsMap[b.name] ?? 0) - ((firstYearMap[a.name] ?? 0) - (rewardsMap[a.name] ?? 0)));
+        break;
       case "annualFee":
         cards.sort((a, b) => a.annual_fee - b.annual_fee);
+        break;
+      case "lowestInterest":
+        cards.sort((a, b) => (a.apr || 999) - (b.apr || 999));
         break;
     }
 
     return cards;
-  }, [rewardsMap, search, sortBy, selectedNetworks, creditScore]);
+  }, [rewardsMap, firstYearMap, search, sortBy, selectedNetworks, creditScore]);
 
   const monthlySpend = useMemo(() => {
     let total = 0;
@@ -316,6 +378,8 @@ export function useFilters() {
     cancelImport,
     rewardsMap,
     firstYearMap,
+    centsPerPoint,
+    pointsReason: pointsInfo.reason,
     filtered,
   };
 }

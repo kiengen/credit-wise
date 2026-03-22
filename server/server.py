@@ -71,7 +71,7 @@ def get_bank_of_america() -> dict:
 		page.wait_for_load_state('networkidle')
 		html = page.inner_html('body')
 
-		result = parse_unknown_attributes(html)
+		result = parse_unknown_attributes(html, multiple=True)
 
 		for idx, card in enumerate(result["cards"]):
 			if not card["details_link"]:
@@ -87,7 +87,36 @@ def get_bank_of_america() -> dict:
 
 	return result
 
+
+def get_american_express() -> dict:
+	with sync_playwright() as p:
+		browser = p.chromium.launch()
+		page = browser.new_page()
+		page.goto('https://www.americanexpress.com/us/credit-cards/category/all/')
+		# page.wait_for_load_state('networkidle')
+		from time import sleep
+		sleep(10)
+		html = page.inner_html('body')
+
+		result = parse_unknown_attributes(html, multiple=True)
+
+		for idx, card in enumerate(result["cards"]):
+			if not card["details_link"]:
+				continue
+
+			print("doing", card['name'])
+			# page.goto(card["details_link"])
+			# page.wait_for_load_state('networkidle')
+			# detail_html = page.inner_html('body')
+			# result["cards"][idx] = parse_unknown_attributes(detail_html)
+
+		browser.close()
+
+	return result
+
 def get_wells_fargo(attempt=0):
+	cards = []
+
 	if not (soup := get_web_data("https://creditcards.wellsfargo.com/?sub_channel=SEO&vendor_code=G")):
 		if attempt < 10:
 			return get_wells_fargo(attempt+1)
@@ -95,29 +124,39 @@ def get_wells_fargo(attempt=0):
 		return
 
 	urls = []
-	cards = soup.find_all("div", class_="card border border-opacity-50 shadow")
+	html_cards = soup.find_all("div", class_="card border border-opacity-50 shadow")
 
-	if len(cards) == 0 and attempt < 10:
+	if len(html_cards) == 0 and attempt < 10:
 		return get_wells_fargo(attempt+1)
 
-	for card in cards:
+	for card in html_cards:
 		if not (page := card.div.div.div.div.a):
 			print(f"Warning: could not pull data for: {card.get("data-group-name")}")
 			continue
-		if (page_name := page.get("href")) and page_name[0] == "/":
-			page_name = "https://creditcards.wellsfargo.com" + page.get("href")
-		urls.append(page_name)
+
+		if (page_name := page.get("href")):
+			if page_name[0] == "/":
+				page_name = "https://creditcards.wellsfargo.com/" + page.get("href")
+			urls.append(page_name)
+
 	urls = list(set(urls))
 
 	with sync_playwright() as p:
 		browser = p.chromium.launch()
 		page = browser.new_page()
 		for url in urls:
-			page.goto(url)
-			page.wait_for_load_state('networkidle')
-			html = page.inner_html('body')
+			page_attempt = 0
+			soup = None
+			while soup is None and page_attempt < 6:
+				page.goto(url)
+				page.wait_for_load_state('networkidle')
+				html = page.inner_html('body')
 
-			soup = BeautifulSoup(html, 'lxml').find("main", class_="main", id="main-content")
+				soup = BeautifulSoup(html, 'lxml').find("main", class_="main", id="main-content")
+				page_attempt += 1
+			if soup is None:
+				print(f"Warning: could not pull data for: {url}")
+				continue
 
 			res = {}
 			res["provider"] = "wells_fargo"
@@ -126,13 +165,13 @@ def get_wells_fargo(attempt=0):
 
 			# name
 			if (name := soup.find("h1")):
-				res["name"] = name.string
+				res["name"] = name.get_text().strip().replace("\n", "")
 				print('name ->', res["name"])
 
 			# image
-			if (image := soup.find("img", alt=re.compile(".*credit card.*"))):
+			if (image := soup.find("img", attrs={"data-name": "Art"})):
 				if (image_name := image.get("src")) and image_name[0] == "/":
-					image_name = "https://creditcards.wellsfargo.com/" + image.get("src")
+					image_name = "https://creditcards.wellsfargo.com" + image.get("src")
 				res["image"] = image_name
 				print("image ->", res["image"])
 
@@ -141,11 +180,22 @@ def get_wells_fargo(attempt=0):
 				res["application_link"] = app.get("href")
 				print("app ->", res["application_link"])
 
+			# annual fee
+			if (ann_fee := soup.find("a", class_=re.compile(".*annualfee.*"))):
+				if (ann_fee_content := ann_fee.content):
+					ann_fee = ann_fee.content[0]
+				res["annual_fee"] = re.sub("[ ]+", " ", ann_fee.string.strip().replace("\n", ""))
+				print("af ->", res["annual_fee"])
+			elif (ann_fee := soup.find(string=re.compile(r"^\$[\d]+ [Aa]nnual [Ff]ee$"))):
+				res["annual_fee"] = re.sub("[ ]+", " ", ann_fee.string.strip().replace("\n", ""))
+				print("af ->", res["annual_fee"])
+
 			# page
 			res["page"] = str(soup)
-			print("\n")
 
-	return
+			cards.append(res)
+
+	return cards
 
 def get_chase(attempt=0):
 	cards = []
@@ -158,9 +208,9 @@ def get_chase(attempt=0):
 
 	urls = []
 	html_cards = soup.find_all("a", attrs={"data-lh-name": "LearnMore"})
-
+	
 	if len(cards) == 0 and attempt < 10:
-		return get_chase(attempt+1)
+			return get_chase(attempt+1)
 
 	for card in html_cards:
 		urls.append("https://creditcards.chase.com" + card.get("href"))
@@ -191,7 +241,7 @@ def get_chase(attempt=0):
 			res["application_link"] = application_button.get("href")
 
 		# page
-		res["page"] = str(csoup.find("div", class_="mx-auto flex w-full md:max-w-[90rem]"))
+		res["page"] = str(csoup.find("main"))
 
 		if (res["page"] is None):
 			continue
@@ -201,35 +251,14 @@ def get_chase(attempt=0):
 
 def main():
 	load_dotenv()
-	cards = get_chase()
-	#cards = get_wells_fargo()
-	#print(cards)
-	#print(cards)
-	#return
+	cards = get_wells_fargo()
 
-# 	cards = get_chase()
-# 	#cards = get_capital_one()
-# 	#print(cards)
-# 	return
-#
-# 	card_list = []
-# 	i = 1
-# 	for card in cards:
-# 		card_list.append(parse_unknown_attributes(json.dumps(card, ensure_ascii=False)))
-#
-# 	print(json.dumps(card_list, ensure_ascii=False, indent=4))
-# 	return
-#
-# 	#json = json.dumps(parse_unknown_attributes(cards), ensure_ascii=False)
-#
-# 	#cards = json.dumps(get_capital_one(), ensure_ascii=False)
-#
-# 	#return
-# 	#print(json.dumps(parse_unknown_attributes(cards), indent=4, ensure_ascii=False))
+	card_list = []
+	for card in cards:
+		card_list.append(parse_unknown_attributes(json.dumps(card, ensure_ascii=False)))
 
-	#cards = get_bank_of_america()
 	with open('output.json', 'w') as f:
-		json.dump(cards, f, indent=2, ensure_ascii=False)
+		json.dump(card_list, f, indent=2, ensure_ascii=False)
 
 if __name__ == "__main__":
 	sys.exit(main())

@@ -127,6 +127,8 @@ def get_wells_fargo():
 	return
 
 def get_chase(attempt=0):
+	cards = []
+
 	if not (soup := get_web_data("https://creditcards.chase.com/all-credit-cards")):
 		if attempt < 10:
 			get_chase(attempt+1)
@@ -136,19 +138,19 @@ def get_chase(attempt=0):
 	#print(soup.prettify())
 
 	urls = []
-	cards = soup.find_all("a", attrs={"data-lh-name": "LearnMore"})
-
+	html_cards = soup.find_all("a", attrs={"data-lh-name": "LearnMore"})
+	
 	if len(cards) == 0:
 		if attempt < 10:
 			return get_chase(attempt+1)
 
-	for card in cards:
+	for card in html_cards:
 		urls.append("https://creditcards.chase.com" + card.get("href"))
 	urls = list(set(urls))
 
 	for url in urls:
 		csoup = get_web_data(url)
-		print(csoup.prettify())
+		#print(csoup.prettify())
 
 		res = {}
 		res["provider"] = "chase"
@@ -156,34 +158,35 @@ def get_chase(attempt=0):
 
 		# name
 		res["name"] = ""
-		if (name := csoup.find("div", class_="cmp-personalcardsummary__title")):
-			print("name ->", name)
-			res["name"] = name.get_text()
+		if (name := csoup.find("h1")):
+			res["name"] = name.string
 
 		# preapproval
 		res["preapproval_link"] = ""
 		if (preapproval_button := csoup.find("div", class_="cmp-personalcardsummary__applywithcconfidence--button")):
-			print("pre-ap ->", preapproval_button)
+			#print("pre-ap ->", preapproval_button)
 			res["preapproval_link"] = preapproval_button.get("href")
 
 		# apply
 		res["application_link"] = ""
 		if (application_button := csoup.find("a", attrs={"data-lh-name": "ApplyNow", "class": "btn button button--applynow-guest icon-lock chaseanalytics-track-link"})):
-			print("appl ->", application_button)
-			res["application_link"]
+			#print("appl ->", application_button)
+			res["application_link"] = application_button.get("href")
 
-		print(res)
-		return
-		if (card_info := new_soup.find("div", class_="card-info")):
-			res["name"] = card_info.p.string
+		# page
+		res["page"] = str(csoup.find("div", class_="mx-auto flex w-full md:max-w-[90rem]"))
 
-		print(new_soup.prettify())
+		if (res["page"] is None):
+			continue
 
-		# name
-		return
+		cards.append(res)
+	return cards
 
 def main():
 	load_dotenv()
+	cards = get_chase()
+	#cards = get_capital_one()
+	print(cards)
 
 # 	cards = get_chase()
 # 	#cards = get_capital_one()

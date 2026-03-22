@@ -83,7 +83,6 @@ def get_bank_of_america() -> dict:
 			detail_html = page.inner_html('body')
 			result["cards"][idx] = parse_unknown_attributes(detail_html)
 
-
 		browser.close()
 
 	return result
@@ -92,9 +91,120 @@ def get_bank_of_america() -> dict:
 def get_american_express() -> dict:
 	pass
 
+def get_wells_fargo():
+	if not (soup := get_web_data("https://creditcards.wellsfargo.com/?sub_channel=SEO&vendor_code=G")):
+		print("Error: could not get Wells Fargo credit card information")
+		return
+	#print(soup.prettify())
+
+	urls = []
+	cards = soup.find_all("div", class_="card border border-opacity-50 shadow")
+	for card in cards:
+		if not (page := card.div.div.div.div.a):
+			print(f"Warning: could not pull data for: {card.get("data-group-name")}")
+			continue
+		urls.append("https://creditcards.wellsfargo.com" + page.get("href"))
+	urls = list(set(urls))
+
+	print(urls)
+	for url in urls:
+		new_soup = get_web_data(url)
+
+		res = {}
+		res["provider"] = "wells_fargo"
+		res["details_link"] = url
+
+		# name
+		res["name"] = ""
+		if (card_info := new_soup.find("div", class_="card-info")):
+			res["name"] = card_info.p.string
+
+		print(new_soup.prettify())
+
+		# name
+		return
+
+	return
+
+def get_chase(attempt=0):
+	if not (soup := get_web_data("https://creditcards.chase.com/all-credit-cards")):
+		if attempt < 10:
+			get_chase(attempt+1)
+		print("Error: could not get Chase credit card information")
+		return
+
+	#print(soup.prettify())
+
+	urls = []
+	cards = soup.find_all("a", attrs={"data-lh-name": "LearnMore"})
+
+	if len(cards) == 0:
+		if attempt < 10:
+			return get_chase(attempt+1)
+
+	for card in cards:
+		urls.append("https://creditcards.chase.com" + card.get("href"))
+	urls = list(set(urls))
+
+	for url in urls:
+		csoup = get_web_data(url)
+		print(csoup.prettify())
+
+		res = {}
+		res["provider"] = "chase"
+		res["details_link"] = url
+
+		# name
+		res["name"] = ""
+		if (name := csoup.find("div", class_="cmp-personalcardsummary__title")):
+			print("name ->", name)
+			res["name"] = name.get_text()
+
+		# preapproval
+		res["preapproval_link"] = ""
+		if (preapproval_button := csoup.find("div", class_="cmp-personalcardsummary__applywithcconfidence--button")):
+			print("pre-ap ->", preapproval_button)
+			res["preapproval_link"] = preapproval_button.get("href")
+
+		# apply
+		res["application_link"] = ""
+		if (application_button := csoup.find("a", attrs={"data-lh-name": "ApplyNow", "class": "btn button button--applynow-guest icon-lock chaseanalytics-track-link"})):
+			print("appl ->", application_button)
+			res["application_link"]
+
+		print(res)
+		return
+		if (card_info := new_soup.find("div", class_="card-info")):
+			res["name"] = card_info.p.string
+
+		print(new_soup.prettify())
+
+		# name
+		return
 
 def main():
 	load_dotenv()
+
+# 	cards = get_chase()
+# 	#cards = get_capital_one()
+# 	#print(cards)
+# 	return
+#
+# 	card_list = []
+# 	i = 1
+# 	for card in cards:
+# 		card_list.append(parse_unknown_attributes(json.dumps(card, ensure_ascii=False)))
+#
+# 	print(json.dumps(card_list, ensure_ascii=False, indent=4))
+# 	return
+#
+# 	#json = json.dumps(parse_unknown_attributes(cards), ensure_ascii=False)
+#
+# 	#cards = json.dumps(get_capital_one(), ensure_ascii=False)
+#
+# 	#return
+# 	#print(json.dumps(parse_unknown_attributes(cards), indent=4, ensure_ascii=False))
+
 	cards = get_bank_of_america()
 	with open('output.json', 'w') as f:
 		json.dump(cards, f, indent=2, ensure_ascii=False)

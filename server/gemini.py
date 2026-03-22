@@ -12,14 +12,21 @@ Providers: list = [
 	"discover",
 	"wells_fargo",
 	"amazon",
-	"united"
+	"united",
+	"other"
 ]
 
 Networks: list = [
 	"mastercard",
 	"visa",
 	"amex",
-	"discover"
+	"discover",
+	"other"
+]
+
+CashBackType: list = [
+	"cash",
+	"points"
 ]
 
 # TODO: see which values are commonly used
@@ -30,18 +37,22 @@ class Credit(Enum):
 	good = 3
 	excellent = 4
 
+
 class CreditCard(BaseModel):
 	name: str = Field(description="The name of the credit card")
 	provider: str = Field(description="The company who is offering the credit card", enum=Providers)
 	network: str = Field(description="The network which the card is on", enum=Networks)
 	credit: str = Field(description="The credit score required/recommended to obtain the card")
 	annual_fee: float = Field(description="The annual cost of keeping the card after any trial periods/sign on bonuses have passed")
-	etc_pct: float = Field(description="Cash back on all purchases (general/non-categorical) as a percentage", minimum=0, maximum=1)
-	has_ftf: bool = Field(description="Whether the card has foreign transaction fees or not, or if unknown, yes")
+	cash_back: dict[str, float] = Field(description="Dictionary with different categories as keys and the cash back percentage (value / 100) as the values. For general cash back ('on all other purchases'), 'other' should be used). THE MAX VALUE SHOULD BE 1.")
+	cash_back_type: str = Field(description="Specifies what the cashback will get you", enum=CashBackType)
+	apr: float = Field(description="General Annual Percentage Rate (not intro APR) for the card", minimum=0, maximum=100)
+	has_ftf: bool = Field(description="Whether the card has foreign transaction fees or not. If it is not specified, true")
 	image: str = Field(description="The URL to an image of the credit card")
 	preapproval_link: str = Field(description="The URL to the official page where one can get preapproved for the card")
 	application_link: str = Field(description="The URL to the official page where one can get apply for the card")
 	details_link: str = Field(description="The URL to the official page where one can find more information about the card")
+	bonus: list[str] = Field(description="Any additional perks that can be redeemed one time after being granted the credit card")
 	other: list[str] = Field(description="Any other relevant information about the card provided as a list of strings")
 
 class CardList(BaseModel):
@@ -52,42 +63,51 @@ def parse_unknown_attributes(data: str) -> str:
 
 	prompt = r"""
 	Role & Context
-	I want you to act as an expert Data Engineer. I have raw data scraped from Capital One that is currently unstructured and "dirty." My goal is to categorize this into a dictionary of relevant,  clean, analysis-ready data.
+	I want you to act as an expert Data Engineer. I have raw data scraped from a credit card service that is currently unstructured and "dirty." My goal is to categorize this into a dictionary of relevant, clean, analysis-ready data.
 
 	The Data Sample
 	Here is a representative sample of the raw data:
 	{
 		"provider": "capital_one",
-		"credit": "good-excellent",
-		"name": "BJ’s One™ Mastercard®",
-		"image": "https://ecm.capitalone.com/WCM/card/products/www-bj-one-mc-240x151.png",
-		"application_link": "https://applynow.capitalone.com/apply/partner/bjs/uns/member-validation/",
-		"preapproval_link": "https://www.capitalone.com/apply/partner/bjs/uns/preapprove/member-validation/",
-		"details_link": "",
-		"attrs": ["$0 annual fee", "3% back in rewards on most purchases at BJ’s", "1.5% back in rewards on purchases everywhere else Mastercard® is accepted", "10¢ off/gallon at BJ’s Gas®"]
+		"credit": "GOOD-EXCELLENT",
+		"name": "Bass Pro Shops CLUB Card",
+		"image": "https://ecm.capitalone.com/WCM/card/products/bass_pro_cardart.png",
+		"application_link": "https://applynow.capitalone.com/?brandCode=BASSPRO&marketingChannelCode=UNS&storeId=701",
+		"preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+		"details_link": "https://www.capitalone.com/credit-cards/bass-pro-shops",
+		"page": "A LOT OF PAGE TEXT"
 	}
 
 	An example of the output for the provided data would be:
 	{
 		"provider": "capital_one",
 		"credit": "good-excellent",
-		"name": "BJ’s One™ Mastercard®",
-		"image": "https://ecm.capitalone.com/WCM/card/products/www-bj-one-mc-240x151.png",
-		"application_link": "https://applynow.capitalone.com/apply/partner/bjs/uns/member-validation/",
-		"preapproval_link": "https://www.capitalone.com/apply/partner/bjs/uns/preapprove/member-validation/",
-		"details_link": "",
+		"name": "Bass Pro Shops CLUB Card",
+		"image": "https://ecm.capitalone.com/WCM/card/products/bass_pro_cardart.png",
+		"application_link": "https://applynow.capitalone.com/?brandCode=BASSPRO&marketingChannelCode=UNS&storeId=701",
+		"preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+		"details_link": "https://www.capitalone.com/credit-cards/bass-pro-shops",
 		"annual_fee": 0,
-		"has_ftf": true,
-		"etc_pct": 0.015,
-		"network": "mastercard",
-		"other": ["3% back in rewards on most purchases at BJ’s", "10¢ off/gallon at BJ’s Gas®"]
+		"has_ftf": false,
+		"apr": 9.99,
+		"cash_back": {
+			"bass_pro_shops": 0.05,
+			"other": 0.01
+		},
+		"bonus": ["Earn up to $50 in CLUB Points for free gear"],
+		"other": ["Beat any price offered local retailers by 5%"]
+	}
 
 	Please apply the following logic:
-	The point of the other category is to provide a space for other benefits that do not fall within any of the existing categories. When we see common parameters cropping up in the attrs, we will consider adding them as additional parameters of the main object.
-	In essence, it is to field and monitor future parameters, while still displaying the additional benefits to the users.
-	Remove an attr if and only if its data has been completely conveyed through other fields. For example, with "1.5% back in rewards on purchases everywhere else Mastercard® is accepted", we added the network Mastercard and the 0.015 general cash back percentage, so all info was conveyed and it can be removed.
-	Data Normalization: [e.g., Strip whitespace, remove symbols like $ or %, and in general ensure that standardized data processing is possible]
-	Edge Cases: [e.g., If any fees/benefits are applied for the first few years only, use the general case and add the bonus information as an attr]
+	One Card Per Page: [Do not worry about secondary/alternative options presented on the web page: focus only on the primary card offered.]
+	Remove Attachment: [Do not use the pronouns "I/we/they" for any of the features, for example "we offer feature x...", just mention the feature]
+	Unemotional Tone: [For the bonus and other categories, without altering wording or removing precision, the tone of any overly stimulating text should be flattened and made more neutral through editing capitalization, punctuation, and overly emotional adjectives]
+	Data Normalization: [e.g., Strip whitespace, remove symbols like $ or % (EXCEPT for 'other' and 'bonus'), and in general ensure that standardized data processing is possible]
+	Data Serialization: [Do not group "similar" features in one bullet point, list each point individually; however, do not include redundant or overly specific information]
+	Misleading Advertising: [Do not include perks/benefits which are true of all credit cards in general, or generally expected to be true]
+	Cherrypicking: [Choose, at a maximum, 4 bonuses and 4 other perks. Do not include more than 4. Pick the ones that are the most unique or useful to use and know]
+	Edge Cases: [e.g., If any fees/benefits are applied for the first few years only, use the general case and add the bonus information as a bonus]
+	Brevity: [For the other/bonus strings, be as succinct as possible without causing confusion or vagueness]
 
 	Output Format
 	Please provide an array of Attribute objects in a json.dumps format.
@@ -101,18 +121,9 @@ def parse_unknown_attributes(data: str) -> str:
 	    contents=prompt,
 	    config={
 	        "response_mime_type": "application/json",
-	        "response_json_schema": CardList.model_json_schema(),
+	        "response_json_schema": CreditCard.model_json_schema(),
 	    },
 	)
 
-	gemini_result = CardList.model_validate_json(response.text)
+	gemini_result = CreditCard.model_validate_json(response.text)
 	return gemini_result.model_dump()
-
-
-	result = []
-
-	# convert credit card objects into json serializable dicts
-	for card in gemini_result:
-		result.append(vars(card))
-
-	return result

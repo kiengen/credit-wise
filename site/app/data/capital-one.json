@@ -72,7 +72,8 @@
                 "bonus": 200,
                 "min_spend": 0,
                 "description": "$200 one-time cash bonus",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "cash"
             }
         ],
         "other": [
@@ -154,7 +155,8 @@
                 "bonus": 50,
                 "min_spend": 33,
                 "description": "$50 cash bonus after spending $100 within 3 months of account opening",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "cash"
             }
         ],
         "other": [
@@ -219,7 +221,8 @@
                 "bonus": 200,
                 "min_spend": 167,
                 "description": "Earn $200 cash bonus after spending $500 on purchases within 3 months of account opening",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "cash"
             }
         ],
         "other": [
@@ -255,7 +258,8 @@
                 "bonus": 50,
                 "min_spend": 33,
                 "description": "Earn a $50 cash bonus after spending $100 on purchases within 3 months of account opening",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "cash"
             }
         ],
         "other": [
@@ -343,28 +347,32 @@
         "details_link": "https://www.capitalone.com/credit-cards/venture",
         "bonus": [
             {
-                "bonus": 750,
+                "bonus": 75000,
                 "min_spend": 1333,
                 "description": "75,000 bonus miles after spending $4,000 on purchases within the first 3 months of account opening",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "points"
             },
             {
                 "bonus": 250,
                 "min_spend": 0,
                 "description": "$250 credit for Capital One Travel during the first cardholder year",
-                "is_welcome": false
+                "is_welcome": true,
+                "bonus_type": "cash"
             },
             {
                 "bonus": 120,
                 "min_spend": 0,
                 "description": "Up to $120 statement credit for Global Entry or TSA PreCheck application fees",
-                "is_welcome": false
+                "is_welcome": false,
+                "bonus_type": "cash"
             },
             {
                 "bonus": 50,
                 "min_spend": 0,
                 "description": "$50 experience credit on every Lifestyle Collection hotel or vacation rental stay",
-                "is_welcome": false
+                "is_welcome": false,
+                "bonus_type": "cash"
             }
         ],
         "other": [
@@ -396,19 +404,22 @@
                 "bonus": 300,
                 "min_spend": 0,
                 "description": "300 dollar annual travel credit for bookings through Capital One Travel",
-                "is_welcome": false
+                "is_welcome": false,
+                "bonus_type": "cash"
             },
             {
                 "bonus": 100,
                 "min_spend": 0,
                 "description": "100 dollar experience credit for dining, spa, or hotel activities",
-                "is_welcome": false
+                "is_welcome": false,
+                "bonus_type": "cash"
             },
             {
                 "bonus": 50,
                 "min_spend": 0,
                 "description": "50 dollar travel credit if flight prices drop within 10 days of booking",
-                "is_welcome": false
+                "is_welcome": false,
+                "bonus_type": "cash"
             }
         ],
         "other": [
@@ -439,10 +450,11 @@
         "details_link": "https://www.capitalone.com/credit-cards/ventureone",
         "bonus": [
             {
-                "bonus": 200,
+                "bonus": 20000,
                 "min_spend": 167,
                 "description": "Earn 20,000 bonus miles after spending $500 on purchases within 3 months of account opening",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "points"
             }
         ],
         "other": [
@@ -501,7 +513,8 @@
                 "bonus": 1000,
                 "min_spend": 3333,
                 "description": "Earn $1,000 cash bonus after spending $10,000 in the first 3 months",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "cash"
             }
         ],
         "other": [
@@ -535,7 +548,8 @@
                 "bonus": 2000,
                 "min_spend": 10000,
                 "description": "$2,000 cash bonus after $30,000 spend in the first 3 months",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "cash"
             }
         ],
         "other": [
@@ -569,7 +583,8 @@
                 "bonus": 750,
                 "min_spend": 2000,
                 "description": "$750 cash bonus after $6,000 spend within first 3 months",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "cash"
             }
         ],
         "other": [
@@ -625,22 +640,25 @@
         "details_link": "https://www.capitalone.com/small-business/credit-cards/spark-miles",
         "bonus": [
             {
-                "bonus": 500,
+                "bonus": 50000,
                 "min_spend": 1500,
                 "description": "50,000 miles after spending $4,500 on purchases within the first 3 months",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "points"
             },
             {
                 "bonus": 120,
                 "min_spend": 0,
                 "description": "Up to $120 credit for Global Entry or TSA PreCheck every four years",
-                "is_welcome": false
+                "is_welcome": false,
+                "bonus_type": "cash"
             },
             {
                 "bonus": 50,
                 "min_spend": 0,
                 "description": "Lifestyle Collection benefits including $50 experience credits and room upgrades",
-                "is_welcome": false
+                "is_welcome": false,
+                "bonus_type": "cash"
             }
         ],
         "other": [
@@ -669,10 +687,11 @@
         "details_link": "https://www.capitalone.com/small-business/credit-cards/spark-miles-select",
         "bonus": [
             {
-                "bonus": 500,
+                "bonus": 50000,
                 "min_spend": 1500,
                 "description": "50,000 miles after spending $4,500 on purchases within the first 3 months",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "points"
             }
         ],
         "other": [
@@ -702,28 +721,32 @@
         "details_link": "https://www.capitalone.com/small-business/credit-cards/venture-x-business",
         "bonus": [
             {
-                "bonus": 1500,
+                "bonus": 150000,
                 "min_spend": 10000,
                 "description": "150,000 miles after $30,000 spend in first 3 months",
-                "is_welcome": true
+                "is_welcome": true,
+                "bonus_type": "points"
             },
             {
                 "bonus": 300,
                 "min_spend": 0,
                 "description": "$300 annual credit for Capital One Business Travel bookings",
-                "is_welcome": false
+                "is_welcome": false,
+                "bonus_type": "cash"
             },
             {
                 "bonus": 120,
                 "min_spend": 0,
                 "description": "Up to $120 statement credit for Global Entry or TSA PreCheck",
-                "is_welcome": false
+                "is_welcome": false,
+                "bonus_type": "cash"
             },
             {
                 "bonus": 100,
                 "min_spend": 0,
                 "description": "$100 experience credit and premium benefits at Premier Collection properties",
-                "is_welcome": false
+                "is_welcome": false,
+                "bonus_type": "cash"
             }
         ],
         "other": [

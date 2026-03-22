@@ -100,6 +100,26 @@ export function useFilters() {
   const [creditScore, setCreditScore] = useState("unknown");
   const [selectedNetworks, setSelectedNetworks] = useState<Set<string>>(new Set());
 
+  // Best cents-per-point based on selected airlines (0.5c default if none selected)
+  const pointsInfo = useMemo(() => {
+    if (selectedAirlines.size === 0) {
+      return { centsPerPoint: 0.5, reason: "Statement credit" };
+    }
+    let best = 1;
+    let bestKey = "";
+    for (const key of selectedAirlines) {
+      const val = pointValuation[key] ?? 1;
+      if (val >= best) {
+        best = val;
+        bestKey = key;
+      }
+    }
+    const label = airlines.find((a) => a.key === bestKey)?.label ?? bestKey;
+    return { centsPerPoint: best, reason: `Transfer to ${label}` };
+  }, [selectedAirlines]);
+
+  const centsPerPoint = pointsInfo.centsPerPoint;
+
   const { rewardsMap, firstYearMap } = useMemo(() => {
     const rewards: Record<string, number> = {};
     const firstYear: Record<string, number> = {};
@@ -107,6 +127,8 @@ export function useFilters() {
     for (const card of rawCards) {
       const cb = card.cash_back as Record<string, number>;
       const baseRate = cb.other ?? 0;
+      const isPoints = (card as any).reward_type === "points";
+      const multiplier = isPoints ? centsPerPoint : 1;
       let totalAnnualSpend = 0;
       let totalRewards = 0;
 
@@ -115,20 +137,21 @@ export function useFilters() {
         const annual = input.period === "monthly" ? input.amount * 12 : input.amount;
         totalAnnualSpend += annual;
         const rate = cb[cat.key] ?? baseRate;
-        totalRewards += annual * rate;
+        totalRewards += annual * rate * multiplier;
       }
 
-      const bonuses = (card as any).bonus as { bonus: number; min_spend: number; is_welcome: boolean }[] | undefined;
+      const bonuses = (card as any).bonus as { bonus: number; bonus_type: string; min_spend: number; is_welcome: boolean }[] | undefined;
       let perkValue = 0;
       let welcomeBonus = 0;
       const monthlySpend = totalAnnualSpend / 12;
 
       if (bonuses) {
         for (const b of bonuses) {
+          const val = b.bonus_type === "points" ? b.bonus * (centsPerPoint / 100) : b.bonus;
           if (b.is_welcome && monthlySpend >= b.min_spend) {
-            welcomeBonus += b.bonus;
-          } else if (!b.is_welcome && b.bonus > 0) {
-            perkValue += b.bonus;
+            welcomeBonus += val;
+          } else if (!b.is_welcome && val > 0) {
+            perkValue += val;
           }
         }
       }
@@ -139,7 +162,7 @@ export function useFilters() {
     }
 
     return { rewardsMap: rewards, firstYearMap: firstYear };
-  }, [spending]);
+  }, [spending, centsPerPoint]);
 
   const toggleAirline = useCallback((key: AirlineKey) => {
     setSelectedAirlines((prev) => {
@@ -316,6 +339,8 @@ export function useFilters() {
     cancelImport,
     rewardsMap,
     firstYearMap,
+    centsPerPoint,
+    pointsReason: pointsInfo.reason,
     filtered,
   };
 }

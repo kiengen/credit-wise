@@ -75,7 +75,7 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
               <div key={cat.key} onClick={isParent ? () => setRecurringExpanded(!recurringExpanded) : undefined} className={isParent ? "cursor-pointer" : ""}>
                 <AmountInput
                   label={cat.label}
-                  value={Math.round((viewAnnual ? monthly * 12 : monthly) * 100) / 100}
+                  value={Math.round((viewAnnual ? monthly * 12 : monthly) * 100)}
                   onCommit={(val) => {
                     const monthlyVal = viewAnnual ? val / 12 : val;
                     filters.handleSpendingChange(cat.key, monthlyVal, "monthly");
@@ -88,7 +88,7 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
                     }
                     if (cat.key === "recurring" && recurringMonthly > 0) {
                       const ratio = streamingMonthly / recurringMonthly;
-                      filters.handleSpendingChange("streaming", Math.round(monthlyVal * ratio * 100) / 100, "monthly");
+                      filters.handleSpendingChange("streaming", Math.round(monthlyVal * ratio * 100), "monthly");
                     }
                   }}
                   barColor={cat.color}
@@ -113,14 +113,14 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
           <div className="flex gap-2">
             <button
               onClick={filters.useAverageSpending}
-              className="flex-1 rounded-md border border-[var(--color-border)] py-1.5 text-xs font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-surface)]"
+              className="flex-1 rounded-md cursor-pointer border border-[var(--color-border)] py-1.5 text-xs font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-surface)]"
             >
               Reset
             </button>
             <button
               onClick={() => fileRef.current?.click()}
               disabled={filters.importing}
-              className="flex-1 rounded-md border border-[var(--color-border)] py-1.5 text-xs font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-surface)] disabled:opacity-50"
+              className="flex-1 rounded-md cursor-pointer border border-[var(--color-border)] py-1.5 text-xs font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-surface)] disabled:opacity-50"
             >
               {filters.importing ? "Parsing..." : "Import"}
             </button>

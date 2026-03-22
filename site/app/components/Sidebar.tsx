@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import AmountInput from "./AmountInput";
 import ProfileRow from "./ProfileRow";
 import { spendingCategories, airlines, alliances, networks, type useFilters } from "../hooks/useFilters";
@@ -9,10 +9,12 @@ type Filters = ReturnType<typeof useFilters>;
 
 const Sidebar = ({ filters }: { filters: Filters }) => {
   const [viewAnnual, setViewAnnual] = useState(false);
+  const [recurringExpanded, setRecurringExpanded] = useState(false);
   const [airlinesExpanded, setAirlinesExpanded] = useState(false);
   const [airlinesMounted, setAirlinesMounted] = useState(false);
   const [airlinesAnimateIn, setAirlinesAnimateIn] = useState(false);
   const { spending } = filters;
+  const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (airlinesExpanded) {
@@ -28,6 +30,7 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
   }, [airlinesExpanded]);
 
   const monthlyTotal = spendingCategories.reduce((sum, cat) => {
+    if ("sub" in cat && cat.sub) return sum;
     const input = spending[cat.key];
     return sum + (input.period === "monthly" ? input.amount : input.amount / 12);
   }, 0);
@@ -37,7 +40,6 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
     <aside className="w-84 shrink-0">
 
       {/* Spending Section */}
-
       <div className="rounded-lg border border-[var(--color-border)] bg-white">
         <div className="flex items-center justify-between border-b border-[var(--color-border)] px-5 py-3">
           <span className="text-sm font-bold text-[var(--color-primary)]">Spending</span>
@@ -60,22 +62,40 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
 
         <div className="divide-y divide-[var(--color-border)]">
           {spendingCategories.map((cat) => {
+            const isSub = "sub" in cat && cat.sub === true;
+            if (isSub && !recurringExpanded) return null;
+
             const { amount, period } = spending[cat.key];
             const monthly = period === "monthly" ? amount : amount / 12;
             const pct = monthlyTotal > 0 ? Math.round((monthly / monthlyTotal) * 100) : 0;
 
+            const isParent = cat.key === "recurring";
+
             return (
-              <AmountInput
-                key={cat.key}
-                label={cat.label}
-                value={Math.round((viewAnnual ? monthly * 12 : monthly) * 100) / 100}
-                onCommit={(val) => {
-                  const monthlyVal = viewAnnual ? val / 12 : val;
-                  filters.handleSpendingChange(cat.key, monthlyVal, "monthly");
-                }}
-                barColor={cat.color}
-                pct={pct}
-              />
+              <div key={cat.key} onClick={isParent ? () => setRecurringExpanded(!recurringExpanded) : undefined} className={isParent ? "cursor-pointer" : ""}>
+                <AmountInput
+                  label={cat.label}
+                  value={Math.round((viewAnnual ? monthly * 12 : monthly) * 100) / 100}
+                  onCommit={(val) => {
+                    const monthlyVal = viewAnnual ? val / 12 : val;
+                    filters.handleSpendingChange(cat.key, monthlyVal, "monthly");
+
+                    const recurringMonthly = spending.recurring.period === "monthly" ? spending.recurring.amount : spending.recurring.amount / 12;
+                    const streamingMonthly = spending.streaming.period === "monthly" ? spending.streaming.amount : spending.streaming.amount / 12;
+
+                    if (cat.key === "streaming" && monthlyVal > recurringMonthly) {
+                      filters.handleSpendingChange("recurring", monthlyVal, "monthly");
+                    }
+                    if (cat.key === "recurring" && recurringMonthly > 0) {
+                      const ratio = streamingMonthly / recurringMonthly;
+                      filters.handleSpendingChange("streaming", Math.round(monthlyVal * ratio * 100) / 100, "monthly");
+                    }
+                  }}
+                  barColor={cat.color}
+                  pct={pct}
+                  sub={isSub}
+                />
+              </div>
             );
           })}
         </div>
@@ -92,23 +112,34 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
           </div>
           <div className="flex gap-2">
             <button
-              onClick={filters.resetSpending}
+              onClick={filters.useAverageSpending}
               className="flex-1 rounded-md border border-[var(--color-border)] py-1.5 text-xs font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-surface)]"
             >
               Reset
             </button>
             <button
-              onClick={filters.useAverageSpending}
-              className="flex-1 rounded-md border border-[var(--color-border)] py-1.5 text-xs font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-surface)]"
+              onClick={() => fileRef.current?.click()}
+              disabled={filters.importing}
+              className="flex-1 rounded-md border border-[var(--color-border)] py-1.5 text-xs font-semibold text-[var(--color-primary)] transition-colors hover:bg-[var(--color-surface)] disabled:opacity-50"
             >
-              Use Average
+              {filters.importing ? "Parsing..." : "Import"}
             </button>
+            <input
+              ref={fileRef}
+              type="file"
+              multiple
+              className="hidden"
+              onChange={(e) => {
+                const files = e.target.files;
+                if (files && files.length > 0) filters.importStatement(Array.from(files));
+                e.target.value = "";
+              }}
+            />
           </div>
         </div>
       </div>
 
       {/* Profile Section */}
-
       <div className="mt-4 rounded-lg border border-[var(--color-border)] bg-white shadow-md divide-y divide-[var(--color-border)]">
         <ProfileRow type="creditScore" label="Credit Score" selected={filters.creditScore} onSelect={filters.setCreditScore} />
         <ProfileRow type="income" label="Personal Income" selected={filters.personalIncome} onSelect={filters.setPersonalIncome} />
@@ -116,7 +147,6 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
       </div>
 
       {/* Network Section */}
-
       <div className="mt-4 rounded-lg border border-[var(--color-border)] bg-white shadow-md overflow-hidden">
         <div className="border-b border-[var(--color-border)] px-5 py-3">
           <span className="text-sm font-bold text-[var(--color-primary)]">Card Network</span>

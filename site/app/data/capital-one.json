@@ -1,0 +1,737 @@
+[
+    {
+        "name": "Platinum from Capital One",
+        "provider": "capital_one",
+        "network": "mastercard",
+        "credit": "fair",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.0
+        },
+        "cash_back_type": "none",
+        "apr": 29.99,
+        "has_ftf": true,
+        "image": "https://ecm.capitalone.com/WCM/card/products/plat_cardart_prim_323x203/mobile.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=38227",
+        "details_link": "https://www.capitalone.com/credit-cards/platinum",
+        "bonus": [],
+        "other": [
+            "Automatic credit line reviews",
+            "Credit building with responsible use",
+            "Highest score for customer satisfaction in segment",
+            "No annual fee"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Platinum Secured Credit Card from Capital One",
+        "provider": "capital_one",
+        "network": "mastercard",
+        "credit": "rebuilding",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.0
+        },
+        "cash_back_type": "none",
+        "apr": 29.99,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/plat_cardart_prim_323x203/mobile.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37229",
+        "details_link": "https://www.capitalone.com/credit-cards/platinum-secured",
+        "bonus": [],
+        "other": [
+            "Automatic credit line increase consideration in as little as six months",
+            "Activity reported to three major credit bureaus",
+            "Initial credit line of at least 200 with flexible deposit options",
+            "Physical card lacks secured branding",
+            "Earn back security deposit as a statement credit with responsible card use",
+            "Upgrade to an unsecured Platinum card based on account management"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Quicksilver from Capital One",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.015
+        },
+        "cash_back_type": "variable",
+        "apr": 29.99,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/quicksilver_cardart.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37746",
+        "details_link": "https://www.capitalone.com/credit-cards/quicksilver",
+        "bonus": [
+            {
+                "bonus": 200,
+                "min_spend": 0,
+                "description": "$200 one-time cash bonus",
+                "is_welcome": true
+            }
+        ],
+        "other": [
+            "Unlimited 1.5% cash back on every purchase",
+            "Price drop protection up to $50 for flights",
+            "Price matching for flights, hotels, and rental cars",
+            "Flight cancellation options until 3 hours before departure"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Quicksilver Rewards for Good Credit from Capital One",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "good",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.015
+        },
+        "cash_back_type": "cash back",
+        "apr": 29.99,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/quicksilver_cardart.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=38297",
+        "details_link": "https://www.capitalone.com/credit-cards/quicksilver-good-credit",
+        "bonus": [],
+        "other": [
+            "price drop protection up to $50 within 10 days of booking",
+            "24-hour price match guarantee for travel bookings",
+            "flight cancellation options up to 3 hours before departure",
+            "24/7 flight price monitoring and alerts"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "QuicksilverOne from Capital One",
+        "provider": "capital_one",
+        "network": "mastercard",
+        "credit": "fair",
+        "annual_fee": 39.0,
+        "cash_back": {
+            "other": 0.015
+        },
+        "cash_back_type": "cash",
+        "apr": 29.99,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/quicksilver_one_cardart.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37203",
+        "details_link": "https://www.capitalone.com/credit-cards/quicksilverone",
+        "bonus": [],
+        "other": [
+            "Unlimited 1.5% cash back on every purchase",
+            "Automatic credit line reviews in as little as 6 months",
+            "Credit building through reporting to major bureaus",
+            "Access to exclusive merchant deals"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Quicksilver Rewards for Students",
+        "provider": "capital_one",
+        "network": "mastercard",
+        "credit": "fair-limited",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.015
+        },
+        "cash_back_type": "cash",
+        "apr": 29.99,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/qs_cardart_prim_1290x812.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37942",
+        "details_link": "https://www.capitalone.com/credit-cards/quicksilver-student",
+        "bonus": [
+            {
+                "bonus": 50,
+                "min_spend": 33,
+                "description": "$50 cash bonus after spending $100 within 3 months of account opening",
+                "is_welcome": true
+            }
+        ],
+        "other": [
+            "Unlimited 1.5% cash back on all purchases",
+            "Price drop protection for flights booked through Capital One Travel",
+            "Price match guarantee for eligible flights, hotels, and rental cars",
+            "Option to cancel flights up to 3 hours before scheduled departure"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Quicksilver Secured from Capital One",
+        "provider": "capital_one",
+        "network": "mastercard",
+        "credit": "fair",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.015
+        },
+        "cash_back_type": "cash back",
+        "apr": 29.99,
+        "has_ftf": true,
+        "image": "https://ecm.capitalone.com/WCM/card/products/quicksilver_cardart.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37223",
+        "details_link": "https://www.capitalone.com/credit-cards/quicksilver-secured",
+        "bonus": [],
+        "other": [
+            "Reports to the three major credit bureaus",
+            "Credit line increases available by depositing more than the minimum",
+            "No interest applied to the security deposit",
+            "No 'secured' branding on the physical card",
+            "Refundable $200 minimum security deposit",
+            "Statement credit for deposit with responsible card use",
+            "Potential upgrade to an unsecured Quicksilver card"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Savor Rewards from Capital One",
+        "provider": "capital_one",
+        "network": "mastercard",
+        "credit": "excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "travel": 0.05,
+            "dining": 0.03,
+            "entertainment": 0.03,
+            "streaming": 0.03,
+            "grocery": 0.03,
+            "other": 0.01
+        },
+        "cash_back_type": "cash back",
+        "apr": 18.49,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/new-savor-card-art/mobile.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=38234",
+        "details_link": "https://www.capitalone.com/credit-cards/savor",
+        "bonus": [
+            {
+                "bonus": 200,
+                "min_spend": 167,
+                "description": "Earn $200 cash bonus after spending $500 on purchases within 3 months of account opening",
+                "is_welcome": true
+            }
+        ],
+        "other": [
+            "Price drop protection provides up to $50 travel credit if flight prices decrease within 10 days",
+            "Price matching available for lower rates found within 24 hours of booking",
+            "Flight cancellation option available up to 3 hours before scheduled departure",
+            "Automatic flight price monitoring and alerts"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Savor Rewards for Students",
+        "provider": "capital_one",
+        "network": "mastercard",
+        "credit": "good-excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "dining": 0.03,
+            "grocery": 0.03,
+            "entertainment": 0.03,
+            "streaming": 0.03,
+            "other": 0.01
+        },
+        "cash_back_type": "cash back",
+        "apr": 29.99,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/new-savor-card-art/mobile.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37952",
+        "details_link": "https://www.capitalone.com/credit-cards/savor-student",
+        "bonus": [
+            {
+                "bonus": 50,
+                "min_spend": 33,
+                "description": "Earn a $50 cash bonus after spending $100 on purchases within 3 months of account opening",
+                "is_welcome": true
+            }
+        ],
+        "other": [
+            "Travel credit for the difference if flight prices drop within 10 days of booking",
+            "Price matching for flights, hotels, and rental cars within 24 hours of booking",
+            "Option to cancel flights up to 3 hours before departure for a partial refund",
+            "Set price alerts to monitor flight costs 24/7"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Savor Rewards for Good Credit from Capital One",
+        "provider": "capital_one",
+        "network": "mastercard",
+        "credit": "good",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "grocery": 0.03,
+            "dining": 0.03,
+            "entertainment": 0.03,
+            "streaming": 0.03,
+            "other": 0.01
+        },
+        "cash_back_type": "cash back",
+        "apr": 29.99,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/new-savor-card-art/mobile.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=38298",
+        "details_link": "https://www.capitalone.com/credit-cards/savor-good-credit",
+        "bonus": [],
+        "other": [
+            "Flight price drop protection up to $50 travel credit",
+            "Price matching on eligible flight, hotel, and rental car bookings",
+            "Flexible flight cancellation up to 3 hours before departure",
+            "24/7 flight price alerts and monitoring"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "SavorOne Rewards from Capital One",
+        "provider": "capital_one",
+        "network": "mastercard",
+        "credit": "fair",
+        "annual_fee": 39.0,
+        "cash_back": {
+            "grocery": 0.03,
+            "dining": 0.03,
+            "entertainment": 0.03,
+            "streaming": 0.03,
+            "other": 0.01
+        },
+        "cash_back_type": "cash back",
+        "apr": 29.99,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/savorone-2025-cardart.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://regression-www-capitalone-com.cloud.capitalone.com//apply/credit-cards/?marketableOfferId=37210",
+        "details_link": "https://www.capitalone.com/credit-cards/savorone",
+        "bonus": [],
+        "other": [
+            "automatic credit line reviews for potential higher limit",
+            "no foreign transaction fees",
+            "rewards do not expire for the life of the account",
+            "pre-approval check without impacting credit score"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Venture Rewards from Capital One",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 95.0,
+        "cash_back": {
+            "travel": 0.05,
+            "other": 0.02
+        },
+        "cash_back_type": "travel miles",
+        "apr": 19.49,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/venture_cardart_prim_323x203-1/mobile.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37729",
+        "details_link": "https://www.capitalone.com/credit-cards/venture",
+        "bonus": [
+            {
+                "bonus": 750,
+                "min_spend": 1333,
+                "description": "75,000 bonus miles after spending $4,000 on purchases within the first 3 months of account opening",
+                "is_welcome": true
+            },
+            {
+                "bonus": 250,
+                "min_spend": 0,
+                "description": "$250 credit for Capital One Travel during the first cardholder year",
+                "is_welcome": false
+            },
+            {
+                "bonus": 120,
+                "min_spend": 0,
+                "description": "Up to $120 statement credit for Global Entry or TSA PreCheck application fees",
+                "is_welcome": false
+            },
+            {
+                "bonus": 50,
+                "min_spend": 0,
+                "description": "$50 experience credit on every Lifestyle Collection hotel or vacation rental stay",
+                "is_welcome": false
+            }
+        ],
+        "other": [
+            "Complimentary Hertz Five Star status including rental car selection upgrades",
+            "50% discount on handcrafted beverages at any Capital One Cafe nationwide"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "Venture X",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 395.0,
+        "cash_back": {
+            "travel": 0.1,
+            "entertainment": 0.05,
+            "other": 0.02
+        },
+        "cash_back_type": "travel miles",
+        "apr": 19.49,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/venturex-cg-static-card-1000x630-2.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37518",
+        "details_link": "https://www.capitalone.com/credit-cards/venture-x",
+        "bonus": [
+            {
+                "bonus": 300,
+                "min_spend": 0,
+                "description": "300 dollar annual travel credit for bookings through Capital One Travel",
+                "is_welcome": false
+            },
+            {
+                "bonus": 100,
+                "min_spend": 0,
+                "description": "100 dollar experience credit for dining, spa, or hotel activities",
+                "is_welcome": false
+            },
+            {
+                "bonus": 50,
+                "min_spend": 0,
+                "description": "50 dollar travel credit if flight prices drop within 10 days of booking",
+                "is_welcome": false
+            }
+        ],
+        "other": [
+            "unlimited access to Capital One Lounges and Landing locations",
+            "membership for 1,300 participating Priority Pass lounges worldwide",
+            "Hertz President\u2019s Circle status upgrade",
+            "complimentary PRIOR subscription for destination guides",
+            "10,000 anniversary bonus miles"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "VentureOne Rewards from Capital One",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "travel": 0.05,
+            "other": 0.0125
+        },
+        "cash_back_type": "travel miles",
+        "apr": 19.99,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/ventureone_cardart_prim_323x203/mobile.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=38243",
+        "details_link": "https://www.capitalone.com/credit-cards/ventureone",
+        "bonus": [
+            {
+                "bonus": 200,
+                "min_spend": 167,
+                "description": "Earn 20,000 bonus miles after spending $500 on purchases within 3 months of account opening",
+                "is_welcome": true
+            }
+        ],
+        "other": [
+            "Up to $50 travel credit if flight prices drop within 10 days of booking",
+            "Price match guarantee for flights, hotels, or rental cars within 24 hours of booking",
+            "Flight cancellation options up to 3 hours before scheduled departure",
+            "24/7 flight price alerts and monitoring"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "VentureOne Rewards for Good Credit from Capital One",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "good",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "travel": 0.05,
+            "other": 0.0125
+        },
+        "cash_back_type": "travel miles",
+        "apr": 29.99,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/ventureone_cardart_prim_323x203/mobile.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=38296",
+        "details_link": "https://www.capitalone.com/credit-cards/ventureone-good-credit",
+        "bonus": [],
+        "other": [
+            "Up to $50 travel credit if flight prices drop within 10 days of booking",
+            "Price match guarantee for flights, hotels, or rental cars within 24 hours",
+            "Option to cancel flights up to 3 hours before departure for a refund",
+            "Price alerts for 24/7 flight cost monitoring"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "Spark 2% Cash",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 95.0,
+        "cash_back": {
+            "travel": 0.05,
+            "other": 0.02
+        },
+        "cash_back_type": "variable",
+        "apr": 24.49,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/compressed-1.5x-spark-cash-card-art.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37969",
+        "details_link": "https://www.capitalone.com/small-business/credit-cards/spark-cash",
+        "bonus": [
+            {
+                "bonus": 1000,
+                "min_spend": 3333,
+                "description": "Earn $1,000 cash bonus after spending $10,000 in the first 3 months",
+                "is_welcome": true
+            }
+        ],
+        "other": [
+            "Free employee and virtual cards",
+            "Roadside assistance for auto-related emergencies",
+            "Extended warranty on eligible items",
+            "Assign account managers to resolve problems and review transactions",
+            "$0 introductory annual fee for the first year"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Spark Cash Plus",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 150.0,
+        "cash_back": {
+            "travel": 0.05,
+            "other": 0.02
+        },
+        "cash_back_type": "cash",
+        "apr": 0.0,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/scp-metal-our-best-offer-compressed.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37963",
+        "details_link": "https://www.capitalone.com/small-business/credit-cards/spark-cash-plus",
+        "bonus": [
+            {
+                "bonus": 2000,
+                "min_spend": 10000,
+                "description": "$2,000 cash bonus after $30,000 spend in the first 3 months",
+                "is_welcome": true
+            }
+        ],
+        "other": [
+            "No preset spending limit",
+            "$150 annual fee refund with $150,000 annual spend",
+            "Free employee and virtual cards",
+            "Extended warranty on eligible purchases",
+            "$2,000 bonus for every $500,000 spent in the first year"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Spark 1.5% Cash Select",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "travel": 0.05,
+            "other": 0.015
+        },
+        "cash_back_type": "cash back",
+        "apr": 16.74,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/spark-cash-plus.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37974",
+        "details_link": "https://www.capitalone.com/small-business/credit-cards/spark-cash-select",
+        "bonus": [
+            {
+                "bonus": 750,
+                "min_spend": 2000,
+                "description": "$750 cash bonus after $6,000 spend within first 3 months",
+                "is_welcome": true
+            }
+        ],
+        "other": [
+            "Roadside assistance for auto-related emergencies",
+            "Extended warranty on eligible items",
+            "Virtual card numbers for safer online payments",
+            "Free employee cards with customized spending limits"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Spark 1% Classic",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "fair",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "travel": 0.05,
+            "other": 0.01
+        },
+        "cash_back_type": "cash back",
+        "apr": 28.99,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/classic_new_2021.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37979",
+        "details_link": "https://www.capitalone.com/small-business/credit-cards/spark-classic",
+        "bonus": [],
+        "other": [
+            "Unlimited 5% cash back on hotels and rental cars booked through Capital One Business Travel",
+            "Free employee cards with individual spending limits and transaction tracking",
+            "Roadside assistance for jump-starting, tire changes, and towing emergencies",
+            "Extended warranty and protection on eligible items purchased with the card"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Spark 2X Miles",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 95.0,
+        "cash_back": {
+            "travel": 0.05,
+            "other": 0.02
+        },
+        "cash_back_type": "travel miles",
+        "apr": 24.49,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/compressed-1.5x-spark-cash-card-art.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37989",
+        "details_link": "https://www.capitalone.com/small-business/credit-cards/spark-miles",
+        "bonus": [
+            {
+                "bonus": 500,
+                "min_spend": 1500,
+                "description": "50,000 miles after spending $4,500 on purchases within the first 3 months",
+                "is_welcome": true
+            },
+            {
+                "bonus": 120,
+                "min_spend": 0,
+                "description": "Up to $120 credit for Global Entry or TSA PreCheck every four years",
+                "is_welcome": false
+            },
+            {
+                "bonus": 50,
+                "min_spend": 0,
+                "description": "Lifestyle Collection benefits including $50 experience credits and room upgrades",
+                "is_welcome": false
+            }
+        ],
+        "other": [
+            "Transfer miles to 15+ travel partners",
+            "Complimentary Hertz Five Star status",
+            "$0 intro annual fee for the first year"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "Spark 1.5X Miles Select",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "travel": 0.05,
+            "other": 0.015
+        },
+        "cash_back_type": "travel miles",
+        "apr": 16.74,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/miles_new_2021.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37996",
+        "details_link": "https://www.capitalone.com/small-business/credit-cards/spark-miles-select",
+        "bonus": [
+            {
+                "bonus": 500,
+                "min_spend": 1500,
+                "description": "50,000 miles after spending $4,500 on purchases within the first 3 months",
+                "is_welcome": true
+            }
+        ],
+        "other": [
+            "transfer miles to 15+ travel partners",
+            "hertz five star status",
+            "rental collision coverage",
+            "roadside assistance"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "Venture X Business",
+        "provider": "capital_one",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 395.0,
+        "cash_back": {
+            "travel": 0.1,
+            "other": 0.02
+        },
+        "cash_back_type": "travel miles",
+        "apr": 0.0,
+        "has_ftf": false,
+        "image": "https://ecm.capitalone.com/WCM/card/products/compressed-1.5x-vxb-card.png",
+        "preapproval_link": "https://www.capitalone.com/credit-cards/preapprove?landingPage=ehpnav",
+        "application_link": "https://applynow.capitalone.com/?productId=37983",
+        "details_link": "https://www.capitalone.com/small-business/credit-cards/venture-x-business",
+        "bonus": [
+            {
+                "bonus": 1500,
+                "min_spend": 10000,
+                "description": "150,000 miles after $30,000 spend in first 3 months",
+                "is_welcome": true
+            },
+            {
+                "bonus": 300,
+                "min_spend": 0,
+                "description": "$300 annual credit for Capital One Business Travel bookings",
+                "is_welcome": false
+            },
+            {
+                "bonus": 120,
+                "min_spend": 0,
+                "description": "Up to $120 statement credit for Global Entry or TSA PreCheck",
+                "is_welcome": false
+            },
+            {
+                "bonus": 100,
+                "min_spend": 0,
+                "description": "$100 experience credit and premium benefits at Premier Collection properties",
+                "is_welcome": false
+            }
+        ],
+        "other": [
+            "Unlimited access to 1,300+ lounges worldwide",
+            "Hertz President's Circle status for primary cardholders",
+            "No preset spending limit based on usage and credit profile",
+            "10,000 bonus miles after each anniversary starting year one"
+        ],
+        "reward_type": "points"
+    }
+]

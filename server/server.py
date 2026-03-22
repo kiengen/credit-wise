@@ -2,146 +2,94 @@ from gemini import parse_unknown_attributes
 
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
-from zenrows import ZenRowsClient
+from playwright.sync_api import sync_playwright
 
 import json
 import re
 import requests
 import sys
 
-def get_web_data(url: str, parser: str = "lxml") -> None|BeautifulSoup:
+def get_web_data(url: str) -> None|BeautifulSoup:
 	response = requests.get(url)
 
 	if not response.status_code == 200:
 		return None
 
-	return BeautifulSoup(response.content, parser)
+	return BeautifulSoup(response.content, 'lxml')
 
-def get_capital_one() -> list:
-	cards = []
-	card_names = {
-		"credit-cards": ["bass-pro-shops", "cabelas", "club-business", "kohls", "platinum", "platinum-secured", "potterybarn", "quicksilver", "quicksilver-good-credit", "quicksilverone", "quicksilver-student", "quicksilver-secured", "rei", "savor", "savor-student", "savor-good-credit", "savorone", "thekeyrewards", "t-mobile", "venture", "venture-x", "ventureone", "ventureone-good-credit", "westelm", "williams-sonoma"],
-		"small-business/credit-cards": ["spark-cash", "spark-cash-plus", "spark-cash-select", "spark-classic", "spark-miles", "spark-miles-select", "venture-x-business"]
-	}
-
-	for sub_url, sub_cards in card_names.items():
-		for card_name in sub_cards:
-			url = f'https://www.capitalone.com/{sub_url}/{card_name}'
-			if not (soup := get_web_data(url)):
-				print(f"Warning: could not pull data for: {card_name}")
-				continue
-
-			res = {}
-			res["provider"] = "capital_one"
-			res["details_link"] = url
-
-			# name
-			if (name := soup.find("h1", class_="product-name")):
-				res["name"] = name.string
-
-			# credit requirement
-			if (credit := soup.find("a", class_="credit-link")):
-				res["credit"] = credit.string
-
-			# picture
-			if (image := soup.find("img", class_="card-image")):
-				res["image"] = image.get("src")
-
-			# preapproval link
-			res["preapproval_link"] = ""
-			if (preapproval_button := soup.find(string=re.compile("[Pp]re-[Aa]pproved"))):
-				if (link := preapproval_button.parent.get("href"))[0] == "/":
-					link = "https://applynow.capitalone.com" + link
-				res["preapproval_link"] = link
-
-			# application link
-			res["application_link"] = ""
-			if (application_button := soup.find(string=re.compile("[Aa]pply [Nn]ow"))):
-				res["application_link"] = application_button.parent.get("href")
-
-			# page text
-			res["page"] = ""
-			if (page := soup.find("shared-cms-container-component", class_="ng-star-inserted")):
-				res["page"] = page.get_text()
-
-
-			cards.append(res)
-
-	# TODO: bj's card has two on one page
-	#url = "bjs-wholesale-club"
-
-	return cards
-
-
-def get_bank_of_america() -> list:
+def get_capital_one() -> dict:
 	cards = []
 
-	soup = get_web_data("https://www.bankofamerica.com/credit-cards/#filter")
-
-	# get card list
-	max_json_len = 10000
-	card_list = soup.find("div", class_="card-list")["data-jcr"]
-	if len(card_list) < max_json_len:
-		card_list = json.loads(card_list)
-	
-	urls = []
-	for card in card_list.values():
-		if (not type(card) == dict):
-			break
-		urls.append("https://www.bankofamerica.com/credit-cards/" + card["learnMore"]["path"] + "?campaign=" + card["campaign"])
-	urls = list(set(urls))
-
-	client = ZenRowsClient("c63ff661cea1c80cc05691d252994bc8399f6e83")
-	params = {"mode": "auto"}
-	for url in urls:
-		new_soup = client.get(url, params=params)
-		print(new_soup.text)
+	if not (soup := get_web_data('https://www.capitalone.com/credit-cards/?filter=compareallcards')):
 		return
 
-		app_info = new_soup.find("div", id="apply-now-default")["data-jcr"]
-		if len(app_info) < max_json_len:
-			app_info = json.loads(app_info)
-		print(app_info)
-		return
-
-		res = {}
-		res["provider"] = "bank_of_america"
-		res["details_link"] = url
-
-		# name
-		res["name"] = ""
-		if (name := new_soup.find("h1", class_="heading title-heading")):
-			name = re.sub(r"^Bank of America®?|Credit Card$", "", name.string).strip()
-
-		# credit requirement
-		if (credit := soup.find("a", class_="credit-link")):
-			res["credit"] = credit.string
-
-		# picture
-		if (image := soup.find("img", class_="card-image small-centered")):
-			res["image"] = image.get("src")
+	card_div = soup.find("section", class_="pfo-product-list ng-star-inserted")
+	html_cards = card_div.find_all("card-pfo-product-list-item-desktop", class_="ng-star-inserted")
+	for card in html_cards:
+		response = {}
+		response["provider"] = "capital_one"
+		response["credit"] = card.find("div", class_="credit-link").string.split(" ")[0].lower()
+		response["name"] = card.find("button", id=re.compile(r"^productNameText.*")).string
+		response["image"] = card.find("button", class_="card-art").img.get("src")
 
 		# application link
-		res["application_link"] = ""
-		if (application_button := soup.find(string=re.compile("[Aa]pply [Nn]ow"))):
-			res["application_link"] = application_button.parent.get("href")
+		response["application_link"] = ""
+		if (application := card.find("a", attrs={"aria-label": "Apply Now"})) is not None:
+			if (url := application.get("href").split(">")[-1])[0] == "/":
+				url = "https://applynow.capitalone.com" + url
+			response["application_link"] = url
 
 		# preapproval link
-		res["preapproval_link"] = ""
-		if (preapproval_button := soup.find(class_="prequalify", id="preQualify_engagement", string=re.compile("[Pp]requalify"))):
-			print("pre:", preapproval_button)
-			if (link := preapproval_button.parent.get("href"))[0] == "/":
-				link = "https://applynow.capitalone.com" + link
-			res["preapproval_link"] = link
+		response["preapproval_link"] = ""
+		if (preapproval := card.find("a", attrs={"aria-label": "See if I'm Pre-Approved"})) is not None:
+			response["preapproval_link"] = "https://www.capitalone.com" + preapproval.get("href").split(">")[-1]
 
-		# page text
-		res["page"] = ""
-		if (page := soup.find("div", id="details")):
-			res["page"] = page.parent.get_text()
+		# more details link
+		response["details_link"] = ""
+		if (details := card.find("a", attrs={"aria-label": "View Card Details"})) is not None:
+			if (url := details.get("href").split(">")[-1])[0] == "/":
+				url = "https://www.capitalone.com" + url
+			response["details_link"] = url
 
-		cards.append(res)
+		# attributes
+		response["attrs"] = []
+		if (attr_div := card.find("div", class_="attribute-list promo-ribbon-disabled ng-star-inserted")) is not None:
+			attrs = attr_div.find_all("li")
+			for i in range(len(attrs)):
+				attrs[i] = attrs[i].contents[0].strip()
+			response["attrs"] = attrs
+		cards.append(response)
 
 	return cards
+
+
+def get_bank_of_america() -> dict:
+	with sync_playwright() as p:
+		browser = p.chromium.launch()
+		page = browser.new_page()
+		page.goto('https://www.bankofamerica.com/credit-cards/')
+		page.wait_for_load_state('networkidle')
+		html = page.inner_html('body')
+
+		result = parse_unknown_attributes(html)
+
+		for idx, card in enumerate(result["cards"]):
+			if not card["details_link"]:
+				continue
+
+			print("doing", card['name'])
+			page.goto(card["details_link"])
+			page.wait_for_load_state('networkidle')
+			detail_html = page.inner_html('body')
+			result["cards"][idx] = parse_unknown_attributes(detail_html)
+
+		browser.close()
+
+	return result
+
+
+def get_american_express() -> dict:
+	pass
 
 def get_wells_fargo():
 	if not (soup := get_web_data("https://creditcards.wellsfargo.com/?sub_channel=SEO&vendor_code=G")):
@@ -218,7 +166,7 @@ def get_chase(attempt=0):
 		if (preapproval_button := csoup.find("div", class_="cmp-personalcardsummary__applywithcconfidence--button")):
 			#print("pre-ap ->", preapproval_button)
 			res["preapproval_link"] = preapproval_button.get("href")
-		
+
 		# apply
 		res["application_link"] = ""
 		if (application_button := csoup.find("a", attrs={"data-lh-name": "ApplyNow", "class": "btn button button--applynow-guest icon-lock chaseanalytics-track-link"})):
@@ -234,27 +182,35 @@ def get_chase(attempt=0):
 		cards.append(res)
 	return cards
 
-
 def main():
 	load_dotenv()
 	cards = get_chase()
 	#cards = get_capital_one()
 	print(cards)
 
-	card_list = []
-	i = 1
-	for card in cards:
-		card_list.append(parse_unknown_attributes(json.dumps(card, ensure_ascii=False)))
+# 	cards = get_chase()
+# 	#cards = get_capital_one()
+# 	#print(cards)
+# 	return
+#
+# 	card_list = []
+# 	i = 1
+# 	for card in cards:
+# 		card_list.append(parse_unknown_attributes(json.dumps(card, ensure_ascii=False)))
+#
+# 	print(json.dumps(card_list, ensure_ascii=False, indent=4))
+# 	return
+#
+# 	#json = json.dumps(parse_unknown_attributes(cards), ensure_ascii=False)
+#
+# 	#cards = json.dumps(get_capital_one(), ensure_ascii=False)
+#
+# 	#return
+# 	#print(json.dumps(parse_unknown_attributes(cards), indent=4, ensure_ascii=False))
 
-	print(json.dumps(card_list, ensure_ascii=False, indent=4))
-	return
-	
-	#json = json.dumps(parse_unknown_attributes(cards), ensure_ascii=False)
-
-	#cards = json.dumps(get_capital_one(), ensure_ascii=False)
-
-	#return
-	#print(json.dumps(parse_unknown_attributes(cards), indent=4, ensure_ascii=False))
+	cards = get_bank_of_america()
+	with open('output.json', 'w') as f:
+		json.dump(cards, f, indent=2, ensure_ascii=False)
 
 if __name__ == "__main__":
 	sys.exit(main())

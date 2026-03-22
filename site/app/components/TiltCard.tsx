@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 
-const TiltCard = ({ src, alt }: { src: string; alt: string }) => {
+const TiltCard = ({ src, alt, details_link }: { src: string; alt: string; details_link: string }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [style, setStyle] = useState<React.CSSProperties>({});
 
@@ -36,11 +36,13 @@ const TiltCard = ({ src, alt }: { src: string; alt: string }) => {
       style={style}
       className="w-full"
     >
-      <img
-        src={src}
-        alt={alt}
-        className="w-full rounded-md object-contain pointer-events-none"
-      />
+      <a href={details_link} target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
+        <img
+          src={src}
+          alt={alt}
+          className="w-full rounded-md object-contain pointer-events-none"
+        />
+      </a>
     </div>
   );
 };

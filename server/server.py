@@ -114,40 +114,47 @@ def get_american_express() -> dict:
 
 	return result
 
-def get_wells_fargo():
+def get_wells_fargo(attempt=0):
 	if not (soup := get_web_data("https://creditcards.wellsfargo.com/?sub_channel=SEO&vendor_code=G")):
+		if attempt < 10:
+			return get_wells_fargo(attempt+1)
 		print("Error: could not get Wells Fargo credit card information")
 		return
-	#print(soup.prettify())
 
 	urls = []
 	cards = soup.find_all("div", class_="card border border-opacity-50 shadow")
+
+	if len(cards) == 0 and attempt < 10:
+		return get_wells_fargo(attempt+1)
+
 	for card in cards:
 		if not (page := card.div.div.div.div.a):
 			print(f"Warning: could not pull data for: {card.get("data-group-name")}")
 			continue
-		urls.append("https://creditcards.wellsfargo.com" + page.get("href"))
+		if (page_name := page.get("href")) and page_name[0] == "/":
+			page_name = "https://creditcards.wellsfargo.com/" + page.get("href")
+		urls.append(page_name)
 	urls = list(set(urls))
 
-	print(urls)
-	for url in urls:
-		new_soup = get_web_data(url)
+	with sync_playwright() as p:
+		browser = p.chromium.launch()
+		page = browser.new_page()
+		for url in urls:
+			page.goto(url)
+			page.wait_for_load_state('networkidle')
+			html = page.inner_html('body')
 
-		res = {}
-		res["provider"] = "wells_fargo"
-		res["details_link"] = url
+			soup = BeautifulSoup(html, 'lxml').find("main", class_="main", id="main-content")
 
-		# name
-		res["name"] = ""
-		if (card_info := new_soup.find("div", class_="card-info")):
-			res["name"] = card_info.p.string
+			res = {}
+			res["provider"] = "wells_fargo"
+			res["details_link"] = url
+			print("url ->", url)
 
-		print(new_soup.prettify())
-
-		# name
-		return
-
-	return
+			# name
+			if (name := soup.find("h1")):
+				res["name"] = name.string
+				print('name ->', res["name"])
 
 def get_chase(attempt=0):
 	cards = []

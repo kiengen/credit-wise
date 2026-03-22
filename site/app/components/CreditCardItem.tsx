@@ -50,7 +50,7 @@ const CreditCardItem = ({
           <div>
             <p className="text-xs text-[var(--color-muted)]">Credit Level</p>
             <p className="text-base font-bold text-[var(--color-primary)] capitalize">
-              {card.credit.replace(/-/g, " ")}
+              {card.credit}
             </p>
           </div>
           {!card.has_ftf && (

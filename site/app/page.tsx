@@ -4,6 +4,7 @@ import { Search } from "lucide-react";
 import { useFilters } from "./hooks/useFilters";
 import CreditCardItem from "./components/CreditCardItem";
 import Sidebar from "./components/Sidebar";
+import TransactionModal from "./components/TransactionModal";
 
 const ComparePage = () => {
   const filters = useFilters();
@@ -67,6 +68,16 @@ const ComparePage = () => {
           </div>
         </div>
       </div>
+      {(filters.importing || filters.pendingTransactions) && (
+        <TransactionModal
+          loading={filters.importing}
+          progress={filters.importProgress}
+          transactions={filters.pendingTransactions ?? []}
+          detectedAirlines={filters.detectedAirlines}
+          onConfirm={filters.applyTransactionSpending}
+          onCancel={filters.cancelImport}
+        />
+      )}
     </div>
   );
 };

@@ -5,16 +5,18 @@ import data from "../data/credit-cards.json";
 
 const rawCards = data.cards;
 
-// --- Spending categories ---
 
 export const spendingCategories = [
-  { key: "dining", label: "Food & Dining", color: "bg-slate-300", description: "Restaurants, Bars, Delivery, Cafes" },
-  { key: "groceries", label: "Groceries", color: "bg-amber-200", description: "Supermarkets, Farmers Markets" },
-  { key: "gas", label: "Gas & Transit", color: "bg-purple-200", description: "Fuel, Public Transit, Rideshare" },
+  { key: "dining", label: "Food", color: "bg-slate-300", description: "Restaurants, Bars, Delivery, Cafes" },
+  { key: "groceries", label: "Grocery", color: "bg-amber-200", description: "Supermarkets, Farmers Markets" },
+  { key: "recurring", label: "Recurring", color: "bg-sky-200", description: "Subscriptions, Phone, Internet, Utilities" },
+  { key: "gas", label: "Gas", color: "bg-purple-200", description: "Fuel" },
+  { key: "entertainment", label: "Entertainment", color: "bg-pink-200", description: "Movies, Concerts, Events" },
+  { key: "foreign", label: "Foreign Purchases", color: "bg-indigo-200", description: "Non-domestic currency" },
   { key: "travel", label: "Travel", color: "bg-rose-200", description: "Flights, Hotels, Car Rentals" },
-  { key: "streaming", label: "Recurring", color: "bg-sky-200", description: "Subscriptions, Phone, Utilities" },
+  { key: "pharmacy", label: "Pharmacy", color: "bg-emerald-200", description: "Drugstores, Prescriptions" },
   { key: "shopping", label: "Online Shopping", color: "bg-lime-200", description: "Amazon, Retail, Electronics" },
-  { key: "other", label: "Everything Else", color: "bg-orange-200", description: "Miscellaneous spending" },
+  { key: "other", label: "All Other Spending", color: "bg-orange-200", description: "Everything else" },
 ] as const;
 
 export type SpendingKey = (typeof spendingCategories)[number]["key"];
@@ -23,24 +25,17 @@ export type SpendingInput = Record<SpendingKey, { amount: number; period: "month
 const defaultSpending: SpendingInput = {
   dining: { amount: 250, period: "monthly" },
   groceries: { amount: 350, period: "monthly" },
-  gas: { amount: 150, period: "monthly" },
-  travel: { amount: 200, period: "monthly" },
-  streaming: { amount: 80, period: "monthly" },
-  shopping: { amount: 200, period: "monthly" },
-  other: { amount: 300, period: "monthly" },
-};
-
-const emptySpending: SpendingInput = {
-  dining: { amount: 0, period: "monthly" },
-  groceries: { amount: 0, period: "monthly" },
-  gas: { amount: 0, period: "monthly" },
-  travel: { amount: 0, period: "monthly" },
-  streaming: { amount: 0, period: "monthly" },
+  recurring: { amount: 50, period: "monthly" },
+  gas: { amount: 50, period: "monthly" },
+  entertainment: { amount: 50, period: "monthly" },
+  foreign: { amount: 0, period: "monthly" },
+  travel: { amount: 100, period: "monthly" },
+  pharmacy: { amount: 50, period: "monthly" },
   shopping: { amount: 0, period: "monthly" },
-  other: { amount: 0, period: "monthly" },
+  other: { amount: 100, period: "monthly" },
 };
 
-// --- Airlines & alliances ---
+
 
 export const airlines = [
   { key: "united", label: "United", alliance: "star-alliance" },
@@ -74,11 +69,9 @@ export const networks = [
   { key: "discover", label: "Discover", logo: "/networks/discover-logo.png" },
 ] as const;
 
-// --- Credit card type & parsing ---
 
 export type CreditCard = (typeof rawCards)[number];
 
-// --- Hook ---
 
 export type SortBy = "bestValue" | "annualFee";
 
@@ -144,8 +137,71 @@ export function useFilters() {
     []
   );
 
-  const resetSpending = useCallback(() => setSpending(emptySpending), []);
+
   const useAverageSpending = useCallback(() => setSpending(defaultSpending), []);
+  const [importing, setImporting] = useState(false);
+  const [importProgress, setImportProgress] = useState({ done: 0, total: 0 });
+  const [pendingTransactions, setPendingTransactions] = useState<
+    { date: string; description: string; amount: number; category: string }[] | null
+  >(null);
+  const [detectedAirlines, setDetectedAirlines] = useState<AirlineKey[]>([]);
+
+  const importStatement = useCallback(async (files: File[]) => {
+    setImporting(true);
+    setPendingTransactions([]);
+    setDetectedAirlines([]);
+    setImportProgress({ done: 0, total: files.length });
+
+    let completed = 0;
+    const allTransactions: { date: string; description: string; amount: number; category: string }[] = [];
+    const allAirlines: AirlineKey[] = [];
+
+    await Promise.all(
+      files.map(async (file) => {
+        const form = new FormData();
+        form.append("file", file);
+        const res = await fetch("/api/parse-statement", { method: "POST", body: form });
+        const json = await res.json();
+        allTransactions.push(...json.transactions);
+        allAirlines.push(...(json.airlines ?? []));
+        completed++;
+        setImportProgress({ done: completed, total: files.length });
+        setPendingTransactions(
+          [...allTransactions].sort((a, b) => a.date.localeCompare(b.date))
+        );
+        setDetectedAirlines([...new Set(allAirlines)]);
+      })
+    );
+    setImporting(false);
+  }, []);
+
+  const applyTransactionSpending = useCallback((monthly: Record<SpendingKey, number>) => {
+    const next = {} as SpendingInput;
+    for (const cat of spendingCategories) {
+      next[cat.key] = { amount: monthly[cat.key] ?? 0, period: "monthly" };
+    }
+    setSpending(next);
+
+    if (detectedAirlines.length > 0) {
+      setSelectedAirlines(new Set(detectedAirlines));
+    }
+
+    setPendingTransactions(null);
+    setDetectedAirlines([]);
+  }, [detectedAirlines]);
+
+  const cancelImport = useCallback(() => setPendingTransactions(null), []);
+
+
+  const creditRank: Record<string, number> = {
+    "rebuilding": 1,
+    "poor": 1,
+    "fair": 2,
+    "good": 3,
+    "good-excellent": 4,
+    "very-good": 4,
+    "excellent": 5,
+  };
 
   const filtered = useMemo(() => {
     let cards = [...rawCards];
@@ -155,6 +211,11 @@ export function useFilters() {
       cards = cards.filter(
         (c) => c.name.toLowerCase().includes(q) || c.provider.toLowerCase().includes(q)
       );
+    }
+
+    if (creditScore !== "unknown") {
+      const userRank = creditRank[creditScore] ?? 5;
+      cards = cards.filter((c) => (creditRank[c.credit] ?? 0) <= userRank);
     }
 
     if (selectedNetworks.size > 0) {
@@ -171,12 +232,12 @@ export function useFilters() {
     }
 
     return cards;
-  }, [rewardsMap, search, sortBy, selectedNetworks]);
+  }, [rewardsMap, search, sortBy, selectedNetworks, creditScore]);
 
   return {
     spending,
     handleSpendingChange,
-    resetSpending,
+
     useAverageSpending,
     search,
     setSearch,
@@ -193,6 +254,13 @@ export function useFilters() {
     selectAlliance,
     selectedNetworks,
     toggleNetwork,
+    importStatement,
+    importing,
+    importProgress,
+    detectedAirlines,
+    pendingTransactions,
+    applyTransactionSpending,
+    cancelImport,
     rewardsMap,
     filtered,
   };

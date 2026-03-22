@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Check, Info } from "lucide-react";
 import TiltCard from "./TiltCard";
 import { spendingCategories, type CreditCard, type SpendingInput } from "../hooks/useFilters";
@@ -56,6 +56,24 @@ const CreditCardItem = ({
     return () => document.removeEventListener("mousedown", handleClick);
   }, [showBreakdown]);
 
+  const [redditData, setRedditData] = useState<any>(null);
+  const [redditLoading, setRedditLoading] = useState(false);
+  const [showReddit, setShowReddit] = useState(false);
+
+  const fetchReddit = useCallback(async () => {
+    if (redditData) { setShowReddit(!showReddit); return; }
+    setShowReddit(true);
+    setRedditLoading(true);
+    const res = await fetch("/api/reddit-reviews", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ cardName: card.name }),
+    });
+    const data = await res.json();
+    setRedditData(data);
+    setRedditLoading(false);
+  }, [redditData, showReddit, card.name]);
+
   const cashBackEntries = Object.entries(card.cash_back);
   const otherRate = card.cash_back.other ?? 0;
   const bonusCategories = cashBackEntries.filter(([k]) => k !== "other" && k !== "choice");
@@ -72,7 +90,7 @@ const CreditCardItem = ({
   const cashBackRewards = estimatedReward + card.annual_fee - perkValue;
 
   const welcomeBonusValue = (card.bonus as any[])
-    .filter((b: any) => b.is_welcome && b.bonus > 0)
+    .filter((b: any) => b.is_welcome && b.bonus > 0 && monthlySpend >= b.min_spend)
     .reduce((sum: number, b: any) => {
       const val = b.bonus_type === "points" ? b.bonus * (centsPerPoint / 100) : b.bonus;
       return sum + val;
@@ -366,7 +384,61 @@ const CreditCardItem = ({
             More Details
           </a>
         )}
+        <button
+          onClick={fetchReddit}
+          disabled={redditLoading}
+          className="rounded-md border border-[var(--color-border)] p-2.5 transition-colors hover:bg-[var(--color-surface)] disabled:opacity-50 cursor-pointer"
+        >
+          <img src="/reddit.png" alt="Reddit" className="h-4 w-4" />
+        </button>
       </div>
+
+      {showReddit && (
+        <div className="border-t border-[var(--color-border)] px-5 py-4">
+          {redditLoading ? (
+            <div className="flex items-center gap-2 text-xs text-[var(--color-muted)]">
+              <span className="h-3 w-3 animate-spin rounded-full border-2 border-[var(--color-border)] border-t-[var(--color-primary)]" />
+              Searching Reddit... this may take a while
+            </div>
+          ) : redditData?.sections?.length > 0 ? (
+            <div className="space-y-3">
+              <p className="text-xs font-bold text-[var(--color-primary)]">What Reddit Says</p>
+              {redditData.sections.map((section: any, i: number) => (
+                <div key={i}>
+                  <p className="text-xs font-semibold text-[var(--color-primary)] mb-1">{section.heading}</p>
+                  <div className="space-y-1.5">
+                    {section.items?.map((item: any, j: number) => (
+                      <p key={j} className="text-xs text-[var(--color-muted)] leading-relaxed">
+                        {item.itemContent}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              {redditData.relatedPosts?.length > 0 && (
+                <div className="border-t border-[var(--color-border)] pt-2 mt-2">
+                  <p className="text-[0.625rem] font-semibold text-[var(--color-muted)] mb-1">Related Posts</p>
+                  <div className="flex flex-wrap gap-x-3 gap-y-1">
+                    {redditData.relatedPosts.slice(0, 5).map((post: any, i: number) => (
+                      <a
+                        key={i}
+                        href={post.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[0.625rem] text-[var(--color-accent)] hover:underline"
+                      >
+                        {post.title}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : (
+            <p className="text-xs text-[var(--color-muted)]">No Reddit discussions found for this card.</p>
+          )}
+        </div>
+      )}
     </div>
   );
 };

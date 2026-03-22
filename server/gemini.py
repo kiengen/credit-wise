@@ -26,7 +26,8 @@ Networks: list = [
 
 CashBackType: list = [
 	"cash",
-	"points"
+	"points",
+	"cashback"
 ]
 
 # TODO: see which values are commonly used

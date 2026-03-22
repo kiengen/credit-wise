@@ -89,7 +89,28 @@ def get_bank_of_america() -> dict:
 
 
 def get_american_express() -> dict:
-	pass
+	with sync_playwright() as p:
+		browser = p.chromium.launch()
+		page = browser.new_page()
+		page.goto('https://www.americanexpress.com/us/credit-cards/category/all/')
+		page.wait_for_load_state('networkidle')
+		html = page.inner_html('body')
+
+		result = parse_unknown_attributes(html, multiple=True)
+
+		for idx, card in enumerate(result["cards"]):
+			if not card["details_link"]:
+				continue
+
+			print("doing", card['name'])
+			page.goto(card["details_link"])
+			page.wait_for_load_state('networkidle')
+			detail_html = page.inner_html('body')
+			result["cards"][idx] = parse_unknown_attributes(detail_html)
+
+		browser.close()
+
+	return result
 
 def get_wells_fargo():
 	if not (soup := get_web_data("https://creditcards.wellsfargo.com/?sub_channel=SEO&vendor_code=G")):

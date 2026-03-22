@@ -1,5 +1,2 @@
 # Ignore Mac system files
 .DS_Store
-
-# Ignore my test repo
-test

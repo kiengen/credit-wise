@@ -9,6 +9,7 @@ type Filters = ReturnType<typeof useFilters>;
 
 const Sidebar = ({ filters }: { filters: Filters }) => {
   const [viewAnnual, setViewAnnual] = useState(false);
+  const [recurringExpanded, setRecurringExpanded] = useState(false);
   const [airlinesExpanded, setAirlinesExpanded] = useState(false);
   const [airlinesMounted, setAirlinesMounted] = useState(false);
   const [airlinesAnimateIn, setAirlinesAnimateIn] = useState(false);
@@ -29,6 +30,7 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
   }, [airlinesExpanded]);
 
   const monthlyTotal = spendingCategories.reduce((sum, cat) => {
+    if ("sub" in cat && cat.sub) return sum;
     const input = spending[cat.key];
     return sum + (input.period === "monthly" ? input.amount : input.amount / 12);
   }, 0);
@@ -60,22 +62,40 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
 
         <div className="divide-y divide-[var(--color-border)]">
           {spendingCategories.map((cat) => {
+            const isSub = "sub" in cat && cat.sub === true;
+            if (isSub && !recurringExpanded) return null;
+
             const { amount, period } = spending[cat.key];
             const monthly = period === "monthly" ? amount : amount / 12;
             const pct = monthlyTotal > 0 ? Math.round((monthly / monthlyTotal) * 100) : 0;
 
+            const isParent = cat.key === "recurring";
+
             return (
-              <AmountInput
-                key={cat.key}
-                label={cat.label}
-                value={Math.round((viewAnnual ? monthly * 12 : monthly) * 100) / 100}
-                onCommit={(val) => {
-                  const monthlyVal = viewAnnual ? val / 12 : val;
-                  filters.handleSpendingChange(cat.key, monthlyVal, "monthly");
-                }}
-                barColor={cat.color}
-                pct={pct}
-              />
+              <div key={cat.key} onClick={isParent ? () => setRecurringExpanded(!recurringExpanded) : undefined} className={isParent ? "cursor-pointer" : ""}>
+                <AmountInput
+                  label={cat.label}
+                  value={Math.round((viewAnnual ? monthly * 12 : monthly) * 100) / 100}
+                  onCommit={(val) => {
+                    const monthlyVal = viewAnnual ? val / 12 : val;
+                    filters.handleSpendingChange(cat.key, monthlyVal, "monthly");
+
+                    const recurringMonthly = spending.recurring.period === "monthly" ? spending.recurring.amount : spending.recurring.amount / 12;
+                    const streamingMonthly = spending.streaming.period === "monthly" ? spending.streaming.amount : spending.streaming.amount / 12;
+
+                    if (cat.key === "streaming" && monthlyVal > recurringMonthly) {
+                      filters.handleSpendingChange("recurring", monthlyVal, "monthly");
+                    }
+                    if (cat.key === "recurring" && recurringMonthly > 0) {
+                      const ratio = streamingMonthly / recurringMonthly;
+                      filters.handleSpendingChange("streaming", Math.round(monthlyVal * ratio * 100) / 100, "monthly");
+                    }
+                  }}
+                  barColor={cat.color}
+                  pct={pct}
+                  sub={isSub}
+                />
+              </div>
             );
           })}
         </div>

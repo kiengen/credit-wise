@@ -15,7 +15,7 @@ const responseSchema: Schema = {
           category: {
             type: SchemaType.STRING,
             format: "enum",
-            enum: ["dining", "groceries", "recurring", "gas", "entertainment", "foreign", "travel", "pharmacy", "shopping", "other"],
+            enum: ["dining", "grocery", "recurring", "streaming", "gas", "entertainment", "foreign", "travel", "pharmacy", "shopping", "other"],
             description: "Spending category",
           },
         },
@@ -57,8 +57,9 @@ export async function POST(req: NextRequest) {
 
 Categories:
 - dining: Restaurants, bars, delivery, cafes, fast food
-- groceries: Supermarkets, grocery stores, farmers markets
-- recurring: Subscriptions, phone, internet, utilities
+- grocery: Supermarkets, grocery stores, farmers markets
+- recurring: Phone, internet, utilities
+- streaming: Netflix, Spotify, streaming subscriptions
 - gas: Fuel
 - entertainment: Movies, concerts, events, sports
 - foreign: Non-domestic currency purchases

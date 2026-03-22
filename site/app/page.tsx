@@ -61,6 +61,9 @@ const ComparePage = () => {
                     key={card.name}
                     card={card}
                     estimatedReward={filters.rewardsMap[card.name]}
+                    firstYearReward={filters.firstYearMap[card.name]}
+                    monthlySpend={filters.monthlySpend}
+                    spending={filters.spending}
                   />
                 ))}
               </div>

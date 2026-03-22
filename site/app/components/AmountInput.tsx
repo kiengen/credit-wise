@@ -8,12 +8,14 @@ const AmountInput = ({
   onCommit,
   barColor,
   pct,
+  sub,
 }: {
   label: string;
   value: number;
   onCommit: (val: number) => void;
   barColor: string;
   pct: number;
+  sub?: boolean;
 }) => {
   const [draft, setDraft] = useState(value.toFixed(2));
 
@@ -22,9 +24,9 @@ const AmountInput = ({
   }, [value]);
 
   return (
-    <div className="px-5 py-3">
+    <div className={sub ? "px-5 pb-2 pt-0 pl-9" : "px-5 py-3"}>
       <div className="flex items-center justify-between">
-        <span className="text-sm font-semibold text-[var(--color-primary)]">
+        <span className={`font-semibold text-[var(--color-primary)] ${sub ? "text-xs text-[var(--color-muted)]" : "text-sm"}`}>
           {label}
         </span>
         <div className="flex items-center gap-0.5 rounded-sm border-2 border-transparent bg-transparent px-3 pr-0 py-1 transition-colors duration-200 hover:border-[var(--color-border)] focus-within:border-[var(--color-border)]">

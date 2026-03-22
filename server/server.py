@@ -71,7 +71,7 @@ def get_bank_of_america() -> dict:
 		page.wait_for_load_state('networkidle')
 		html = page.inner_html('body')
 
-		result = parse_unknown_attributes(html)
+		result = parse_unknown_attributes(html, multiple=True)
 
 		for idx, card in enumerate(result["cards"]):
 			if not card["details_link"]:

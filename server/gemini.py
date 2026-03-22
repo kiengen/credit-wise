@@ -38,6 +38,13 @@ class Credit(Enum):
 	excellent = 4
 
 
+class Bonus(BaseModel):
+	bonus: float = Field(description="The monetary value of the bonus")
+	min_spend: float = Field(description="The minimum spending required to earn the bonus")
+	description: str = Field(description="A brief description of the bonus")
+	is_welcome: bool = Field(description="Whether this is a welcome/sign-up bonus")
+	bonus_type: str = Field(description="The type of bonus (e.g. cash, points)", enum=CashBackType)
+
 class CreditCard(BaseModel):
 	name: str = Field(description="The name of the credit card")
 	provider: str = Field(description="The company who is offering the credit card", enum=Providers)
@@ -52,14 +59,17 @@ class CreditCard(BaseModel):
 	preapproval_link: str = Field(description="The URL to the official page where one can get preapproved for the card")
 	application_link: str = Field(description="The URL to the official page where one can get apply for the card")
 	details_link: str = Field(description="The URL to the official page where one can find more information about the card")
-	bonus: list[str] = Field(description="Any additional perks that can be redeemed one time after being granted the credit card")
+	bonus: list[Bonus] = Field(description="Any additional perks that can be redeemed one time after being granted the credit card")
 	other: list[str] = Field(description="Any other relevant information about the card provided as a list of strings")
+	reward_type: str = Field(description="The type of reward the card offers (e.g. cash, points)", enum=CashBackType)
 
 class CardList(BaseModel):
 	cards: list[CreditCard] = Field(description="A list of credit cards objects")
 
-def parse_unknown_attributes(data: str) -> str:
+def parse_unknown_attributes(data: str, multiple: bool = False) -> str:
 	client = genai.Client()
+
+	schema = CardList.model_json_schema() if multiple else CreditCard.model_json_schema()
 
 	prompt = r"""
 	Role & Context
@@ -94,13 +104,14 @@ def parse_unknown_attributes(data: str) -> str:
 			"bass_pro_shops": 0.05,
 			"other": 0.01
 		},
-		"bonus": ["Earn up to $50 in CLUB Points for free gear"],
-		"other": ["Beat any price offered local retailers by 5%"]
+		"cash_back_type": "cash",
+		"bonus": [{"bonus": 50, "min_spend": 0, "description": "Earn up to $50 in CLUB Points for free gear", "is_welcome": true, "bonus_type": "cash"}],
+		"other": ["Beat any price offered local retailers by 5%"],
+		"reward_type": "cash"
 	}
 
 	Please apply the following logic:
-	One Card Per Page: [Do not worry about secondary/alternative options presented on the web page: focus only on the primary card offered.]
-	Remove Attachment: [Do not use the pronouns "I/we/they" for any of the features, for example "we offer feature x...", just mention the feature]
+	""" + ("One Card Per Page: [Do not worry about secondary/alternative options presented on the web page: focus only on the primary card offered.]\n" if not multiple else "Multiple Cards: [Extract ALL credit cards found in the data.]\n") + r"""	Remove Attachment: [Do not use the pronouns "I/we/they" for any of the features, for example "we offer feature x...", just mention the feature]
 	Unemotional Tone: [For the bonus and other categories, without altering wording or removing precision, the tone of any overly stimulating text should be flattened and made more neutral through editing capitalization, punctuation, and overly emotional adjectives]
 	Data Normalization: [e.g., Strip whitespace, remove symbols like $ or % (EXCEPT for 'other' and 'bonus'), and in general ensure that standardized data processing is possible]
 	Data Serialization: [Do not group "similar" features in one bullet point, list each point individually; however, do not include redundant or overly specific information]
@@ -117,13 +128,16 @@ def parse_unknown_attributes(data: str) -> str:
 	""" + data
 
 	response = client.models.generate_content(
-	    model="gemini-3-flash-preview",
+	    model="gemini-3.1-pro-preview",
 	    contents=prompt,
 	    config={
 	        "response_mime_type": "application/json",
-	        "response_json_schema": CreditCard.model_json_schema(),
+	        "response_json_schema": schema,
 	    },
 	)
 
-	gemini_result = CreditCard.model_validate_json(response.text)
+	if multiple:
+		gemini_result = CardList.model_validate_json(response.text)
+	else:
+		gemini_result = CreditCard.model_validate_json(response.text)
 	return gemini_result.model_dump()

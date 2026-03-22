@@ -125,20 +125,39 @@ const CreditCardItem = ({
                   )}
                   <div className="space-y-0.5 mt-0.5">
                     {(() => {
-                      const cb = card.cash_back as Record<string, number>;
+                      const cb = card.cash_back as unknown as Record<string, number>;
                       const baseRate = cb.other ?? 0;
+                      const choiceRate = cb.choice;
+                      let bestChoiceKey: string | null = null;
+
+                      if (choiceRate) {
+                        let bestGain = 0;
+                        for (const cat of spendingCategories) {
+                          if ("sub" in cat && cat.sub) continue;
+                          const input = spending[cat.key];
+                          const annual = input.period === "monthly" ? input.amount * 12 : input.amount;
+                          const currentRate = cb[cat.key] ?? baseRate;
+                          if (choiceRate > currentRate) {
+                            const gain = annual * (choiceRate - currentRate);
+                            if (gain > bestGain) { bestGain = gain; bestChoiceKey = cat.key; }
+                          }
+                        }
+                      }
+
                       let otherAnnual = 0;
                       let otherReward = 0;
-                      const rows: { label: string; annual: number; rate: number; reward: number }[] = [];
+                      const rows: { label: string; annual: number; rate: number; reward: number; isChoice?: boolean }[] = [];
 
                       for (const cat of spendingCategories) {
                         const input = spending[cat.key];
                         const annual = input.period === "monthly" ? input.amount * 12 : input.amount;
                         if (annual === 0) continue;
-                        const rate = cb[cat.key] ?? baseRate;
+                        let rate = cb[cat.key] ?? baseRate;
+                        const isChoice = bestChoiceKey === cat.key;
+                        if (isChoice) rate = choiceRate!;
                         const reward = annual * rate * multiplier;
-                        if (cb[cat.key] !== undefined && cb[cat.key] !== baseRate) {
-                          rows.push({ label: cat.label, annual, rate, reward });
+                        if ((cb[cat.key] !== undefined && cb[cat.key] !== baseRate) || isChoice) {
+                          rows.push({ label: cat.label, annual, rate, reward, isChoice });
                         } else {
                           otherAnnual += annual;
                           otherReward += annual * baseRate * multiplier;
@@ -152,7 +171,10 @@ const CreditCardItem = ({
                         <>
                           {rows.map((r) => (
                             <div key={r.label} className="flex items-center justify-between text-[0.625rem] text-[var(--color-muted)]">
-                              <span>{r.label} (${r.annual.toLocaleString()} x {rateLabel(r.rate)})</span>
+                              <span>
+                                {r.label} (${r.annual.toLocaleString()} x {rateLabel(r.rate)})
+                                {r.isChoice && <span className="ml-1 text-[var(--color-accent)]">★ Choice</span>}
+                              </span>
                               <span>${r.reward.toLocaleString("en-US", { maximumFractionDigits: 0 })}</span>
                             </div>
                           ))}

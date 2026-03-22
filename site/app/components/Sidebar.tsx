@@ -3,13 +3,14 @@
 import { useState, useEffect, useRef } from "react";
 import AmountInput from "./AmountInput";
 import ProfileRow from "./ProfileRow";
-import { spendingCategories, airlines, alliances, networks, type useFilters } from "../hooks/useFilters";
+import { spendingCategories, airlines, alliances, networks, type useFilters, type SpendingKey } from "../hooks/useFilters";
 
 type Filters = ReturnType<typeof useFilters>;
 
 const Sidebar = ({ filters }: { filters: Filters }) => {
   const [viewAnnual, setViewAnnual] = useState(false);
   const [recurringExpanded, setRecurringExpanded] = useState(false);
+  const [travelExpanded, setTravelExpanded] = useState(false);
   const [airlinesExpanded, setAirlinesExpanded] = useState(false);
   const [airlinesMounted, setAirlinesMounted] = useState(false);
   const [airlinesAnimateIn, setAirlinesAnimateIn] = useState(false);
@@ -61,43 +62,103 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
         </div>
 
         <div className="divide-y divide-[var(--color-border)]">
-          {spendingCategories.map((cat) => {
-            const isSub = "sub" in cat && cat.sub === true;
-            if (isSub && !recurringExpanded) return null;
+          {(() => {
+            let currentParent: string | null = null;
+            const parentSubs: Record<string, string[]> = {};
 
-            const { amount, period } = spending[cat.key];
-            const monthly = period === "monthly" ? amount : amount / 12;
-            const pct = monthlyTotal > 0 ? Math.round((monthly / monthlyTotal) * 100) : 0;
+            // Build parent -> subs mapping
+            for (const cat of spendingCategories) {
+              const isSub = "sub" in cat && cat.sub === true;
+              if (!isSub) {
+                currentParent = cat.key;
+              } else if (currentParent) {
+                if (!parentSubs[currentParent]) parentSubs[currentParent] = [];
+                parentSubs[currentParent].push(cat.key);
+              }
+            }
 
-            const isParent = cat.key === "recurring";
+            const expandedParents: Record<string, boolean> = {
+              recurring: recurringExpanded,
+              travel: travelExpanded,
+            };
+            const toggleParent: Record<string, () => void> = {
+              recurring: () => setRecurringExpanded(!recurringExpanded),
+              travel: () => setTravelExpanded(!travelExpanded),
+            };
 
-            return (
-              <div key={cat.key} onClick={isParent ? () => setRecurringExpanded(!recurringExpanded) : undefined} className={isParent ? "cursor-pointer" : ""}>
-                <AmountInput
-                  label={cat.label}
-                  value={Math.round((viewAnnual ? monthly * 12 : monthly) * 100)}
-                  onCommit={(val) => {
-                    const monthlyVal = viewAnnual ? val / 12 : val;
-                    filters.handleSpendingChange(cat.key, monthlyVal, "monthly");
+            currentParent = null;
 
-                    const recurringMonthly = spending.recurring.period === "monthly" ? spending.recurring.amount : spending.recurring.amount / 12;
-                    const streamingMonthly = spending.streaming.period === "monthly" ? spending.streaming.amount : spending.streaming.amount / 12;
+            return spendingCategories.map((cat) => {
+              const isSub = "sub" in cat && cat.sub === true;
 
-                    if (cat.key === "streaming" && monthlyVal > recurringMonthly) {
-                      filters.handleSpendingChange("recurring", monthlyVal, "monthly");
-                    }
-                    if (cat.key === "recurring" && recurringMonthly > 0) {
-                      const ratio = streamingMonthly / recurringMonthly;
-                      filters.handleSpendingChange("streaming", Math.round(monthlyVal * ratio * 100), "monthly");
-                    }
-                  }}
-                  barColor={cat.color}
-                  pct={pct}
-                  sub={isSub}
-                />
-              </div>
-            );
-          })}
+              if (!isSub) currentParent = cat.key;
+
+              // Find this sub's parent
+              let parentKey: string | null = null;
+              if (isSub) {
+                for (const [p, subs] of Object.entries(parentSubs)) {
+                  if (subs.includes(cat.key)) { parentKey = p; break; }
+                }
+              }
+
+              if (isSub && parentKey && !expandedParents[parentKey]) return null;
+
+              const { amount, period } = spending[cat.key];
+              const monthly = period === "monthly" ? amount : amount / 12;
+              const pct = monthlyTotal > 0 ? Math.round((monthly / monthlyTotal) * 100) : 0;
+
+              const hasSubcategories = !!parentSubs[cat.key];
+
+              const getMonthly = (key: string) => {
+                const s = spending[key as SpendingKey];
+                return s.period === "monthly" ? s.amount : s.amount / 12;
+              };
+
+              return (
+                <div
+                  key={cat.key}
+                  onClick={hasSubcategories ? toggleParent[cat.key] : undefined}
+                  className={hasSubcategories ? "cursor-pointer" : ""}
+                >
+                  <AmountInput
+                    label={cat.label}
+                    value={Math.round((viewAnnual ? monthly * 12 : monthly) * 100) / 100}
+                    onCommit={(val) => {
+                      const monthlyVal = viewAnnual ? val / 12 : val;
+                      filters.handleSpendingChange(cat.key, monthlyVal, "monthly");
+
+                      // If sub exceeds parent, bump parent
+                      if (isSub && parentKey) {
+                        const parentMonthly = getMonthly(parentKey);
+                        if (monthlyVal > parentMonthly) {
+                          filters.handleSpendingChange(parentKey as SpendingKey, monthlyVal, "monthly");
+                        }
+                      }
+
+                      // If parent lowered, scale subs proportionally
+                      if (hasSubcategories) {
+                        const oldParentMonthly = getMonthly(cat.key);
+                        if (oldParentMonthly > 0) {
+                          const ratio = monthlyVal / oldParentMonthly;
+                          for (const subKey of parentSubs[cat.key]) {
+                            const subMonthly = getMonthly(subKey);
+                            filters.handleSpendingChange(
+                              subKey as SpendingKey,
+                              Math.round(subMonthly * ratio * 100) / 100,
+                              "monthly"
+                            );
+                          }
+                        }
+                      }
+                    }}
+                    barColor={cat.color}
+                    pct={pct}
+                    sub={isSub}
+                  />
+                </div>
+              );
+            });
+          })()}
         </div>
 
         <div className="border-t border-[var(--color-border)] px-5 py-3">

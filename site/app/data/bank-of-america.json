@@ -1,0 +1,434 @@
+[
+    {
+        "name": "Bank of America Customized Cash Rewards Credit Card",
+        "provider": "bank_of_america",
+        "network": "visa",
+        "credit": "good-excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "choice": 0.03,
+            "grocery": 0.02,
+            "other": 0.01
+        },
+        "apr": 17.49,
+        "has_ftf": true,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8ckn_cshsigcm_v_250x158.png",
+        "preapproval_link": "https://secure.bankofamerica.com/apply-now-services/cards-prequal/initialize-prequal?requesttype=CCAPQ&campaignid=4079538&productoffercode=DY&appflow=USA&locale=en_US&lobchannelcode=BPCSPP",
+        "application_link": "https://www.bankofamerica.com/upac/#/get-started?campaignId=4079538&productOfferCode=DY",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
+        "bonus": [
+            {
+                "bonus": 200.0,
+                "min_spend": 1000.0,
+                "description": "Online cash rewards bonus after making at least $1,000 in purchases in the first 90 days of account opening",
+                "is_welcome": true,
+                "bonus_type": "cash"
+            }
+        ],
+        "other": [
+            "0% Intro APR for the first 15 billing cycles for purchases and any balance transfers made within the first 60 days",
+            "Bank of America Preferred Rewards members earn 25% to 75% more cash back on every purchase",
+            "Optional Balance Connect for overdraft protection when linked to an eligible checking account"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Bank of America\u00ae Unlimited Cash Rewards Credit Card",
+        "provider": "bank_of_america",
+        "network": "visa",
+        "credit": "good-excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.015
+        },
+        "apr": 17.49,
+        "has_ftf": true,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8cty_cshsigcm_v_250x157.png",
+        "preapproval_link": "https://secure.bankofamerica.com/apply-now-services/cards-prequal/initialize-prequal?requesttype=CCAPQ&campaignid=4079262&productoffercode=G6&appflow=USA&locale=en_US&lobchannelcode=BPCSPP",
+        "application_link": "https://www.bankofamerica.com/upac/#/get-started?campaignId=4079262&productOfferCode=G6",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
+        "bonus": [
+            {
+                "bonus": 200.0,
+                "min_spend": 1000.0,
+                "description": "Online $200 cash rewards bonus after making at least $1,000 in purchases in the first 90 days of account opening",
+                "is_welcome": true,
+                "bonus_type": "cash"
+            }
+        ],
+        "other": [
+            "Earn 2% cash back on purchases for the first year from account opening",
+            "0% Intro APR for the first 15 billing cycles for purchases and any balance transfers made within the first 60 days",
+            "Bank of America Preferred Rewards members earn 25%-75% more cash back on every purchase",
+            "Balance Connect for overdraft protection helps prevent declined purchases, returned checks or other overdrafts when linking an eligible checking account"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "BankAmericard Credit Card",
+        "provider": "bank_of_america",
+        "network": "mastercard",
+        "credit": "good-excellent",
+        "annual_fee": 0.0,
+        "cash_back": {},
+        "apr": 14.99,
+        "has_ftf": true,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/bofa_nrwcm_mc_300x188.png",
+        "preapproval_link": "https://secure.bankofamerica.com/apply-now-services/cards-prequal/initialize-prequal?requesttype=CCAPQ&campaignid=4079406&productoffercode=5Y&appflow=USA&locale=en_US&lobchannelcode=BPCSPP",
+        "application_link": "https://secure.bankofamerica.com/ogateway/public/apply-now-services/iaoconsumer/rest/public/usa/initialize/cc/v1?requesttype=usa&campaignId=4079406&productOfferCode=5Y&locale=en_US",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/bankamericard-credit-card/",
+        "bonus": [],
+        "other": [
+            "0% introductory APR for 21 billing cycles on purchases and balance transfers made within 60 days",
+            "No penalty APR for late payments",
+            "Balance Connect for overdraft protection",
+            "Access to credit education on topics like using credit responsibly and budgeting"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Bank of America Travel Rewards Credit Card",
+        "provider": "bank_of_america",
+        "network": "visa",
+        "credit": "good",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.015
+        },
+        "apr": 18.24,
+        "has_ftf": false,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8blm_trvsigcm_v_250x158.png",
+        "preapproval_link": "https://secure.bankofamerica.com/apply-now-services/cards-prequal/initialize-prequal?requesttype=CCAPQ&campaignid=4079333&productoffercode=75&appflow=USA&locale=en_US&lobchannelcode=BPCSPP",
+        "application_link": "https://secure.bankofamerica.com/ogateway/public/apply-now-services/iaoconsumer/rest/public/usa/initialize/cc/v1?requesttype=usa&campaignId=4079333&productOfferCode=75&locale=en_US",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
+        "bonus": [
+            {
+                "bonus": 250.0,
+                "min_spend": 1000.0,
+                "description": "25,000 online bonus points after spending at least $1,000 in purchases in the first 90 days of account opening",
+                "is_welcome": true,
+                "bonus_type": "points"
+            }
+        ],
+        "other": [
+            "0% Intro APR for the first 15 billing cycles for purchases and any balance transfers made within the first 60 days",
+            "Bank of America Preferred Rewards members earn 25% to 75% more points on every purchase",
+            "Points can be redeemed for a statement credit to pay for flights, hotel stays, vacation rentals, baggage fees, and restaurants",
+            "Points do not expire as long as the account remains open"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "Bank of America Premium Rewards Credit Card",
+        "provider": "bank_of_america",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 95.0,
+        "cash_back": {
+            "travel": 0.02,
+            "dining": 0.02,
+            "other": 0.015
+        },
+        "apr": 19.49,
+        "has_ftf": false,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8CAL_prmsigcm_v_250_158.png",
+        "preapproval_link": "https://secure.bankofamerica.com/apply-now-services/cards-prequal/initialize-prequal?requesttype=CCAPQ&campaignid=4079485&productoffercode=UN&appflow=USA&locale=en_US&lobchannelcode=BPCSPP",
+        "application_link": "https://secure.bankofamerica.com/ogateway/public/apply-now-services/iaoconsumer/rest/public/usa/initialize/cc/v1?requesttype=usa&campaignId=4079485&productOfferCode=UN&locale=en_US",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-credit-card/",
+        "bonus": [
+            {
+                "bonus": 60000.0,
+                "min_spend": 4000.0,
+                "description": "Earn 60,000 online bonus points after making at least $4,000 in purchases in the first 90 days of account opening",
+                "is_welcome": true,
+                "bonus_type": "points"
+            },
+            {
+                "bonus": 100.0,
+                "min_spend": 0.0,
+                "description": "Up to $100 in Airline Incidental Statement Credits annually for qualifying purchases",
+                "is_welcome": false,
+                "bonus_type": "cash"
+            },
+            {
+                "bonus": 100.0,
+                "min_spend": 0.0,
+                "description": "Up to $100 in Airport Security Statement Credits for TSA PreCheck or Global Entry application fees every four years",
+                "is_welcome": false,
+                "bonus_type": "cash"
+            }
+        ],
+        "other": [
+            "Bank of America Preferred Rewards members earn 25% to 75% more points on every purchase",
+            "Travel Insurance protections to assist with trip delays, cancellations, interruptions, baggage delays, lost luggage, and emergency evacuation",
+            "Purchase protections including Warranty Manager Service, Return Protection, and Purchase Security",
+            "Visa Signature concierge service for travel planning, restaurant recommendations, and event reservations"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "Bank of America Premium Rewards Elite Credit Card",
+        "provider": "bank_of_america",
+        "network": "visa",
+        "credit": "excellent",
+        "annual_fee": 550.0,
+        "cash_back": {
+            "travel": 0.02,
+            "dining": 0.02,
+            "other": 0.015
+        },
+        "apr": 19.49,
+        "has_ftf": false,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8cud_premrewelite_v_250x158.png",
+        "preapproval_link": "https://secure.bankofamerica.com/apply-now-services/cards-prequal/initialize-prequal?requesttype=CCAPQ&campaignid=4079322&productoffercode=R9&appflow=USA&locale=en_US&lobchannelcode=BPCSPP",
+        "application_link": "https://secure.bankofamerica.com/ogateway/public/apply-now-services/iaoconsumer/rest/public/usa/initialize/cc/v1?requesttype=usa&campaignId=4079322&productOfferCode=R9&locale=en_US",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-elite-credit-card/",
+        "bonus": [
+            {
+                "bonus": 75000.0,
+                "min_spend": 5000.0,
+                "description": "75,000 online bonus points after making at least $5,000 in purchases in the first 90 days of account opening",
+                "is_welcome": true,
+                "bonus_type": "points"
+            }
+        ],
+        "other": [
+            "Receive up to $300 annually in Airline Incidental Statement Credits",
+            "Receive up to $150 annually for lifestyle conveniences",
+            "Receive up to $120 in statement credits for Global Entry or TSA PreCheck application fees every four years",
+            "Complimentary Priority Pass Select Memberships for unlimited access to airport lounges"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "Bank of America\u00ae Customized Cash Rewards Credit Card for Students",
+        "provider": "bank_of_america",
+        "network": "visa",
+        "credit": "fair",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "choice": 0.03,
+            "grocery": 0.02,
+            "other": 0.01
+        },
+        "apr": 17.49,
+        "has_ftf": true,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8ckn_cshsigcm_v_250x158.png",
+        "preapproval_link": "https://secure.bankofamerica.com/apply-now-services/cards-prequal/initialize-prequal?requesttype=CCAPQ&campaignid=4079543&productoffercode=V7&appflow=USA&locale=en_US&lobchannelcode=BPCSPP",
+        "application_link": "https://www.bankofamerica.com/upac/#/get-started?campaignId=4079543&productOfferCode=V7",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/student-cash-back-credit-card/",
+        "bonus": [
+            {
+                "bonus": 200.0,
+                "min_spend": 1000.0,
+                "description": "Earn a $200 online cash rewards bonus after making at least $1,000 in purchases in the first 90 days of account opening",
+                "is_welcome": true,
+                "bonus_type": "cash"
+            },
+            {
+                "bonus": 0.0,
+                "min_spend": 0.0,
+                "description": "Earn an additional 3% cash back in your choice category for the first year of account opening",
+                "is_welcome": true,
+                "bonus_type": "cash"
+            }
+        ],
+        "other": [
+            "0% Intro APR for the first 15 billing cycles for purchases and for balance transfers made within the first 60 days of account opening",
+            "Elevated cash back rates apply to the first $2,500 in combined choice category, grocery store, and wholesale club purchases each quarter, earning 1% thereafter",
+            "Choice category can be updated once each calendar month",
+            "Bank of America Preferred Rewards members earn 25%-75% more cash back on every purchase"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Bank of America Unlimited Cash Rewards Credit Card for Students",
+        "provider": "bank_of_america",
+        "network": "visa",
+        "credit": "fair",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.015
+        },
+        "apr": 17.49,
+        "has_ftf": true,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8cty_cshsigcm_v_250x157.png",
+        "preapproval_link": "https://secure.bankofamerica.com/apply-now-services/cards-prequal/initialize-prequal?requesttype=CCAPQ&campaignid=4079267&productoffercode=2A&appflow=USA&locale=en_US&lobchannelcode=BPCSPP",
+        "application_link": "https://www.bankofamerica.com/upac/#/get-started?campaignId=4079267&productOfferCode=2A",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-student-credit-card/",
+        "bonus": [
+            {
+                "bonus": 200.0,
+                "min_spend": 1000.0,
+                "description": "Online $200 cash rewards bonus after making at least $1,000 in purchases in the first 90 days of account opening",
+                "is_welcome": true,
+                "bonus_type": "cash"
+            }
+        ],
+        "other": [
+            "Earn 2% cash back on all purchases for the first year from account opening",
+            "0% Intro APR for the first 15 billing cycles for purchases, and for any balance transfers made within the first 60 days",
+            "Preferred Rewards members earn 25% to 75% more cash back on every purchase",
+            "Optional Balance Connect for overdraft protection when linked to an eligible checking account"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "BankAmericard Credit Card for Students",
+        "provider": "bank_of_america",
+        "network": "mastercard",
+        "credit": "fair",
+        "annual_fee": 0.0,
+        "cash_back": {},
+        "apr": 14.99,
+        "has_ftf": true,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8cae_nrwcm_mc_250x158.png",
+        "preapproval_link": "https://secure.bankofamerica.com/apply-now-services/cards-prequal/initialize-prequal?requesttype=CCAPQ&campaignid=4079408&productoffercode=42&appflow=USA&locale=en_US&lobchannelcode=BPCSPP",
+        "application_link": "https://secure.bankofamerica.com/ogateway/public/apply-now-services/iaoconsumer/rest/public/usa/initialize/cc/v1?requesttype=usa&campaignId=4079408&productOfferCode=42&locale=en_US",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/low-interest-student-credit-card/",
+        "bonus": [],
+        "other": [
+            "0% introductory APR for the first 21 billing cycles for purchases and any balance transfers made within 60 days of opening the account",
+            "5% fee applies to all balance transfers",
+            "$0 Liability Guarantee covers fraudulent transactions made by others",
+            "Balance Connect provides optional overdraft protection when linked to an eligible checking account"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Bank of America\u00ae Travel Rewards Credit Card for Students",
+        "provider": "bank_of_america",
+        "network": "visa",
+        "credit": "fair",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.015
+        },
+        "apr": 17.49,
+        "has_ftf": false,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8blm_trvcm_v_250x158.png",
+        "preapproval_link": "https://secure.bankofamerica.com/apply-now-services/cards-prequal/initialize-prequal?requesttype=CCAPQ&campaignid=4079335&productoffercode=A4&appflow=USA&locale=en_US&lobchannelcode=BPCSPP",
+        "application_link": "https://secure.bankofamerica.com/ogateway/public/apply-now-services/iaoconsumer/rest/public/usa/initialize/cc/v1?requesttype=usa&campaignId=4079335&productOfferCode=A4&locale=en_US",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/student-rewards-credit-card/",
+        "bonus": [
+            {
+                "bonus": 250.0,
+                "min_spend": 1000.0,
+                "description": "Earn 25,000 online bonus points after making at least 1000 in purchases in the first 90 days of account opening",
+                "is_welcome": true,
+                "bonus_type": "points"
+            }
+        ],
+        "other": [
+            "0% Intro APR for the first 15 billing cycles for purchases and balance transfers made within the first 60 days of opening the account",
+            "Preferred Rewards members earn 25% to 75% more points on every purchase",
+            "$0 Liability Guarantee for fraudulent transactions",
+            "Optional overdraft protection by linking an eligible checking account"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "Customized Cash Rewards Secured Credit Card",
+        "provider": "bank_of_america",
+        "network": "other",
+        "credit": "rebuilding",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "choice": 0.03,
+            "grocery": 0.02,
+            "other": 0.01
+        },
+        "apr": 27.49,
+        "has_ftf": true,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8ckn_cshcm_v_250x158.png",
+        "preapproval_link": "https://secure.bankofamerica.com/secure-offers/public/customizedOffers/?subchannel=ECCSLC&request_locale=en_US",
+        "application_link": "https://secure.bankofamerica.com/ogateway/public/apply-now-services/iaoconsumer/rest/public/usa/initialize/cc/v1?requesttype=usa&campaignId=4079151&productOfferCode=6S&locale=en_US",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/cash-back-secured-credit-card/",
+        "bonus": [
+            {
+                "bonus": 0.0,
+                "min_spend": 0.0,
+                "description": "Earn an additional 3% first-year cash back bonus in the category of your choice",
+                "is_welcome": true,
+                "bonus_type": "cash"
+            }
+        ],
+        "other": [
+            "Requires a minimum security deposit of $200 up to a maximum of $5000",
+            "Periodic account reviews may qualify you to have your security deposit returned",
+            "Cash back in choice category and grocery/wholesale clubs is limited to the first $2,500 in combined purchases each quarter",
+            "Optional Balance Connect for overdraft protection when linked to an eligible checking account"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Bank of America Unlimited Cash Rewards Secured Credit Card",
+        "provider": "bank_of_america",
+        "network": "other",
+        "credit": "rebuilding",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.015
+        },
+        "apr": 27.49,
+        "has_ftf": true,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8cty_cshcm_v_250x157.png",
+        "preapproval_link": "https://secure.bankofamerica.com/secure-offers/public/customizedOffers/?subchannel=ECCSLC&request_locale=en_US",
+        "application_link": "https://secure.bankofamerica.com/ogateway/public/apply-now-services/iaoconsumer/rest/public/usa/initialize/cc/v1?requesttype=usa&campaignId=4079271&productOfferCode=Q3&locale=en_US",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-secured-credit-card/",
+        "bonus": [],
+        "other": [
+            "Earn 2% cash back on purchases for the first year from account opening",
+            "Minimum security deposit of $200 up to $5,000 required to open the account",
+            "Periodic account reviews may qualify you to have your security deposit returned",
+            "Access to credit education on topics like using credit cards responsibly and budgeting"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "BankAmericard Secured Credit Card",
+        "provider": "bank_of_america",
+        "network": "mastercard",
+        "credit": "rebuilding",
+        "annual_fee": 0.0,
+        "cash_back": {},
+        "apr": 25.99,
+        "has_ftf": true,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8cae_nrwcm_mc_250x158.png",
+        "preapproval_link": "https://secure.bankofamerica.com/secure-offers/public/customizedOffers/?subchannel=ECCSLC&request_locale=en_US",
+        "application_link": "https://secure.bankofamerica.com/ogateway/public/apply-now-services/iaoconsumer/rest/public/usa/initialize/cc/v1?requesttype=usa&campaignId=4079410&productOfferCode=SP&locale=en_US",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/secured-credit-card/",
+        "bonus": [],
+        "other": [
+            "Requires a minimum security deposit of $200 (maximum of $5,000) to open the account",
+            "Accounts are periodically reviewed to qualify for a security deposit return",
+            "Provides access to FICO Score updated monthly",
+            "Optional Balance Connect service helps prevent declined purchases and overdrafts"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Bank of America\u00ae Secured Travel Rewards Credit Card",
+        "provider": "bank_of_america",
+        "network": "visa",
+        "credit": "rebuilding",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.015
+        },
+        "apr": 27.49,
+        "has_ftf": false,
+        "image": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8blm_trvcm_v_250x158.png",
+        "preapproval_link": "https://secure.bankofamerica.com/secure-offers/public/customizedOffers/?subchannel=ECCSLC&request_locale=en_US",
+        "application_link": "https://secure.bankofamerica.com/ogateway/public/apply-now-services/iaoconsumer/rest/public/usa/initialize/cc/v1?requesttype=usa&campaignId=4079337&productOfferCode=5S&locale=en_US",
+        "details_link": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-secured-credit-card/",
+        "bonus": [],
+        "other": [
+            "A minimum security deposit of $200 (maximum of $5,000) is required to open the account",
+            "Security deposit may be returned based on periodic reviews of overall credit history",
+            "Preferred Rewards members earn 25% to 75% more points on every purchase",
+            "Redeem points for a statement credit to pay for travel and dining purchases"
+        ],
+        "reward_type": "points"
+    }
+]

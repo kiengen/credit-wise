@@ -45,8 +45,11 @@ const ComparePage = () => {
                 onChange={(e) => filters.setSortBy(e.target.value as typeof filters.sortBy)}
                 className="h-10 rounded-lg border border-[var(--color-border)] bg-white px-3 text-sm font-medium text-[var(--color-primary)] focus:border-[var(--color-accent)] focus:outline-none"
               >
-                <option value="bestValue">Best Value</option>
+                <option value="bestValue">Best Ongoing Value</option>
+                <option value="bestFirstYear">Best First Year Value</option>
+                <option value="bestFirstYearBonus">Best Welcome Bonus</option>
                 <option value="annualFee">Lowest Annual Fee</option>
+                <option value="lowestInterest">Lowest Interest Rate</option>
               </select>
             </div>
 

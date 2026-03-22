@@ -388,9 +388,12 @@
         "credit": "excellent",
         "annual_fee": 395.0,
         "cash_back": {
-            "travel": 0.1,
+            "travel": 0.02,
             "entertainment": 0.05,
-            "other": 0.02
+            "other": 0.02,
+            "flights": 0.05,
+            "hotels": 0.1,
+            "rental_cars": 0.1
         },
         "cash_back_type": "travel miles",
         "apr": 19.49,
@@ -498,8 +501,11 @@
         "credit": "excellent",
         "annual_fee": 95.0,
         "cash_back": {
-            "travel": 0.05,
-            "other": 0.02
+            "travel": 0.02,
+            "other": 0.02,
+            "flights": 0.02,
+            "hotels": 0.05,
+            "rental_cars": 0.05
         },
         "cash_back_type": "variable",
         "apr": 24.49,
@@ -533,8 +539,11 @@
         "credit": "excellent",
         "annual_fee": 150.0,
         "cash_back": {
-            "travel": 0.05,
-            "other": 0.02
+            "travel": 0.02,
+            "other": 0.02,
+            "flights": 0.02,
+            "hotels": 0.05,
+            "rental_cars": 0.05
         },
         "cash_back_type": "cash",
         "apr": 0.0,
@@ -568,8 +577,11 @@
         "credit": "excellent",
         "annual_fee": 0.0,
         "cash_back": {
-            "travel": 0.05,
-            "other": 0.015
+            "travel": 0.015,
+            "other": 0.015,
+            "flights": 0.015,
+            "hotels": 0.05,
+            "rental_cars": 0.05
         },
         "cash_back_type": "cash back",
         "apr": 16.74,
@@ -602,8 +614,11 @@
         "credit": "fair",
         "annual_fee": 0.0,
         "cash_back": {
-            "travel": 0.05,
-            "other": 0.01
+            "travel": 0.01,
+            "other": 0.01,
+            "flights": 0.01,
+            "hotels": 0.05,
+            "rental_cars": 0.05
         },
         "cash_back_type": "cash back",
         "apr": 28.99,
@@ -628,8 +643,11 @@
         "credit": "excellent",
         "annual_fee": 95.0,
         "cash_back": {
-            "travel": 0.05,
-            "other": 0.02
+            "travel": 0.02,
+            "other": 0.02,
+            "flights": 0.02,
+            "hotels": 0.05,
+            "rental_cars": 0.05
         },
         "cash_back_type": "travel miles",
         "apr": 24.49,
@@ -675,8 +693,11 @@
         "credit": "excellent",
         "annual_fee": 0.0,
         "cash_back": {
-            "travel": 0.05,
-            "other": 0.015
+            "travel": 0.015,
+            "other": 0.015,
+            "flights": 0.015,
+            "hotels": 0.05,
+            "rental_cars": 0.05
         },
         "cash_back_type": "travel miles",
         "apr": 16.74,
@@ -709,8 +730,11 @@
         "credit": "excellent",
         "annual_fee": 395.0,
         "cash_back": {
-            "travel": 0.1,
-            "other": 0.02
+            "travel": 0.02,
+            "other": 0.02,
+            "flights": 0.05,
+            "hotels": 0.1,
+            "rental_cars": 0.1
         },
         "cash_back_type": "travel miles",
         "apr": 0.0,

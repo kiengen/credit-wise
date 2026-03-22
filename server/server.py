@@ -93,7 +93,9 @@ def get_american_express() -> dict:
 		browser = p.chromium.launch()
 		page = browser.new_page()
 		page.goto('https://www.americanexpress.com/us/credit-cards/category/all/')
-		page.wait_for_load_state('networkidle')
+		# page.wait_for_load_state('networkidle')
+		from time import sleep
+		sleep(10)
 		html = page.inner_html('body')
 
 		result = parse_unknown_attributes(html, multiple=True)
@@ -103,10 +105,10 @@ def get_american_express() -> dict:
 				continue
 
 			print("doing", card['name'])
-			page.goto(card["details_link"])
-			page.wait_for_load_state('networkidle')
-			detail_html = page.inner_html('body')
-			result["cards"][idx] = parse_unknown_attributes(detail_html)
+			# page.goto(card["details_link"])
+			# page.wait_for_load_state('networkidle')
+			# detail_html = page.inner_html('body')
+			# result["cards"][idx] = parse_unknown_attributes(detail_html)
 
 		browser.close()
 
@@ -205,9 +207,9 @@ def get_chase(attempt=0):
 
 def main():
 	load_dotenv()
-	cards = get_chase()
+	# cards = get_chase()
 	#cards = get_capital_one()
-	print(cards)
+	# print(cards)
 
 # 	cards = get_chase()
 # 	#cards = get_capital_one()
@@ -229,7 +231,7 @@ def main():
 # 	#return
 # 	#print(json.dumps(parse_unknown_attributes(cards), indent=4, ensure_ascii=False))
 
-	cards = get_bank_of_america()
+	cards = get_american_express()
 	with open('output.json', 'w') as f:
 		json.dump(cards, f, indent=2, ensure_ascii=False)
 

@@ -107,7 +107,8 @@ def parse_unknown_attributes(data: str) -> str:
 	Misleading Advertising: [Do not include perks/benefits which are true of all credit cards in general, or generally expected to be true]
 	Cherrypicking: [Choose, at a maximum, 4 bonuses and 4 other perks. Do not include more than 4. Pick the ones that are the most unique or useful to use and know]
 	Edge Cases: [e.g., If any fees/benefits are applied for the first few years only, use the general case and add the bonus information as a bonus]
-	Brevity: [For the other/bonus strings, be as succinct as possible without causing confusion or vagueness]
+	Brevity: [For the other/bonus strings, be as succinct as possible without causing confusion or vagueness. The shorter the text, the better.]
+	Cleaning: [If there are any cards with very little data (ex: no page field and no name/urls) to the extent that it cannot be used, remove it.]
 
 	Output Format
 	Please provide an array of Attribute objects in a json.dumps format.

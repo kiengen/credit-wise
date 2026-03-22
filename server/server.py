@@ -2,6 +2,7 @@ from gemini import parse_unknown_attributes
 
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
+from playwright.sync_api import sync_playwright
 
 import json
 import re
@@ -62,16 +63,41 @@ def get_capital_one() -> dict:
 	return cards
 
 
+def get_bank_of_america() -> dict:
+	with sync_playwright() as p:
+		browser = p.chromium.launch()
+		page = browser.new_page()
+		page.goto('https://www.bankofamerica.com/credit-cards/')
+		page.wait_for_load_state('networkidle')
+		html = page.inner_html('body')
+
+		result = parse_unknown_attributes(html)
+
+		for idx, card in enumerate(result["cards"]):
+			if not card["details_link"]:
+				continue
+
+			print("doing", card['name'])
+			page.goto(card["details_link"])
+			page.wait_for_load_state('networkidle')
+			detail_html = page.inner_html('body')
+			result["cards"][idx] = parse_unknown_attributes(detail_html)
+
+
+		browser.close()
+
+	return result
+
+
 def get_american_express() -> dict:
 	pass
 
 
 def main():
 	load_dotenv()
-	cards = json.dumps(get_capital_one(), ensure_ascii=False)
-
-	return
-	#print(json.dumps(parse_unknown_attributes(cards), indent=4, ensure_ascii=False))
+	cards = get_bank_of_america()
+	with open('output.json', 'w') as f:
+		json.dump(cards, f, indent=2, ensure_ascii=False)
 
 if __name__ == "__main__":
 	sys.exit(main())

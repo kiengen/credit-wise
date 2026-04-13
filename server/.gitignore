@@ -1,3 +1,7 @@
+# output files
+tmp_cards*.json
+output_*.json
+
 # vim
 *.swp
 

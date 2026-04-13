@@ -55,7 +55,7 @@ class CreditCard(BaseModel):
 	cash_back: dict[str, float] = Field(description="Dictionary with different categories as keys and the cash back percentage (value / 100) as the values. For general cash back ('on all other purchases'), 'other' should be used). THE MAX VALUE SHOULD BE 1.")
 	cash_back_type: str = Field(description="Specifies what the cashback will get you", enum=CashBackType)
 	apr: float = Field(description="General Annual Percentage Rate (not intro APR) for the card", minimum=0, maximum=100)
-	has_ftf: bool = Field(description="Whether the card has foreign transaction fees or not. If it is not specified, true")
+	has_ftf: bool = Field(description="True if the card has or might have foreign transaction fees, else False. If it is not specified, this should default to True")
 	image: str = Field(description="The URL to an image of the credit card")
 	preapproval_link: str = Field(description="The URL to the official page where one can get preapproved for the card")
 	application_link: str = Field(description="The URL to the official page where one can get apply for the card")
@@ -68,6 +68,10 @@ class CardList(BaseModel):
 	cards: list[CreditCard] = Field(description="A list of credit cards objects")
 
 def parse_unknown_attributes(data: str, multiple: bool = False) -> str:
+	if len(data) > 22000:
+		print("Error: Gemini: Too much data passed! Try to make the page smaller.")
+		return data
+
 	client = genai.Client()
 
 	schema = CardList.model_json_schema() if multiple else CreditCard.model_json_schema()
@@ -130,7 +134,7 @@ def parse_unknown_attributes(data: str, multiple: bool = False) -> str:
 	""" + data
 
 	response = client.models.generate_content(
-	    model="gemini-3.1-pro-preview",
+	    model="gemini-3.1-flash-lite-preview",
 	    contents=prompt,
 	    config={
 	        "response_mime_type": "application/json",

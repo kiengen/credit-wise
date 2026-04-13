@@ -1,0 +1,264 @@
+[
+    {
+        "name": "Citi Strata Elite Card",
+        "provider": "citi",
+        "network": "mastercard",
+        "credit": "good-excellent",
+        "annual_fee": 595.0,
+        "cash_back": {
+            "hotels": 0.12,
+            "flights": 0.06,
+            "dining": 0.03,
+            "other": 0.015
+        },
+        "apr": 20.49,
+        "has_ftf": false,
+        "image": "images/strata-elite-dsk.fc987627983eaaf8cdd3.png",
+        "preapproval_link": "",
+        "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3131",
+        "details_link": "terms-0a7aa062-8382-4c16-b523-8998cc00a5d5",
+        "bonus": [
+            {
+                "bonus": 750.0,
+                "min_spend": 6000.0,
+                "description": "Earn 75,000 bonus points after spending $6,000 within 3 months of account opening",
+                "is_welcome": true,
+                "bonus_type": "points"
+            },
+            {
+                "bonus": 300.0,
+                "min_spend": 0.0,
+                "description": "Up to $300 annual hotel benefit on stays of two nights or more booked through cititravel.com",
+                "is_welcome": false,
+                "bonus_type": "cash"
+            },
+            {
+                "bonus": 200.0,
+                "min_spend": 0.0,
+                "description": "Up to $200 annual statement credits on choice of up to two select brands",
+                "is_welcome": false,
+                "bonus_type": "cash"
+            },
+            {
+                "bonus": 200.0,
+                "min_spend": 0.0,
+                "description": "Up to $200 annual statement credits for Blacklane global chauffeur service",
+                "is_welcome": false,
+                "bonus_type": "cash"
+            }
+        ],
+        "other": [
+            "Complimentary access to 1,500+ airport lounges worldwide with Priority Pass Select membership"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "Citi Strata Card",
+        "provider": "citi",
+        "network": "mastercard",
+        "credit": "good-excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "hotels": 0.05,
+            "grocery": 0.03,
+            "gas": 0.03,
+            "choice": 0.03,
+            "dining": 0.02,
+            "other": 0.01
+        },
+        "apr": 18.49,
+        "has_ftf": true,
+        "image": "images/strata-dsk.b939008e2de3f136f6cf.png",
+        "preapproval_link": "",
+        "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3131",
+        "details_link": "terms-e01ad03c-41c2-40bc-ab23-3ad82991b531",
+        "bonus": [
+            {
+                "bonus": 200.0,
+                "min_spend": 1000.0,
+                "description": "Earn 20,000 bonus points after spending $1,000 within 3 months of account opening",
+                "is_welcome": true,
+                "bonus_type": "points"
+            }
+        ],
+        "other": [
+            "0% introductory APR for 15 months on purchases",
+            "0% introductory APR for 15 months on balance transfers",
+            "Transfer points to participating airline and hotel partners"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "Citi Double Cash Card",
+        "provider": "citi",
+        "network": "mastercard",
+        "credit": "good-excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.02
+        },
+        "apr": 17.49,
+        "has_ftf": true,
+        "image": "images/double-cash-dsk.2d4ef4f13bb063243a7a.webp",
+        "preapproval_link": "",
+        "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3000",
+        "details_link": "terms-eda30ca7-af48-45a6-8dda-65eb94eb2133",
+        "bonus": [
+            {
+                "bonus": 200.0,
+                "min_spend": 1500.0,
+                "description": "Earn $200 cash back bonus after spending $1,500 on purchases in the first 6 months",
+                "is_welcome": true,
+                "bonus_type": "cash"
+            }
+        ],
+        "other": [
+            "0% introductory APR for 18 months on balance transfers"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Citi Diamond Preferred Card",
+        "provider": "citi",
+        "network": "mastercard",
+        "credit": "good-excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.0
+        },
+        "apr": 16.49,
+        "has_ftf": true,
+        "image": "images/diamond-preferred-dsk.fbe1be3c40340108d6e8.webp",
+        "preapproval_link": "",
+        "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3000",
+        "details_link": "terms-d30294a6-d7a4-4baf-ac8a-ab4fece195c5",
+        "bonus": [],
+        "other": [
+            "0% introductory APR for 21 months on balance transfers",
+            "0% introductory APR for 12 months on purchases",
+            "Access to purchase tickets to exclusive events through Citi Entertainment",
+            "Free access to FICO score online"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Citi Strata Premier Card",
+        "provider": "citi",
+        "network": "mastercard",
+        "credit": "good-excellent",
+        "annual_fee": 95.0,
+        "cash_back": {
+            "hotels": 0.1,
+            "travel": 0.03,
+            "dining": 0.03,
+            "grocery": 0.03,
+            "gas": 0.03,
+            "other": 0.01
+        },
+        "apr": 19.49,
+        "has_ftf": false,
+        "image": "images/premier-dsk.f49109440d275b671813.webp",
+        "preapproval_link": "",
+        "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3131",
+        "details_link": "terms-f9e44f6b-2dcd-4a26-96c0-c5f5202d9d81",
+        "bonus": [
+            {
+                "bonus": 600.0,
+                "min_spend": 4000.0,
+                "description": "Earn 60,000 bonus points after spending $4,000 within 3 months of account opening",
+                "is_welcome": true,
+                "bonus_type": "points"
+            },
+            {
+                "bonus": 100.0,
+                "min_spend": 0.0,
+                "description": "$100 annual discount on a single hotel stay of $500 or more booked through CitiTravel.com",
+                "is_welcome": false,
+                "bonus_type": "cash"
+            }
+        ],
+        "other": [
+            "Trip delay protection and common carrier trip cancellation coverage",
+            "Lost or damaged luggage protection",
+            "Car rental insurance coverage"
+        ],
+        "reward_type": "points"
+    },
+    {
+        "name": "Citi Simplicity Card",
+        "provider": "citi",
+        "network": "mastercard",
+        "credit": "good-excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "other": 0.0
+        },
+        "apr": 17.49,
+        "has_ftf": true,
+        "image": "images/simplicity-dsk.1c600ef48468165f9406.webp",
+        "preapproval_link": "",
+        "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3018",
+        "details_link": "terms-c95e9269-788f-4955-af82-fdff3c8fc250",
+        "bonus": [],
+        "other": [
+            "0% introductory APR for 18 months on purchases",
+            "0% introductory APR for 18 months on balance transfers",
+            "No late fees and no penalty rates",
+            "Flexible payment due dates"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Costco Anywhere Visa Card by Citi",
+        "provider": "citi",
+        "network": "visa",
+        "credit": "good-excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "gas": 0.04,
+            "dining": 0.03,
+            "travel": 0.03,
+            "shopping": 0.02,
+            "other": 0.01
+        },
+        "apr": 18.74,
+        "has_ftf": false,
+        "image": "images/costco-consumer-dsk.aa0d81d06d29d68966a1.webp",
+        "preapproval_link": "",
+        "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3405",
+        "details_link": "terms-5e1afb98-b8c9-44ed-b1a5-d75fa99b07c2",
+        "bonus": [],
+        "other": [
+            "Cash back rewards are distributed annually as a reward certificate redeemable at Costco",
+            "Costco membership required"
+        ],
+        "reward_type": "cash"
+    },
+    {
+        "name": "Costco Anywhere Visa Business Card by Citi",
+        "provider": "citi",
+        "network": "visa",
+        "credit": "good-excellent",
+        "annual_fee": 0.0,
+        "cash_back": {
+            "gas": 0.04,
+            "dining": 0.03,
+            "travel": 0.03,
+            "shopping": 0.02,
+            "other": 0.01
+        },
+        "apr": 18.74,
+        "has_ftf": false,
+        "image": "images/costco-business-dsk.3a149c0b297bfa998c01.webp",
+        "preapproval_link": "",
+        "application_link": "https://citicards.citi.com/usc/_bt_appredir.asp?BT_TX=1&app=UNSOL&TID=153261&ID=3406",
+        "details_link": "terms-50e6f1df-8271-423a-838b-75e8cd2010d7",
+        "bonus": [],
+        "other": [
+            "Cash back rewards are distributed annually as a reward certificate redeemable at Costco",
+            "Costco membership required",
+            "Add employees as authorized users"
+        ],
+        "reward_type": "cash"
+    }
+]

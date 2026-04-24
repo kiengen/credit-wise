@@ -384,13 +384,6 @@ const CreditCardItem = ({
             More Details
           </a>
         )}
-        <button
-          onClick={fetchReddit}
-          disabled={redditLoading}
-          className="rounded-md border border-[var(--color-border)] p-2.5 transition-colors hover:bg-[var(--color-surface)] disabled:opacity-50 cursor-pointer"
-        >
-          <img src="/reddit.png" alt="Reddit" className="h-4 w-4" />
-        </button>
       </div>
 
       {showReddit && (

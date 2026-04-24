@@ -15,7 +15,13 @@ class Chase(BaseParser):
 		if len(html_cards) == 0:
 			return None
 
+		card_dict = {}
+
 		for card in html_cards:
+			# internal id to make sure there aren't duplicates
+			if (card_id := card.get("data-card-id")) in card_dict:
+				continue
+
 			res = {}
 			res["provider"] = "chase"
 
@@ -43,6 +49,8 @@ class Chase(BaseParser):
 					url = "https://secure.chase.com" + url
 				res["application_link"] = url
 
+			card_dict[card_id] = res["name"]
+
 			result.append(res)
 
 		return result
@@ -61,7 +69,7 @@ class Chase(BaseParser):
 				soup.find("main") or
 				soup)
 
-		result["page"] = str(self._clean_page_soup(main))
+		result["page"] = self._clean_page(main)
 
 		# application link
 		if (not "application_link" in keys) or (result["application_link"] == ""):

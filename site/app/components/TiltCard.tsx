@@ -2,9 +2,16 @@
 
 import { useRef, useState } from "react";
 
-const TiltCard = ({ src, alt, details_link }: { src: string; alt: string; details_link: string }) => {
+const TiltCard = ({ src, alt, details_link, default_src }: { src: string; alt: string; details_link: string, default_src: string }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [style, setStyle] = useState<React.CSSProperties>({});
+  const [display_src, setSrc] = useState<string>(src);
+
+  const handleImageLoadError = (e: Error) => {
+    if (default_src !== display_src) {
+      setSrc(default_src);
+    }
+  }
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const el = ref.current;
@@ -38,9 +45,11 @@ const TiltCard = ({ src, alt, details_link }: { src: string; alt: string; detail
     >
       <a href={details_link} target="_blank" rel="noopener noreferrer" className="block cursor-pointer">
         <img
-          src={src}
+          src={display_src}
           alt={alt}
           className="w-full rounded-md object-contain pointer-events-none"
+          onError={handleImageLoadError}
+          loading="lazy"
         />
       </a>
     </div>

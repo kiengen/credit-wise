@@ -1,0 +1,3231 @@
+[
+  {
+    "name": "World of Hyatt Business Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 199.0,
+    "cash_back": {
+      "hyatt_hotels": 0.04,
+      "top_three_categories": 0.02,
+      "fitness_club_gym_memberships": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F6yKBjSOdSt1XOOPElHsVEV%2F5dd07e2c772125992b25a88c173481f1%2Fworld_hyatt_biz_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J3LT&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/world-of-hyatt/hyatt-business-card?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 80000.0,
+        "min_spend": 10000.0,
+        "description": "Earn 80,000 bonus points after spending $10,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Receive World of Hyatt Discoverist status",
+      "Earn 5 tier-qualifying night credits for every $10,000 spent per calendar year",
+      "Earn up to $100 in Hyatt statement credits annually",
+      "10% point redemption bonus when spending $50,000 in a calendar year"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "World of Hyatt Business Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 199.0,
+    "cash_back": {
+      "hyatt_hotels": 0.04,
+      "top_three_categories": 0.02,
+      "fitness_club_gym": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F6yKBjSOdSt1XOOPElHsVEV%2F5dd07e2c772125992b25a88c173481f1%2Fworld_hyatt_biz_card.png&w=640&q=75",
+    "preapproval_link": "",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J3LT&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=1a1ae75f-a6fd-4c72-b9e5-c54cb17eae7f#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/world-of-hyatt/hyatt-business-card?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 80000.0,
+        "min_spend": 10000.0,
+        "description": "Earn 80,000 bonus points after spending 10,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Receive World of Hyatt Discoverist status",
+      "Earn 5 tier-qualifying night credits for every 10,000 spent annually",
+      "Up to 100 annual Hyatt statement credits",
+      "10% bonus point redemption back after spending 50,000 in a calendar year"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "IHG One Rewards Premier Business Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 99.0,
+    "cash_back": {
+      "ihg_hotels": 0.1,
+      "travel": 0.05,
+      "dining": 0.05,
+      "gas_stations": 0.05,
+      "other": 0.03
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7qM7TsaOlG2NQJummCiLcA%2F730b67dee9365d4b11211d463db7e085%2FIHG_One_Premier_Biz_card_alt.png&w=640&q=75",
+    "preapproval_link": "",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HPHV&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=6686c3d1-6434-4421-a188-4e29d62f8e8d#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/IHG/business-premier?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 140000.0,
+        "min_spend": 4000.0,
+        "description": "Earn 140,000 bonus points after spending 4,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 60000.0,
+        "min_spend": 9000.0,
+        "description": "Earn 60,000 bonus points after spending a total of 9,000 in the first 6 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Anniversary free night valid at properties up to 40,000 points",
+      "Platinum Elite status included",
+      "4th night free on consecutive 4-night reward stays",
+      "Up to 120 statement credit for Global Entry, TSA PreCheck, or NEXUS every 4 years"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Southwest Rapid Rewards Premier Business Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "good-excellent",
+    "annual_fee": 149.0,
+    "cash_back": {
+      "southwest_airlines": 0.03,
+      "gas_stations": 0.02,
+      "restaurants": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F4ddMQ93iOPGyfjEHdF4y9w%2Ff2e67c1f9e9cd69c5fa4b1de6b9bf0f3%2Fswa_premier_biz_card__1_.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSQQ&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 60000.0,
+        "min_spend": 3000.0,
+        "description": "Earn 60,000 points after spending $3,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "6,000 anniversary bonus points each year",
+      "First checked bag free for cardmember and up to 8 companions",
+      "15% flight discount promo code annually",
+      "2,000 tier qualifying points for every $5,000 spent annually"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Southwest Rapid Rewards Performance Business Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 299.0,
+    "cash_back": {
+      "southwest_airlines": 0.04,
+      "hotel_accommodations": 0.02,
+      "gas_stations": 0.02,
+      "dining": 0.02,
+      "local_transit": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F1ILGnjxcvePyve597OKoW4%2Fcc194919b792904e40009bb90f78c326%2Fswa_performance_biz_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSQW&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/southwest/performance-business?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 80000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 80,000 points after spending $5,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Receive 9,000 anniversary bonus points each year",
+      "Complimentary preferred seat selection and upgrades to extra legroom when available",
+      "First checked bag free for cardmember and up to 8 passengers",
+      "Statement credit up to $120 for Global Entry, TSA PreCheck, or NEXUS every 4 years"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "United Club Business Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 695.0,
+    "cash_back": {
+      "united_flights": 0.07,
+      "hotel_stays_renowned": 0.05,
+      "other_united_purchases": 0.02,
+      "other": 0.015
+    },
+    "cash_back_type": "points",
+    "apr": 23.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F4OGuzTUpSE26zcMpgyk6yb%2F33af0f0ae2b8cdba212e98d420515aeb%2Funited_club_biz_card.png&w=640&q=75",
+    "preapproval_link": "",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HZQ9&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/united/united-club-business?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 100000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 100,000 bonus miles after spending 5,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 2000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 2,000 Premier qualifying points after spending 5,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "Earn 10,000 bonus miles after adding an employee card in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "United Club membership for primary cardmember and eligible companions",
+      "First and second checked bags free on United flights",
+      "Up to 925 in annual partner credits for hotels, rideshare, car rentals, Instacart, and JSX",
+      "Premier Access travel services including priority check-in, security, and boarding"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "UnitedSM Business Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 150.0,
+    "cash_back": {
+      "united_flights": 0.07,
+      "gas_stations": 0.02,
+      "dining": 0.02,
+      "office_supply_stores": 0.02,
+      "local_transit": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.74,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F6n2xY65fNWhrX8GaPcVd1z%2F09bff9a3a9b17fbb13875808340eca16%2Funited_biz_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HV5W&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/united/united-business-card?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 100000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 100,000 bonus miles after qualifying purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 2000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 2,000 Premier qualifying points after qualifying purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "Earn 10,000 bonus miles after adding an employee card in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 5000.0,
+        "min_spend": 0.0,
+        "description": "Earn 5,000 anniversary bonus miles for holding a personal United credit card",
+        "is_welcome": false,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "2 United Club one-time passes annually",
+      "Free first checked bag for primary cardmember and one companion",
+      "Up to $600 in annual partner credits for travel and business services",
+      "Priority boarding on United-operated flights"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Ink Business Premier Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 195.0,
+    "cash_back": {
+      "large_purchases_5000_plus": 0.025,
+      "chase_travel": 0.05,
+      "lyft_rides": 0.05,
+      "other": 0.02
+    },
+    "cash_back_type": "cashback",
+    "apr": 23.11,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F6y5yPz2KKJzGcPqYEioJTQ%2F7bf371b6c88073f5699457fc5b8a8a7a%2Fink_business_premier_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/business-credit-cards/ink/premier?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2LS&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/ink/premier?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 1000.0,
+        "min_spend": 10000.0,
+        "description": "Earn $1,000 bonus cash back after spending $10,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cashback"
+      }
+    ],
+    "other": [
+      "Primary auto rental collision damage waiver for business purposes",
+      "Cell phone protection up to $1,000 per claim",
+      "Purchase protection up to $10,000 per item",
+      "Extended warranty protection up to 4 years total"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Ink Business Cash® Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "office_supply_stores": 0.05,
+      "internet_cable_phone_services": 0.05,
+      "gas_stations": 0.02,
+      "restaurants": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "cashback",
+    "apr": 16.74,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F1XZzHouA5HSPu8cMmOx9fh%2F791d7ac2aca82182bca62bfdd564cc25%2Fink_cash_card.png&w=640&q=75",
+    "preapproval_link": "",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2L9&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=827187ed-ffa3-4d3e-b7e5-8bfde0c27532#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/ink/cash?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 750.0,
+        "min_spend": 6000.0,
+        "description": "Earn $750 bonus cash back after spending $6,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cashback"
+      }
+    ],
+    "other": [
+      "Primary auto rental collision damage waiver for business purposes",
+      "Purchase protection for 120 days against damage or theft up to $10,000",
+      "Extended warranty protection adds one year to US manufacturer warranties of 3 years or less",
+      "Employee cards provided at no additional cost"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Ink Business Preferred® Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "shipping": 0.03,
+      "advertising": 0.03,
+      "internet_cable_phone": 0.03,
+      "travel": 0.03,
+      "lyft": 0.05,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 22.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F5MgLwpFlYyNXdq1uJK2RGS%2F2c9967d41c02902355130c832b249e71%2Fink_preferred_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2FB&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=426900cd-9258-406d-aa2c-c9d4ec8aba9c#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 100000.0,
+        "min_spend": 8000.0,
+        "description": "Earn 100,000 bonus points after $8,000 in purchases within 3 months of account opening",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Employee cards provided at no additional cost",
+      "Primary rental car coverage for business purposes",
+      "Cell phone protection up to $1,000 per claim",
+      "Trip cancellation and interruption insurance"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Ink Business Unlimited® Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.015,
+      "lyft": 0.05
+    },
+    "cash_back_type": "cashback",
+    "apr": 16.74,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F4YXfIeQQuE30hdT533LXlJ%2F3b56d1c9eacdff6dd87077a224097f10%2Fink_unlimited_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/business-credit-cards/ink/unlimited?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2CC&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/ink/unlimited?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 750.0,
+        "min_spend": 6000.0,
+        "description": "Earn 750 cash back after spending 6000 on purchases in the first 3 months after account opening",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Primary auto rental collision damage waiver for business purposes",
+      "Purchase protection covers new purchases for 120 days against damage or theft up to 10000 per item",
+      "Extended warranty protection extends manufacturer U.S. warranty by one year on eligible warranties of three years or less",
+      "Employee cards provided at no additional cost"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Sapphire Reserve for Business",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 795.0,
+    "cash_back": {
+      "chase_travel": 0.08,
+      "lyft": 0.05,
+      "flights_and_hotels_direct": 0.04,
+      "social_media_and_search_advertising": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 0.0,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F12sxg11cuTsxca3IYmZfpe%2F7427e53d814994f9efad4f520e20edaa%2Fsapphire_reserve_biz_card.png&w=640&q=75",
+    "preapproval_link": "",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2H7&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=8f3b1dde-30ed-473d-bcf4-740499103fc7#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 150000.0,
+        "min_spend": 20000.0,
+        "description": "Earn 150,000 bonus points after spending $20,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "$300 annual travel credit",
+      "$250 annual credit for select Chase Travel hotels",
+      "Complimentary airport lounge access including Priority Pass Select and Chase Sapphire Lounge",
+      "$120 Global Entry, TSA PreCheck or NEXUS fee credit every four years"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Instacart Mastercard",
+    "provider": "chase",
+    "network": "mastercard",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "instacart": 0.05,
+      "chase_travel": 0.05,
+      "restaurants": 0.02,
+      "gas_stations": 0.02,
+      "streaming": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "cash",
+    "apr": 22.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F2ujp88PK7vj5Q24D3QWGGv%2F3cbd4dbb5458785101db93902f0c0bd1%2Finstacart_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com",
+    "application_link": "https://www.instacart.com/cobrand/chase/link?CELL=61DS&SPID=HNV5&utm_source=chase",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/instacart?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 50.0,
+        "min_spend": 0.0,
+        "description": "Get a $50 Instacart credit automatically upon approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "No foreign transaction fees",
+      "Contactless tap to pay",
+      "Chase Pay Over Time available for eligible purchases"
+    ],
+    "reward_type": "cash"
+  },
+  {
+    "name": "DoorDash Rewards Mastercard",
+    "provider": "chase",
+    "network": "mastercard",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "doordash_caviar": 0.04,
+      "dining": 0.03,
+      "grocery": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "cash",
+    "apr": 22.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7DE5Qh1kOXmnOh6WZ5QtZh%2Feecd707941b48a787171912192636952%2Fdoordash_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/prequalified",
+    "application_link": "https://www.doordash.com/rewards-card/apply?CELL=61DS&SPID=HT9G",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/doordash?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 96.0,
+        "min_spend": 0.0,
+        "description": "Complimentary one-year DashPass membership",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      },
+      {
+        "bonus": 96.0,
+        "min_spend": 10000.0,
+        "description": "Annual complimentary DashPass membership after $10,000 in annual spend",
+        "is_welcome": false,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "10% off one monthly convenience, grocery, alcohol, or retail order on DoorDash through 6/30/2026",
+      "Cell phone protection",
+      "Trip cancellation and interruption insurance",
+      "Purchase protection up to $500 per item for 120 days"
+    ],
+    "reward_type": "cash"
+  },
+  {
+    "name": "Amazon Visa",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "amazon_whole_foods_chase_travel": 0.03,
+      "gas_stations_restaurants_local_transit": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "cashback",
+    "apr": 23.115,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F5Isy8zYmEeoY8CYQ7KCvih%2F38e284d2858b5def73c198da1751c03c%2Famazon-visa.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/cash-back-credit-cards/amazon-rewards?iCELL=61FY",
+    "application_link": "https://www.amazon.com/dp/BT00LN946S/?plattr=CP1",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/amazon-rewards?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 50.0,
+        "min_spend": 0.0,
+        "description": "50 Amazon Gift Card upon approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Extended warranty protection",
+      "Purchase protection up to 500 per item",
+      "Baggage delay insurance",
+      "Auto rental collision damage waiver"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Prime Visa",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "amazon_com": 0.05,
+      "whole_foods_market": 0.05,
+      "chase_travel": 0.05,
+      "gas_stations": 0.02,
+      "restaurants": 0.02,
+      "local_transit": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "cashback",
+    "apr": 18.74,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7kmiz4jVmrVYfvdI7GpHPk%2F9cdec435c065a943c87a4d69d7620946%2Fprime-visa.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/",
+    "application_link": "https://www.amazon.com/dp/BT00LN946S/?plattr=PP1",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/amazon-prime-rewards?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 150.0,
+        "min_spend": 0.0,
+        "description": "Amazon Gift Card on approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "10% back on rotating selection of items and categories on Amazon.com",
+      "Extended warranty protection up to one additional year",
+      "Purchase protection against damage or theft up to 500 dollars per item",
+      "Baggage delay insurance up to 100 dollars a day"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Iberia Visa Signature Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "iberia_british_airways_aer_lingus_flights": 0.03,
+      "hotel_accommodations": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F43l5K89ZzNCGPDQb8p0GAi%2F9e22fbdd271b49a36b3bc24c7337f3bd%2Fiberia_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/preapprove",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSF3&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=804ae156-db65-4959-af0b-5c19244588b4#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/avios/iberia?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 75000.0,
+        "min_spend": 5000.0,
+        "description": "75,000 bonus Avios after spending $5,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "$1,000 airfare discount voucher annually after $30,000 spend",
+      "10% discount on Iberia airfare",
+      "Complimentary 12-month DashPass membership",
+      "Baggage delay insurance, lost luggage reimbursement, and purchase protection"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Aer Lingus Visa Signature Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "aer_lingus_british_airways_iberia_level_flights": 0.03,
+      "hotels": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F5GejTdZB42AzZYKUYXzk8C%2Fa3d9a26d73b4d92273e2788e9cef77ac%2Faer_lingus_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSMT&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=428c4d3d-f8c8-4e4f-a488-8a29199f7125#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 75000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 75,000 bonus Avios after spending $5,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Economy companion ticket each year after $30,000 annual spend",
+      "Priority boarding on eligible Aer Lingus flights",
+      "Baggage delay insurance up to $100 per day for 3 days",
+      "Purchase protection up to $500 per item for 120 days"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "British Airways Visa Signature Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "british_airways_aer_lingus_iberia_flights": 0.03,
+      "hotels": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F5sVcjKIXMv7MsKqmAWo1Fw%2F7e310e514ade7873cfc282eba5d05776%2Fbritish_sign_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSF6&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=f2645ad2-ebef-43c8-89b9-998ff1f3e3f8#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 75000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 75,000 bonus Avios after spending $5,000 within the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Receive up to $600 annually in reward flight statement credits on British Airways reward flights",
+      "Earn a Travel Together Ticket annually upon spending $30,000 on purchases",
+      "10% discount on British Airways flights operated by the airline from the US to London and beyond",
+      "12 months of complimentary DashPass membership for DoorDash and Caviar"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Aeroplan Card",
+    "provider": "chase",
+    "network": "mastercard",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "grocery_stores": 0.03,
+      "dining": 0.03,
+      "air_canada": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2FS9HYcRyGsFip0kfDU1V6G%2Faee89945f1414ae077b8a4a721bd4c10%2Faeroplan_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYN6&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=4ed84ee8-7bba-4f4a-a634-d5701a70f4a5#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 60000.0,
+        "min_spend": 3000.0,
+        "description": "Earn 60,000 bonus points after spending $3,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Free first checked bag on Air Canada flights for primary cardmember and up to eight companions",
+      "Automatic Aeroplan 25K Elite Status for remainder of calendar year and following year",
+      "Statement credit of up to $120 every four years for Global Entry, TSA PreCheck, or NEXUS application fees",
+      "10% bonus on transfers of 50,000 or more Ultimate Rewards points to Aeroplan account"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "World of Hyatt",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "hyatt_hotels": 0.04,
+      "restaurants": 0.02,
+      "airline_tickets": 0.02,
+      "local_transit_and_commuting": 0.02,
+      "fitness_club_and_gym_memberships": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F1AkbUQRvzWYNR5P2dQLTul%2Ffe7b9d7da30705705c139807e5a541e1%2Fworld_of_hyatt_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HPTC&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=96a60e62-2173-4393-b2f3-ec0d84f918af#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 30000.0,
+        "min_spend": 3000.0,
+        "description": "Earn 30,000 points after spending $3,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 30000.0,
+        "min_spend": 15000.0,
+        "description": "Earn up to 30,000 additional points by earning 2 points per $1 on purchases that normally earn 1 point for the first 6 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "One free night at any category 1-4 Hyatt hotel or resort every cardmember anniversary",
+      "Extra free night at any category 1-4 Hyatt hotel or resort for spending $15,000 in a calendar year",
+      "World of Hyatt Discoverist status for as long as account is open",
+      "Five tier-qualifying night credits each year plus two additional credits for every $5,000 spent"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Disney® Visa® Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 18.24,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F726GdE5flTGRs3s6mXcInl%2Fad22b327d24a057417b448ea2505e0c8%2Fcard_disney_vintage_mickey_premier_card.png&w=640&q=75",
+    "preapproval_link": "",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYB3&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=bf9993ba-df76-494f-b07c-38eafbc5428d#/origination/cardDetails/index/index;cellCode=61DS80;combo=Y",
+    "details_link": "https://creditcards.chase.com/rewards-credit-cards/disney/rewards?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 100.0,
+        "min_spend": 0.0,
+        "description": "100 Disney Gift Card eGift upon approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      },
+      {
+        "bonus": 50.0,
+        "min_spend": 500.0,
+        "description": "50 statement credit after spending 500 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "10 percent savings on select DisneyStore.com purchases",
+      "10 percent savings on select merchandise and dining at Disney parks",
+      "15 percent off select guided tours at Disney parks",
+      "Complimentary vacation photo opportunities at Disney parks"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Disney Premier Visa Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 49.0,
+    "cash_back": {
+      "disney_plus_hulu_espn": 0.05,
+      "gas_stations": 0.02,
+      "grocery_stores": 0.02,
+      "restaurants": 0.02,
+      "disney_us_locations": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 18.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F3ae9JtdPBcZkvYKy457YGV%2Fd94d5b8cadf193aa9cd22b6a41f0f3a5%2Fcard_disney_sleeping_beauty_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYB8&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=50ddba4d-656c-4819-8e80-499dd347b4f4#/origination/cardDetails/index/index;cellCode=61DS80;combo=Y",
+    "details_link": "https://creditcards.chase.com/rewards-credit-cards/disney/premier?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 200.0,
+        "min_spend": 0.0,
+        "description": "Disney Gift Card eGift upon approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      },
+      {
+        "bonus": 100.0,
+        "min_spend": 500.0,
+        "description": "Statement credit after spending 500 dollars in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "10% savings on select merchandise at DisneyStore.com",
+      "10% savings on select merchandise and dining at Disney Parks and Resorts",
+      "15% discount on select guided tours at Disney Parks",
+      "Complimentary Disney PhotoPass downloads at designated park locations"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Disney® Inspire Visa® Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 149.0,
+    "cash_back": {
+      "disney_plus_hulu_espn": 0.1,
+      "gas_stations": 0.03,
+      "disney_locations": 0.03,
+      "grocery_stores": 0.02,
+      "restaurants": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 18.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F65syEgyTybkKJZN9rTEaIJ%2Ff836d30f27c8a332c34cf508e0c5ce5e%2Fdisney-inspire.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYBF&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=1c79ca9a-372d-4e0b-8f3d-5e3d12cef6bc#/origination/cardDetails/index/index;cellCode=61DS80;combo=Y",
+    "details_link": "https://creditcards.chase.com/rewards-credit-cards/disney/inspire?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 300.0,
+        "min_spend": 0.0,
+        "description": "Disney Gift Card eGift upon approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      },
+      {
+        "bonus": 300.0,
+        "min_spend": 1000.0,
+        "description": "Statement credit after spending 1000 in first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      },
+      {
+        "bonus": 200.0,
+        "min_spend": 2000.0,
+        "description": "Disney Rewards Dollars after 2000 spent on U.S. Disney Resort stays and Disney Cruise Line bookings annually",
+        "is_welcome": false,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 100.0,
+        "min_spend": 200.0,
+        "description": "Statement credit after 200 spent on U.S. Disney Theme Park tickets annually",
+        "is_welcome": false,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "10 monthly statement credit on qualifying Disney streaming subscriptions",
+      "10 percent off select merchandise purchases at Disneyland and Walt Disney World Resort",
+      "15 percent off select guided tours at Disneyland and Walt Disney World Resort",
+      "Complimentary DoorDash DashPass membership for 12 months"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "IHG One Rewards Traveler Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "ihg_hotels": 0.05,
+      "gas": 0.03,
+      "dining": 0.03,
+      "utilities": 0.03,
+      "streaming": 0.03,
+      "other": 0.02
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F5ePJkOGXDkclE2ZQRl4s9I%2F618e68f75d9d432c98df0b0d59fd6b6b%2Fihg-traveler-card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/prequalified",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HTWZ&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=67f564e5-c755-453a-b79a-111847c43a99#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/traveler?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 80000.0,
+        "min_spend": 2000.0,
+        "description": "Earn 80,000 bonus points after spending $2,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Automatic Silver Elite status",
+      "4th Reward Night free on consecutive 4-night redemptions",
+      "Baggage delay and lost luggage reimbursement",
+      "Trip cancellation and interruption insurance"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Marriott Bonvoy Bold Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "marriott_hotels": 0.03,
+      "grocery": 0.02,
+      "streaming": 0.02,
+      "internet_cable_phone": 0.02,
+      "rideshare": 0.02,
+      "food_delivery": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2Fy8cXD7nquWVHSciAsUTzZ%2Ffb3db0d90bc28976fabc684ce8867fe2%2Fmarriott_bonvoy_bold_card_NAF.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HTMN&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=9680811a-ab14-4dd0-898c-4aa41927c308#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 30000.0,
+        "min_spend": 1000.0,
+        "description": "Earn 30,000 bonus points after spending $1,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Automatic Silver Elite status with Marriott Bonvoy",
+      "5 Elite Night Credits annually",
+      "Complimentary 12-month DashPass membership",
+      "Travel protections including baggage delay and lost luggage insurance"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Marriott Bonvoy Bountiful Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 250.0,
+    "cash_back": {
+      "marriott_hotels": 0.06,
+      "grocery_dining": 0.04,
+      "other": 0.02
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F77fMFIb55JaOz8lpzlJeal%2F5cd55ada35667518a1d263f137539367%2Fmarriott_bonvoy_bountiful_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HR9W&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 85000.0,
+        "min_spend": 4000.0,
+        "description": "Earn 85,000 points after $4,000 in spend in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Annual Free Night Award after $15,000 spend",
+      "Automatic Gold Elite status",
+      "15 Elite Night Credits annually",
+      "Complimentary DashPass membership"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Marriott Bonvoy Boundless® Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "good-excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "marriott_bonvoy_hotels": 0.06,
+      "grocery_stores": 0.03,
+      "gas_stations": 0.03,
+      "dining": 0.03,
+      "other": 0.02
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F6NQqYJGax6zMcb7iCw4kPx%2Fe255147c0c247c676c9a082a38f05ab3%2Fmarriott_bonvoy_boundless_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2SW&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=b4012363-6cd4-49d8-bfe8-f9feba36b0b4#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 3.0,
+        "min_spend": 3000.0,
+        "description": "Earn 3 Free Night Awards after spending $3,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 1.0,
+        "min_spend": 4000.0,
+        "description": "Earn 1 additional Free Night Award after spending $4,000 total in the first 4 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 100.0,
+        "min_spend": 500.0,
+        "description": "Earn up to $100 in airline statement credits through 2026",
+        "is_welcome": false,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Automatic Marriott Bonvoy Silver Elite status",
+      "15 Elite Night Credits annually",
+      "Annual Free Night Award after account anniversary",
+      "Complimentary DashPass membership"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Southwest Rapid Rewards Premier Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 149.0,
+    "cash_back": {
+      "southwest_airlines": 0.03,
+      "grocery_stores": 0.02,
+      "restaurants": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F1yMDXV5i4cAYn66bKoJ9Xw%2F0d2e7fc2f0819970ef73c51400aa7a87%2Fswa_premier_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J33N&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=792f9e0f-2f4f-4523-8b74-7fb9e9d73a67#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/southwest/premier?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 55000.0,
+        "min_spend": 1500.0,
+        "description": "Earn 55,000 bonus points after spending $1,500 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "First checked bag free for cardmember and up to 8 passengers",
+      "6,000 anniversary points annually",
+      "15% flight discount promotion code each anniversary year",
+      "10,000 Companion Pass qualifying points boost annually"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Southwest Rapid Rewards Priority Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 229.0,
+    "cash_back": {
+      "southwest_airlines": 0.04,
+      "gas_stations": 0.02,
+      "restaurants": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F6eacBI5fh2a0OJkIzAgFjK%2Feaed8e381fdcb2c6c04a77d88123c3b9%2Fswa_priority_card-2.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/southwest/priority?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J35P&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=dfd10511-462b-4956-9e1e-904445d1aa3d#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/southwest/priority?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 60000.0,
+        "min_spend": 2000.0,
+        "description": "Earn 60,000 points after spending $2,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "7,500 anniversary points annually",
+      "First checked bag free for cardmember and up to 8 passengers",
+      "Complimentary preferred seat selection at booking when available",
+      "25% back on inflight purchases"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Southwest Rapid Rewards Plus Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "good-excellent",
+    "annual_fee": 99.0,
+    "cash_back": {
+      "southwest_airlines": 0.02,
+      "gas_stations": 0.02,
+      "grocery_stores": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F5n4Djqtj3sdj4s8IDZD1fp%2F2d77da5f0e04100ba93dea173daca20f%2Fswa_plus_card_New.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2X2&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=2155aeb0-a320-447e-8816-8993f70735b3#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/southwest/plus?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 50000.0,
+        "min_spend": 1000.0,
+        "description": "Earn 50,000 bonus points after spending $1,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 3000.0,
+        "min_spend": 0.0,
+        "description": "Receive 3,000 bonus points on each account anniversary",
+        "is_welcome": false,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "Receive 10,000 Companion Pass qualifying points each year",
+        "is_welcome": false,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "First checked bag free for primary cardmember and up to 8 companions",
+      "10% annual flight discount promo code",
+      "Group 5 boarding priority",
+      "25% back on inflight purchases"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "United Club Infinite Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 695.0,
+    "cash_back": {
+      "united_purchases": 0.04,
+      "travel": 0.02,
+      "dining": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7FQaQ0axt8bS9WehDNVxpX%2Fe146a4f05289a1ec1007dbe2654daa52%2Funited_club_infinite_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HXG3&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=286f36af-4229-4423-95c4-c7301fab864c#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 90000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 90,000 bonus miles after $5,000 in purchases within the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "Earn 10,000 bonus miles after adding an authorized user in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "United Club membership included",
+      "Two free checked bags for primary cardmember and one companion",
+      "Up to $120 Global Entry, TSA PreCheck, or NEXUS fee credit every four years",
+      "Up to $875 in annual partner credits for hotels, rideshare, travel, and Instacart"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "United Gateway SM Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "united_purchases": 0.02,
+      "gas_stations": 0.02,
+      "local_transit_and_commuting": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.74,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F3h2MzTCHHVMMcOsHsRsX5K%2F617f991cd1ed780821cddbcb2f923f51%2Funited_gateway_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HNRX&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=ae6fcc59-eb97-484f-8c28-34783c90614d#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 30000.0,
+        "min_spend": 1000.0,
+        "description": "Earn 30,000 bonus miles after spending 1,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "Earn 10,000 bonus miles after adding an authorized user in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Receive 25% back as a statement credit on United inflight and club premium drink purchases",
+      "Earn 2 checked bags per year after spending 10,000 in a calendar year",
+      "Auto rental collision damage waiver",
+      "Trip cancellation and interruption insurance"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "United QuestSM Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 350.0,
+    "cash_back": {
+      "united_purchases": 0.03,
+      "travel": 0.02,
+      "dining": 0.02,
+      "streaming": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F2j8I8HJpxeoHe4ZSbdIX2K%2F7deb0479626712d939f57878143e63b1%2Funited_quest_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/prequalified",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HZPF&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=dfae5402-6c53-40e0-9d0b-347b404a6dad#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/united/united-quest?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 80000.0,
+        "min_spend": 4000.0,
+        "description": "80,000 bonus miles after spending $4,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 3000.0,
+        "min_spend": 4000.0,
+        "description": "3,000 Premier qualifying points after spending $4,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "10,000 bonus miles after adding an authorized user in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "200 annual United travel credit",
+      "Up to 150 in annual statement credits for Renowned Hotels and Resorts",
+      "Free first and second checked bags on United flights",
+      "Up to 120 statement credit for Global Entry, TSA PreCheck, or NEXUS application fees every four years"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "UnitedSM Explorer Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 150.0,
+    "cash_back": {
+      "united_airlines": 0.02,
+      "dining": 0.02,
+      "hotel_stays": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F2XJtw0HVCmIeQ1bHj7cW8l%2F865145b34d2d46b23a6434bfc59ee925%2Funited-explorer-card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYGV&action=guest#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 70000.0,
+        "min_spend": 3000.0,
+        "description": "Earn 70,000 bonus miles after spending $3,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "Earn 10,000 bonus miles after adding an authorized user in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Free first checked bag for primary cardmember and one companion",
+      "Two United Club one-time passes annually",
+      "Up to $120 statement credit for Global Entry, TSA PreCheck, or NEXUS every 4 years",
+      "Priority boarding on United-operated flights"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Slate Edge Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "fair",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.0
+    },
+    "cash_back_type": "cash",
+    "apr": 28.99,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F51tVA3IcV6IOH1bL0t0Wps%2Fb12e0537847f21708d3e74d9ac23b40c%2Fslate_edge_card_alt.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/credit-building-credit-cards/slate/edge?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J3TZ&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=03442c94-933f-49d6-8eff-cadb911f9b44#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/credit-building-credit-cards/slate/edge?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 0.0,
+        "min_spend": 0.0,
+        "description": "6 months of complimentary DashPass membership for DoorDash and Caviar",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Automatic credit line increase consideration every 6 months",
+      "Enrollment in Chase Credit Journey credit building tools",
+      "Purchase protection for 120 days up to 500 per item",
+      "Extended manufacturer warranty by one additional year"
+    ],
+    "reward_type": "cash"
+  },
+  {
+    "name": "Slate Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "Good-Excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.0
+    },
+    "cash_back_type": "cashback",
+    "apr": 23.24,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F4yzZhpZUjLiTZNAZn1HPpc%2Fb9254a1682efa043eb96fbafe8ca49da%2Fcard_slate_V_NAF.png&w=640&q=75",
+    "preapproval_link": "",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYPW&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=9208ef9c-e387-468a-add3-20773f6c0aaf#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/balance-transfer-credit-cards/slate?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 0.0,
+        "min_spend": 0.0,
+        "description": "0% intro APR for 21 months on purchases and balance transfers",
+        "is_welcome": true,
+        "bonus_type": "cashback"
+      }
+    ],
+    "other": [
+      "6 months of complimentary DashPass membership",
+      "Automatic consideration for credit line increases every 6 months",
+      "Free access to Chase Credit Journey credit monitoring",
+      "Purchase protection and extended warranty coverage"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Chase Sapphire Preferred Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "travel": 0.05,
+      "dining": 0.03,
+      "streaming": 0.03,
+      "online_grocery": 0.03,
+      "other_travel": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.36,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7iFzyweepMTrfGn2VrDdL5%2F6adcc35d50cef1e3087ced153d3b7bee%2Fsapphire_preferred_card.png&w=640&q=75",
+    "preapproval_link": "https://secure.chase.com/web/oao/application/card?cfgCode=PREAPPROVEDCONCCSP&sourceCode=J46G&cellCode=6X8D",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSGD&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=03aa4f9b-bb47-4ad2-a60d-a727f1d6be44#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 75000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 75,000 bonus points after spending $5,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Annual $50 Chase Travel hotel credit",
+      "10% anniversary point bonus based on previous year spend",
+      "1:1 point transfer to airline and hotel partners",
+      "Complimentary 12-month DashPass membership"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Chase Sapphire Reserve",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 795.0,
+    "cash_back": {
+      "chase_travel": 0.08,
+      "flights_booked_direct": 0.04,
+      "hotels_booked_direct": 0.04,
+      "dining": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F1SEpLWPkNLolbDxImf3IQw%2F7ba66b9c6373ec775477bc797aecb6b3%2Fsapphire_reserve_card_Halo__2_.png&w=640&q=75",
+    "preapproval_link": "https://secure.chase.com/web/oao/application/card?cfgCode=PREAPPROVEDCONCCSP&sourceCode=J45Z&cellCode=6X8F",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HWHN&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=2276120b-283a-4e0f-8b7e-d5bd41be74e8#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 125000.0,
+        "min_spend": 6000.0,
+        "description": "Earn 125,000 points after spending $6,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "300 annual travel credit",
+      "Priority Pass Select lounge access",
+      "Global Entry TSA PreCheck or NEXUS fee credit",
+      "Complimentary DashPass membership"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Chase Freedom Rise Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "new to credit",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.015
+    },
+    "cash_back_type": "cashback",
+    "apr": 25.24,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F3emmJbPFYCNlwlbw4Fg2J%2F0f67da5066e839c5e2097fcf73157495%2Ffreedom_rise_alt_card2.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HB5Y&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=cd169775-9863-43d8-84ef-9144a9395eaa#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 25.0,
+        "min_spend": 0.0,
+        "description": "Statement credit for enrolling in automatic payments within the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Automatic evaluation for a credit limit increase as soon as 6 months",
+      "Automatic annual evaluation for upgrade to Chase Freedom Unlimited card",
+      "Complimentary 6 months of DoorDash DashPass membership",
+      "Earn 2% cash back on Lyft rides through 09/30/2027"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Chase Freedom Flex Credit Card",
+    "provider": "chase",
+    "network": "mastercard",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "quarterly_bonus_categories": 0.05,
+      "travel_via_chase": 0.05,
+      "dining": 0.03,
+      "drugstores": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "cashback",
+    "apr": 18.24,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7KrVet3yXT2YntiE8PqwAe%2Fbd0a8cc35ed60ac330442ae63c031a95%2Ffreedom_flex_card_alt.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HPKP&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=ca4a5cb5-5d88-4ea9-a8bb-f757e658c30b#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 200.0,
+        "min_spend": 500.0,
+        "description": "Earn $200 bonus after spending $500 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cashback"
+      }
+    ],
+    "other": [
+      "0% intro APR on purchases and balance transfers for 15 months",
+      "Cell phone protection up to $800 per claim",
+      "Purchase protection up to $500 per item for 120 days",
+      "Complimentary 6 months of DashPass subscription"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Chase Freedom Unlimited Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "travel_via_chase": 0.05,
+      "dining": 0.03,
+      "drugstores": 0.03,
+      "other": 0.015
+    },
+    "cash_back_type": "cash",
+    "apr": 18.24,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F302fEMopacO8lPIOANH1Kr%2F92aa401d22ec4244b1521a02d9ea1e19%2Ffreedom_unlimited_card_alt.png&w=640&q=75",
+    "preapproval_link": "https://secure.chase.com/web/oao/application/card?cfgCode=PREAPPROVEDCONCCSP&sourceCode=J4GZ&cellCode=63P4",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HPGZ&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=62e0eca2-3b79-4175-a883-a51c9b2f0f34#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 250.0,
+        "min_spend": 500.0,
+        "description": "Earn a $250 bonus after spending $500 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "0% intro APR on purchases and balance transfers for 15 months",
+      "6 months of complimentary DashPass membership",
+      "Purchase protection up to $500 per item for 120 days",
+      "Extended warranty protection for an additional year on warranties of 3 years or less"
+    ],
+    "reward_type": "cash"
+  },
+  {
+    "name": "IHG One Rewards Premier Business Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 99.0,
+    "cash_back": {
+      "ihg_hotels_and_resorts": 0.1,
+      "travel": 0.05,
+      "dining": 0.05,
+      "business_advertising": 0.05,
+      "office_supply_stores": 0.05,
+      "gas_stations": 0.05,
+      "other": 0.03
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7qM7TsaOlG2NQJummCiLcA%2F730b67dee9365d4b11211d463db7e085%2FIHG_One_Premier_Biz_card_alt.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/business-credit-cards/IHG/business-premier?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HPHV&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=c6b11046-48f9-4622-bd98-84ad162fcd6c#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/IHG/business-premier?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 200000.0,
+        "min_spend": 9000.0,
+        "description": "Earn 140,000 points after spending $4,000 in the first 3 months and 60,000 points after spending a total of $9,000 in the first 6 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Anniversary free night valid for hotels up to 40,000 points",
+      "4th night free on consecutive 4-night reward stays",
+      "Automatic IHG One Rewards Platinum Elite status",
+      "Statement credit up to $120 for Global Entry, TSA PreCheck, or NEXUS application fee every 4 years"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Southwest Rapid Rewards Premier Business Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 149.0,
+    "cash_back": {
+      "southwest_airlines": 0.03,
+      "gas_stations": 0.02,
+      "restaurants": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F4ddMQ93iOPGyfjEHdF4y9w%2Ff2e67c1f9e9cd69c5fa4b1de6b9bf0f3%2Fswa_premier_biz_card__1_.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSQQ&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=f4360bb8-6719-485a-a4e1-5a053d779364#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 60000.0,
+        "min_spend": 3000.0,
+        "description": "Earn 60,000 points after spending $3,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 6000.0,
+        "min_spend": 0.0,
+        "description": "6,000 anniversary points awarded annually",
+        "is_welcome": false,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "Annual 10,000 Companion Pass qualifying points boost",
+        "is_welcome": false,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "First checked bag free for cardmember and up to 8 passengers",
+      "15 percent annual flight discount promo code",
+      "25 percent back on inflight purchases",
+      "Earn 2,000 tier qualifying points per $5,000 spent annually"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Southwest Rapid Rewards Performance Business Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 299.0,
+    "cash_back": {
+      "southwest_airlines": 0.04,
+      "hotel_direct": 0.02,
+      "gas_stations": 0.02,
+      "restaurants": 0.02,
+      "local_transit": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F1ILGnjxcvePyve597OKoW4%2Fcc194919b792904e40009bb90f78c326%2Fswa_performance_biz_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSQW&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=a5bf0d27-cd06-4e62-868f-c3d736e01705#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/southwest/performance-business?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 80000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 80,000 points after spending $5,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Receive 9,000 bonus points each year after account anniversary",
+      "10,000 annual companion pass qualifying points boost",
+      "Global Entry, TSA PreCheck or NEXUS fee credit up to $120 every 4 years",
+      "Free first checked bag for cardmember and up to 8 companions"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "United Club Business Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 695.0,
+    "cash_back": {
+      "united_flights": 0.05,
+      "other_united_purchases": 0.02,
+      "renowned_hotels": 0.05,
+      "other": 0.015
+    },
+    "cash_back_type": "points",
+    "apr": 19.74,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F4OGuzTUpSE26zcMpgyk6yb%2F33af0f0ae2b8cdba212e98d420515aeb%2Funited_club_biz_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/digital/customer/offers/creditcards",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HZQ9&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/united/united-club-business?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 100000.0,
+        "min_spend": 5000.0,
+        "description": "100,000 bonus miles after spending $5,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 2000.0,
+        "min_spend": 5000.0,
+        "description": "2,000 Premier qualifying points after spending $5,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "10,000 bonus miles for adding an employee card in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "United Club membership included",
+      "Free first and second checked bags",
+      "Up to $925 in annual partner credits",
+      "Premier Access travel services"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "UnitedSM Business Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 150.0,
+    "cash_back": {
+      "united_flights": 0.07,
+      "dining": 0.02,
+      "gas_stations": 0.02,
+      "office_supply_stores": 0.02,
+      "local_transit": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F6n2xY65fNWhrX8GaPcVd1z%2F09bff9a3a9b17fbb13875808340eca16%2Funited_biz_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HV5W&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/united/united-business-card?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 100000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 100,000 bonus miles after spending $5,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 2000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 2,000 Premier qualifying points after spending $5,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "Earn 10,000 bonus miles after adding an employee card in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 5000.0,
+        "min_spend": 0.0,
+        "description": "5,000-mile anniversary bonus when holding a personal United card",
+        "is_welcome": false,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Two United Club one-time passes annually",
+      "First checked bag free for primary cardmember and one companion",
+      "Up to $600 in annual partner credits for travel, hotels, rideshare, and Instacart",
+      "Priority boarding on United-operated flights"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Ink Business Premier Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 195.0,
+    "cash_back": {
+      "large_purchases": 0.025,
+      "travel": 0.05,
+      "lyft": 0.05,
+      "other": 0.02
+    },
+    "cash_back_type": "points",
+    "apr": 28.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F6y5yPz2KKJzGcPqYEioJTQ%2F7bf371b6c88073f5699457fc5b8a8a7a%2Fink_business_premier_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/business-credit-cards/ink/premier?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2LS&action=guest#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/ink/premier?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 1000.0,
+        "min_spend": 10000.0,
+        "description": "Earn 1,000 bonus cash back after spending 10,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Primary auto rental collision damage waiver for business rentals",
+      "Cell phone protection up to 1,000 per claim",
+      "Purchase protection covering new purchases for 120 days up to 10,000 per item",
+      "Extended warranty protection adding one year to eligible manufacturer warranties"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Ink Business Cash Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "office_supply_internet_cable_phone": 0.05,
+      "gas_stations_restaurants": 0.02,
+      "lyft": 0.05,
+      "other": 0.01
+    },
+    "cash_back_type": "cashback",
+    "apr": 16.74,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F1XZzHouA5HSPu8cMmOx9fh%2F791d7ac2aca82182bca62bfdd564cc25%2Fink_cash_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2L9&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/ink/cash?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 750.0,
+        "min_spend": 6000.0,
+        "description": "Earn 750 bonus cash back after spending 6000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Primary auto rental collision damage waiver for business purposes",
+      "Purchase protection against damage or theft for 120 days",
+      "Extended warranty protection adding one year to eligible manufacturer warranties",
+      "Employee cards provided at no additional cost"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Ink Business Preferred Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "shipping": 0.03,
+      "advertising": 0.03,
+      "internet_cable_phone": 0.03,
+      "travel": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 22.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F5MgLwpFlYyNXdq1uJK2RGS%2F2c9967d41c02902355130c832b249e71%2Fink_preferred_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2FB&action=guest#/origination/cardDetails/index/index;cellCode=61FY;combo=N",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 100000.0,
+        "min_spend": 8000.0,
+        "description": "Earn 100,000 bonus points after $8,000 in spending in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "5x points total on Lyft rides through September 30, 2027",
+      "Complimentary DashPass access for at least 12 months when activated by December 31, 2027",
+      "Primary auto rental collision damage waiver for business purposes",
+      "Cell phone protection up to $1,000 per claim"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Ink Business Unlimited Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.015,
+      "lyft": 0.05
+    },
+    "cash_back_type": "cash",
+    "apr": 16.74,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F4YXfIeQQuE30hdT533LXlJ%2F3b56d1c9eacdff6dd87077a224097f10%2Fink_unlimited_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2CC&action=guest#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/ink/unlimited?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 750.0,
+        "min_spend": 6000.0,
+        "description": "Earn $750 cash back after spending $6,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Primary auto rental collision damage waiver for business purposes",
+      "Purchase protection for new purchases for 120 days up to $10,000 per item",
+      "Extended warranty protection adding one year to manufacturer warranties of three years or less",
+      "Employee cards at no additional cost with individual spending limits"
+    ],
+    "reward_type": "cash"
+  },
+  {
+    "name": "Sapphire Reserve for Business Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 795.0,
+    "cash_back": {
+      "chase_travel": 0.08,
+      "lyft": 0.05,
+      "flights_hotels_direct": 0.04,
+      "social_media_search_advertising": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 0.0,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F12sxg11cuTsxca3IYmZfpe%2F7427e53d814994f9efad4f520e20edaa%2Fsapphire_reserve_biz_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2H7&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=afdf7c53-1d03-4264-acd8-99f82b6ba9e8#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 150000.0,
+        "min_spend": 20000.0,
+        "description": "Earn 150,000 bonus points after spending $20,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "$300 annual travel credit",
+      "Complimentary Priority Pass Select and Sapphire Lounge network access",
+      "Annual credits for Google Workspace, ZipRecruiter, and curated gift cards",
+      "IHG One Rewards Platinum Elite status"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Instacart Mastercard",
+    "provider": "chase",
+    "network": "mastercard",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "instacart": 0.05,
+      "chase_travel": 0.05,
+      "restaurants": 0.02,
+      "gas_stations": 0.02,
+      "streaming": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "cashback",
+    "apr": 22.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F2ujp88PK7vj5Q24D3QWGGv%2F3cbd4dbb5458785101db93902f0c0bd1%2Finstacart_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/cash-back-credit-cards/instacart?iCELL=61FY",
+    "application_link": "https://www.instacart.com/cobrand/chase/link?CELL=61DS&SPID=HNV5&utm_source=chase",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/instacart?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 50.0,
+        "min_spend": 0.0,
+        "description": "Get a $50 Instacart credit automatically upon approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Points do not expire as long as account remains open",
+      "Pay Over Time allows breaking up purchases of $100 or more into monthly payments",
+      "Contactless tap to pay enabled"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "DoorDash Rewards Mastercard",
+    "provider": "chase",
+    "network": "mastercard",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "doordash_caviar": 0.04,
+      "dining": 0.03,
+      "grocery": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "cashback",
+    "apr": 22.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7DE5Qh1kOXmnOh6WZ5QtZh%2Feecd707941b48a787171912192636952%2Fdoordash_card.png&w=640&q=75",
+    "preapproval_link": "",
+    "application_link": "https://www.doordash.com/rewards-card/apply?CELL=61DS&SPID=HT9G",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/doordash?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 96.0,
+        "min_spend": 0.0,
+        "description": "One year of complimentary DashPass membership",
+        "is_welcome": true,
+        "bonus_type": "cashback"
+      }
+    ],
+    "other": [
+      "10% off one convenience, grocery, alcohol, retail or DashMart order per month through 6/30/2026",
+      "Complimentary annual DashPass membership with $10,000 annual spend",
+      "Purchase protection up to $500 per item for 120 days",
+      "Extended warranty protection up to one additional year on eligible warranties"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Amazon Visa",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "amazon_whole_foods_chase_travel": 0.03,
+      "gas_stations_restaurants_local_transit": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "cashback",
+    "apr": 23.115,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F5Isy8zYmEeoY8CYQ7KCvih%2F38e284d2858b5def73c198da1751c03c%2Famazon-visa.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/cash-back-credit-cards/amazon-rewards?iCELL=61FY",
+    "application_link": "https://www.amazon.com/dp/BT00LN946S/?plattr=CP1",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/amazon-rewards?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 50.0,
+        "min_spend": 0.0,
+        "description": "50 Amazon Gift Card loaded to Amazon account upon approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Extended warranty protection adds one year to manufacturer warranties of three years or less",
+      "Purchase protection covers new items against damage or theft for 120 days up to 500 per item",
+      "Baggage delay insurance covers essential items up to 100 per day for 3 days if delayed over 6 hours",
+      "Auto rental coverage provides collision and theft damage reimbursement"
+    ],
+    "reward_type": "cash"
+  },
+  {
+    "name": "Prime Visa",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "amazon_com": 0.05,
+      "chase_travel": 0.05,
+      "gas_stations": 0.02,
+      "restaurants": 0.02,
+      "local_transit": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "cashback",
+    "apr": 18.74,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7kmiz4jVmrVYfvdI7GpHPk%2F9cdec435c065a943c87a4d69d7620946%2Fprime-visa.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/cash-back-credit-cards/amazon-prime-rewards?iCELL=61FY",
+    "application_link": "https://www.amazon.com/dp/BT00LN946S/?plattr=PP1",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/amazon-prime-rewards?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 150.0,
+        "min_spend": 0.0,
+        "description": "Amazon Gift Card upon approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "10% back or more on rotating Amazon.com items",
+      "Extended warranty protection for one additional year",
+      "Purchase protection up to $500 per item for 120 days",
+      "Baggage delay reimbursement up to $100 per day for 3 days"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Iberia Visa Signature® Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "good-excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "flights": 0.03,
+      "hotel": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F43l5K89ZzNCGPDQb8p0GAi%2F9e22fbdd271b49a36b3bc24c7337f3bd%2Fiberia_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/avios/iberia?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSF3&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=c1c9cf7a-b729-4c51-a4c4-fed76193f4bc#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/avios/iberia?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 75000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 75,000 Bonus Avios after spending $5,000 within the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Annual $1,000 airfare discount voucher after $30,000 in annual spending",
+      "10% discount on Iberia flight bookings",
+      "Complimentary one-year DashPass membership",
+      "Baggage delay, lost luggage, and purchase protection benefits"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Aer Lingus Visa Signature Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "aer_lingus_british_airways_iberia_level_flights": 0.03,
+      "hotels": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F5GejTdZB42AzZYKUYXzk8C%2Fa3d9a26d73b4d92273e2788e9cef77ac%2Faer_lingus_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSMT&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=e412d2e6-9fd8-4db8-9cef-45c99cbee078#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 75000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 75,000 bonus Avios after spending $5,000 on purchases in the first 3 months of account opening",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Earn economy companion ticket after $30,000 in purchases per calendar year",
+      "Priority boarding on Aer Lingus flights between the US and Ireland",
+      "Baggage delay insurance up to $100 per day for 3 days",
+      "Purchase protection up to $500 per item for 120 days"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "British Airways Visa Signature Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "british_airways_aer_lingus_iberia_flights": 0.03,
+      "hotel_accommodations": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F5sVcjKIXMv7MsKqmAWo1Fw%2F7e310e514ade7873cfc282eba5d05776%2Fbritish_sign_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSF6&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=657c805f-d7e9-4e45-aece-40b386b079a4#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 75000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 75,000 bonus Avios after spending $5,000 on purchases in the first 3 months of account opening",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Receive up to $600 in reward flight statement credits annually",
+      "Earn a Travel Together Ticket annually upon reaching $30,000 in spend",
+      "10% discount on British Airways flights originating in the US",
+      "Includes 12 months of complimentary DashPass membership"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Aeroplan Card",
+    "provider": "chase",
+    "network": "mastercard",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "grocery_stores": 0.03,
+      "dining": 0.03,
+      "air_canada": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2FS9HYcRyGsFip0kfDU1V6G%2Faee89945f1414ae077b8a4a721bd4c10%2Faeroplan_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYN6&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=45798b1e-807a-4068-9db2-8540a1246778#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 60000.0,
+        "min_spend": 3000.0,
+        "description": "Earn 60,000 bonus points after spending $3,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 500.0,
+        "min_spend": 2000.0,
+        "description": "Earn 500 bonus points for every $2,000 spent in a calendar month",
+        "is_welcome": false,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Receive automatic Aeroplan 25K Status",
+      "Free first checked bag for cardmember and up to eight companions on Air Canada flights",
+      "Statement credit of up to $120 every four years for Global Entry, TSA PreCheck, or NEXUS application fees",
+      "10% bonus on transfers of 50,000 or more Ultimate Rewards points to Aeroplan"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "World of Hyatt Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "Good-Excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "hyatt_hotels": 0.04,
+      "restaurants": 0.02,
+      "airline_tickets": 0.02,
+      "local_transit": 0.02,
+      "fitness_clubs": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F1AkbUQRvzWYNR5P2dQLTul%2Ffe7b9d7da30705705c139807e5a541e1%2Fworld_of_hyatt_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/preapprove",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HPTC&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=7e1f264a-2ab6-44d4-b1af-1a235f61a2d7#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 30000.0,
+        "min_spend": 3000.0,
+        "description": "Earn 30,000 bonus points after spending $3,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 30000.0,
+        "min_spend": 15000.0,
+        "description": "Earn up to 30,000 additional points by earning 2 points per dollar in the first 6 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Receive one free night at a Category 1-4 Hyatt hotel annually after cardmember anniversary",
+      "Earn an extra free night at a Category 1-4 Hyatt hotel after spending $15,000 in a calendar year",
+      "Receive automatic World of Hyatt Discoverist status",
+      "Earn 5 tier-qualifying night credits annually plus 2 additional credits for every $5,000 spent"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Disney® Visa® Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 22.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F726GdE5flTGRs3s6mXcInl%2Fad22b327d24a057417b448ea2505e0c8%2Fcard_disney_vintage_mickey_premier_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYB3&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=f044b5cd-7d46-412d-a1aa-38e5fdb0a9db#/origination/cardDetails/index/index;cellCode=61DS80;combo=Y",
+    "details_link": "https://creditcards.chase.com/rewards-credit-cards/disney/rewards?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 100.0,
+        "min_spend": 0.0,
+        "description": "Disney Gift Card eGift upon approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      },
+      {
+        "bonus": 50.0,
+        "min_spend": 500.0,
+        "description": "Statement credit after spending $500 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "10% savings on select merchandise purchases at DisneyStore.com",
+      "10% savings on select merchandise and dining at Disneyland and Walt Disney World Resorts",
+      "15% savings on select guided tours at Disneyland and Walt Disney World Resorts",
+      "Access to private Cardmember photo opportunities at Disney parks"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Disney Premier Visa Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 49.0,
+    "cash_back": {
+      "disney_plus_hulu_espn_plus": 0.05,
+      "gas_stations": 0.02,
+      "grocery_stores": 0.02,
+      "restaurants": 0.02,
+      "disney_us_locations": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 18.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F3ae9JtdPBcZkvYKy457YGV%2Fd94d5b8cadf193aa9cd22b6a41f0f3a5%2Fcard_disney_sleeping_beauty_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/digital/customer/offers/creditcards",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYB8&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=8e6ec67a-c44f-4d2b-b613-aee61ad16ced#/origination/cardDetails/index/index;cellCode=61DS80;combo=Y",
+    "details_link": "https://creditcards.chase.com/rewards-credit-cards/disney/premier?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 200.0,
+        "min_spend": 0.0,
+        "description": "Disney Gift Card eGift upon approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      },
+      {
+        "bonus": 100.0,
+        "min_spend": 500.0,
+        "description": "Statement credit after spending $500 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "10% savings on select merchandise and dining at Disney Resorts",
+      "15% discount on select guided tours at Disney Resorts",
+      "Access to private Disney cardmember photo opportunities",
+      "Complimentary one-year DashPass membership"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Disney Inspire Visa Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 149.0,
+    "cash_back": {
+      "disney_plus_hulu_espn": 0.1,
+      "gas_stations": 0.03,
+      "disney_locations": 0.03,
+      "grocery_stores": 0.02,
+      "restaurants": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 22.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F65syEgyTybkKJZN9rTEaIJ%2Ff836d30f27c8a332c34cf508e0c5ce5e%2Fdisney-inspire.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/preapprove",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYBF&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=2e2bf58e-128d-453a-8fc0-1f798726fe26#/origination/cardDetails/index/index;cellCode=61DS80;combo=Y",
+    "details_link": "https://creditcards.chase.com/rewards-credit-cards/disney/inspire?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 300.0,
+        "min_spend": 0.0,
+        "description": "300 Disney Gift Card eGift upon approval",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      },
+      {
+        "bonus": 300.0,
+        "min_spend": 1000.0,
+        "description": "300 statement credit after spending 1,000 in first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "10 percent off select merchandise at Disneyland and Walt Disney World",
+      "10 percent off select dining at Disneyland and Walt Disney World",
+      "15 percent off select guided tours at Disneyland and Walt Disney World",
+      "Complimentary Disney PhotoPass downloads at select photo locations"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Marriott Bonvoy Bold Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "marriott_bonvoy_hotels": 0.03,
+      "grocery_stores": 0.02,
+      "internet_cable_phone": 0.02,
+      "streaming_services": 0.02,
+      "rideshare": 0.02,
+      "food_delivery": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2Fy8cXD7nquWVHSciAsUTzZ%2Ffb3db0d90bc28976fabc684ce8867fe2%2Fmarriott_bonvoy_bold_card_NAF.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HTMN&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=e72f19fe-d1bd-4276-9df4-33bf22c922cd#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 30000.0,
+        "min_spend": 1000.0,
+        "description": "Earn 30,000 bonus points after spending $1,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Automatic Marriott Bonvoy Silver Elite Status",
+      "5 Elite Night Credits annually",
+      "Baggage delay, lost luggage, and trip delay insurance",
+      "Complimentary 12-month DashPass membership"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Marriott Bonvoy Bountiful Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 250.0,
+    "cash_back": {
+      "marriott_hotels": 0.06,
+      "grocery_stores": 0.04,
+      "dining": 0.04,
+      "other": 0.02
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F77fMFIb55JaOz8lpzlJeal%2F5cd55ada35667518a1d263f137539367%2Fmarriott_bonvoy_bountiful_card.png&w=640&q=75",
+    "preapproval_link": "",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HR9W&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=ea1ca940-dfaf-4fe1-95fc-25c9a6e96a12#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 85000.0,
+        "min_spend": 4000.0,
+        "description": "Earn 85,000 bonus points after spending $4,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Receive 15 elite night credits each calendar year",
+      "Automatic gold elite status",
+      "Earn one free night award annually after $15,000 in spend",
+      "Complimentary 12-month dashpass membership"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Marriott Bonvoy Boundless Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "marriott_bonvoy_hotels": 0.06,
+      "gas_stations": 0.03,
+      "grocery_stores": 0.03,
+      "dining": 0.03,
+      "other": 0.02
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F6NQqYJGax6zMcb7iCw4kPx%2Fe255147c0c247c676c9a082a38f05ab3%2Fmarriott_bonvoy_boundless_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2SW&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=96091171-49c7-4aff-8923-c5d7531fc6e0#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 3.0,
+        "min_spend": 3000.0,
+        "description": "Earn 3 Free Night Awards after spending $3,000 on eligible purchases within 3 months of account opening",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 1.0,
+        "min_spend": 4000.0,
+        "description": "Earn 1 additional Free Night Award after spending $4,000 total on eligible purchases within 4 months of account opening",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 100.0,
+        "min_spend": 500.0,
+        "description": "Earn up to $100 in statement credits after spending $500 on eligible airline purchases",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Annual Free Night Award after account anniversary",
+      "Automatic Silver Elite Status",
+      "15 Elite Night Credits annually",
+      "Complimentary DashPass membership"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Southwest Rapid Rewards® Premier Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 149.0,
+    "cash_back": {
+      "southwest_airlines": 0.03,
+      "grocery_stores": 0.02,
+      "restaurants": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F1yMDXV5i4cAYn66bKoJ9Xw%2F0d2e7fc2f0819970ef73c51400aa7a87%2Fswa_premier_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J33N&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=9d1901fd-8eb7-4b18-b494-7f0d4a286bb2#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/southwest/premier?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 55000.0,
+        "min_spend": 1500.0,
+        "description": "Earn 55,000 bonus points after spending $1,500 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "First checked bag free for cardmember and up to 8 passengers",
+      "6,000 anniversary points awarded annually",
+      "10,000 Companion Pass qualifying points boost annually",
+      "15 percent annual flight discount promo code"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Southwest Rapid Rewards Priority Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 229.0,
+    "cash_back": {
+      "southwest_airlines": 0.04,
+      "gas_stations": 0.02,
+      "restaurants": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F6eacBI5fh2a0OJkIzAgFjK%2Feaed8e381fdcb2c6c04a77d88123c3b9%2Fswa_priority_card-2.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J35P&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=81a55ead-41ca-4c7f-a184-f050227112fc#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/southwest/priority?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 60000.0,
+        "min_spend": 2000.0,
+        "description": "Earn 60,000 bonus points after spending $2,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 7500.0,
+        "min_spend": 0.0,
+        "description": "7,500 anniversary points each year",
+        "is_welcome": false,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "First checked bag free",
+      "7,500 annual anniversary points",
+      "10,000 Companion Pass qualifying points boost annually",
+      "25% back on inflight purchases"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Southwest Rapid Rewards Plus Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 99.0,
+    "cash_back": {
+      "southwest_airlines": 0.02,
+      "gas_stations": 0.02,
+      "grocery_stores": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.24,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F5n4Djqtj3sdj4s8IDZD1fp%2F2d77da5f0e04100ba93dea173daca20f%2Fswa_plus_card_New.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J2X2&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=6d2973e3-6e32-4d71-911c-e2dcccd10233#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/southwest/plus?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 50000.0,
+        "min_spend": 1000.0,
+        "description": "Earn 50,000 bonus points after spending $1,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Receive 3,000 anniversary points each year",
+      "First checked bag free for the primary cardmember and up to 8 companions",
+      "Board with Group 5 for earlier overhead bin access",
+      "10% annual flight discount promo code"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "United ClubSM Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 695.0,
+    "cash_back": {
+      "united_purchases": 0.04,
+      "travel": 0.02,
+      "dining": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 24.0,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7FQaQ0axt8bS9WehDNVxpX%2Fe146a4f05289a1ec1007dbe2654daa52%2Funited_club_infinite_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HXG3&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=9832ff11-5c3f-460e-bfd7-99dcb56af3a2#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 90000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 90,000 bonus miles after spending $5,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "Earn 10,000 bonus miles after adding an authorized user in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "United Club membership included",
+      "Free first and second checked bags on United flights",
+      "Up to $120 statement credit for Global Entry, TSA PreCheck or NEXUS application fee every four years",
+      "Complimentary Instacart+ membership"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "United Gateway SM Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "united_purchases": 0.02,
+      "gas_stations": 0.02,
+      "local_transit_and_commuting": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.74,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F3h2MzTCHHVMMcOsHsRsX5K%2F617f991cd1ed780821cddbcb2f923f51%2Funited_gateway_card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HNRX&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=7f5813bb-af5f-419b-a1a9-9a865b426667#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 30000.0,
+        "min_spend": 1000.0,
+        "description": "Earn 30,000 bonus miles after spending $1,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "Earn 10,000 bonus miles after adding an authorized user in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "25% back as a statement credit on United inflight food, beverage, and Wi-Fi purchases",
+      "25% back as a statement credit on United Club premium drink purchases",
+      "Earn 2 standard checked bag certificates after spending $10,000 in a calendar year",
+      "0% intro APR on purchases for 12 months"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "United Quest Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 350.0,
+    "cash_back": {
+      "united_purchases": 0.03,
+      "travel": 0.02,
+      "dining": 0.02,
+      "streaming_services": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.99,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F2j8I8HJpxeoHe4ZSbdIX2K%2F7deb0479626712d939f57878143e63b1%2Funited_quest_card.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/preapprove",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HZPF&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=d62f5199-7175-4a6e-8f82-965373cc1890#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/united/united-quest?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 80000.0,
+        "min_spend": 4000.0,
+        "description": "Earn 80,000 bonus miles after spending 4,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 3000.0,
+        "min_spend": 4000.0,
+        "description": "Earn 3,000 Premier qualifying points after spending 4,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "Earn 10,000 bonus miles after adding an authorized user in the first 3 months",
+        "is_welcome": false,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "200 annual United travel credit",
+      "Free first and second checked bags on United-operated flights",
+      "Up to 120 statement credit for Global Entry, TSA PreCheck or NEXUS application fee every four years",
+      "Annual 10,000-mile award flight discount"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "UnitedSM Explorer Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "good-excellent",
+    "annual_fee": 150.0,
+    "cash_back": {
+      "united_airlines": 0.02,
+      "dining": 0.02,
+      "hotel_stays": 0.02,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.74,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F2XJtw0HVCmIeQ1bHj7cW8l%2F865145b34d2d46b23a6434bfc59ee925%2Funited-explorer-card.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYGV&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=0f23b94e-a728-4a0d-84ec-17fbb974fd80#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 70000.0,
+        "min_spend": 3000.0,
+        "description": "70,000 bonus miles after spending $3,000 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      },
+      {
+        "bonus": 10000.0,
+        "min_spend": 0.0,
+        "description": "10,000 bonus miles after adding an authorized user in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Free first checked bag on United-operated flights",
+      "2 United Club one-time passes annually",
+      "Up to $120 credit for Global Entry, TSA PreCheck, or NEXUS fee every 4 years",
+      "25% back as statement credit on United inflight food, beverage, and Wi-Fi purchases"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Slate Edge® Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "fair",
+    "annual_fee": 0.0,
+    "cash_back": {},
+    "cash_back_type": "cashback",
+    "apr": 28.99,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F51tVA3IcV6IOH1bL0t0Wps%2Fb12e0537847f21708d3e74d9ac23b40c%2Fslate_edge_card_alt.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/credit-building-credit-cards/slate/edge?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=J3TZ&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=6ef087ba-2c57-4093-ad6d-80e5f6083ff2#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/credit-building-credit-cards/slate/edge?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 0.0,
+        "min_spend": 0.0,
+        "description": "6 months of complimentary DashPass membership",
+        "is_welcome": true,
+        "bonus_type": "cashback"
+      }
+    ],
+    "other": [
+      "Automatic credit line increase check every 6 months",
+      "Purchase protection up to 500 per item for 120 days",
+      "Extended warranty protection up to one additional year",
+      "Chase Pay Over Time functionality for eligible purchases"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Slate Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.0
+    },
+    "cash_back_type": "cash",
+    "apr": 18.24,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F4yzZhpZUjLiTZNAZn1HPpc%2Fb9254a1682efa043eb96fbafe8ca49da%2Fcard_slate_V_NAF.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HYPW&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=42665326-dbbc-411d-850a-d7596100110a#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/balance-transfer-credit-cards/slate?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 0.0,
+        "min_spend": 0.0,
+        "description": "0% intro APR for 21 months on purchases and balance transfers",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "6 months of complimentary DashPass membership",
+      "Up to 10 off quarterly on non-restaurant DoorDash orders",
+      "Purchase protection for 120 days up to 500 per item",
+      "Extended warranty protection for an additional year on eligible warranties"
+    ],
+    "reward_type": "cash"
+  },
+  {
+    "name": "Chase Sapphire Preferred Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "travel_chase": 0.05,
+      "travel_other": 0.02,
+      "dining": 0.03,
+      "online_grocery": 0.03,
+      "streaming_services": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.365,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7iFzyweepMTrfGn2VrDdL5%2F6adcc35d50cef1e3087ced153d3b7bee%2Fsapphire_preferred_card.png&w=640&q=75",
+    "preapproval_link": "https://secure.chase.com/web/oao/application/card?cfgCode=PREAPPROVEDCONCCSP&sourceCode=J46G&cellCode=6X8D",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HSGD&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=8934889b-c36a-4739-85f5-2d9a096c6d40#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 75000.0,
+        "min_spend": 5000.0,
+        "description": "Earn 75,000 bonus points after spending $5,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Annual $50 statement credit for hotel stays through Chase Travel",
+      "10% annual anniversary points bonus based on total previous year spend",
+      "1:1 point transfer to airline and hotel travel partners",
+      "Complimentary 12-month DashPass membership"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Chase Sapphire Reserve Credit Card",
+    "provider": "chase",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 795.0,
+    "cash_back": {
+      "chase_travel": 0.08,
+      "flights_direct": 0.04,
+      "hotels_direct": 0.04,
+      "dining": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.49,
+    "has_ftf": false,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F1SEpLWPkNLolbDxImf3IQw%2F7ba66b9c6373ec775477bc797aecb6b3%2Fsapphire_reserve_card_Halo__2_.png&w=640&q=75",
+    "preapproval_link": "https://secure.chase.com/web/oao/application/card?cfgCode=PREAPPROVEDCONCCSP&sourceCode=J45Z&cellCode=6X8F",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HWHN&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=593a9835-588e-4cc8-aeea-b17435e218c6#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 125000.0,
+        "min_spend": 6000.0,
+        "description": "Earn 125,000 points after spending $6,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "300 annual travel statement credit",
+      "Complimentary Priority Pass Select and Chase Sapphire Lounge access",
+      "120 fee credit for Global Entry, TSA PreCheck, or NEXUS every four years",
+      "1:1 point transfer to airline and hotel partners"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Chase Freedom Rise Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "new to credit",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.015,
+      "lyft": 0.02
+    },
+    "cash_back_type": "cashback",
+    "apr": 25.24,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F3emmJbPFYCNlwlbw4Fg2J%2F0f67da5066e839c5e2097fcf73157495%2Ffreedom_rise_alt_card2.png&w=640&q=75",
+    "preapproval_link": "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise?iCELL=61FY",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HB5Y&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=6191ace2-53f1-46a6-8715-c30afc8cd238#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 25.0,
+        "min_spend": 0.0,
+        "description": "Statement credit for enrolling in automatic payments within the first three months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Automatic annual evaluation for upgrade to Chase Freedom Unlimited",
+      "Complimentary 6 months of DashPass membership",
+      "Quarterly discount of $10 on non-restaurant DoorDash orders",
+      "Purchase protection and extended warranty coverage"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Chase Freedom Flex Credit Card",
+    "provider": "chase",
+    "network": "mastercard",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "bonus_categories": 0.05,
+      "travel_chase": 0.05,
+      "dining": 0.03,
+      "drugstore": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "cash",
+    "apr": 18.24,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F7KrVet3yXT2YntiE8PqwAe%2Fbd0a8cc35ed60ac330442ae63c031a95%2Ffreedom_flex_card_alt.png&w=640&q=75",
+    "preapproval_link": "https://www.chase.com/personal/credit-cards/freedom/flex",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HPKP&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=ed0682b1-026a-433a-b8c0-c1ef62ece3c6#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 200.0,
+        "min_spend": 500.0,
+        "description": "Earn 200 after spending 500 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "0% introductory APR for 15 months on purchases and balance transfers",
+      "Cell phone protection up to 800 per claim with 50 deductible",
+      "Purchase protection up to 500 per item for 120 days",
+      "Trip cancellation and interruption insurance up to 1500 per person"
+    ],
+    "reward_type": "cash"
+  },
+  {
+    "name": "Chase Freedom Unlimited Credit Card",
+    "provider": "chase",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "travel": 0.05,
+      "dining": 0.03,
+      "drugstores": 0.03,
+      "other": 0.015
+    },
+    "cash_back_type": "cashback",
+    "apr": 18.24,
+    "has_ftf": true,
+    "image": "https://creditcards.chase.com/bcs/_next/image?url=%2Fbcs%2Fimages.ctfassets.net%2F8qmz0ef3xzub%2F302fEMopacO8lPIOANH1Kr%2F92aa401d22ec4244b1521a02d9ea1e19%2Ffreedom_unlimited_card_alt.png&w=640&q=75",
+    "preapproval_link": "https://secure.chase.com/web/oao/application/card?cfgCode=PREAPPROVEDCONCCSP&sourceCode=J4GZ&cellCode=63P4",
+    "application_link": "https://secure.chase.com/web/oao/application/card?sourceCode=HPGZ&action=guest&write_key=wk_33WaeSZjhqltEFG8BcM3EtT93tv&jp_tpid=6870f2ac-a3ae-48e5-a93f-86dbe56f91fc#/origination/cardDetails/index/index;cellCode=61DS;combo=Y",
+    "details_link": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited?iCELL=61FY",
+    "bonus": [
+      {
+        "bonus": 250.0,
+        "min_spend": 500.0,
+        "description": "Earn 250 bonus after spending 500 on purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "0% intro APR on purchases and balance transfers for 15 months",
+      "6 months of complimentary DashPass membership",
+      "Purchase protection against damage or theft up to 500 per item",
+      "Extended warranty protection for an additional year on eligible warranties of 3 years or less"
+    ],
+    "reward_type": "cashback"
+  }
+]

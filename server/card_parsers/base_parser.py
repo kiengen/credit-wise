@@ -26,13 +26,13 @@ class BaseParser:
 			try:
 				soup = self.curl_get_soup(url)
 			except Exception as e:
-				print(f"Warning: cURL: Could not fetch: {e} Retrying ({page_attempts_left})...")
+				print(f"Warning: cURL: Could not fetch: {e} Retrying ({page_attempts_left} left)...")
 				sleep(0.3)
 
 			page_attempts_left -= 1
 			if (not soup is None) or page_attempts_left == 0:
 				break
-			print(f"Warning: BeautifulSoup: Could not process page. Retrying ({page_attempts_left})...")
+			print(f"Warning: BeautifulSoup: Could not process page. Retrying ({page_attempts_left} left)...")
 			sleep(0.5)
 		if not soup:
 			print(f"Warning: Could not fetch page '{url}'.")
@@ -99,7 +99,7 @@ class BaseParser:
 					except Exception as e:
 						if (page_attempts_left == 0):
 							break
-						print(f"Warning: Playwright: Could not fetch: {e} Retrying ({page_attempts_left})...")
+						print(f"Warning: Playwright: Could not fetch: {e} Retrying ({page_attempts_left} left)...")
 						sleep(0.3)
 
 					# process page's html content
@@ -107,7 +107,7 @@ class BaseParser:
 					soup = BeautifulSoup(html, 'lxml')
 					if (not soup is None) or (page_attempts_left == 0):
 						break
-					print(f"Warning: BeautifulSoup: Could not process page. Retrying ({page_attempts_left})...")
+					print(f"Warning: BeautifulSoup: Could not process page. Retrying ({page_attempts_left} left)...")
 					sleep(0.5)
 				
 				# give up; continue with next URL
@@ -148,6 +148,8 @@ class BaseParser:
 			return True
 		if isinstance(element, NavigableString):
 			return False
+		if element.name == "style":
+			return True
 		if element.name == "link":
 			return False
 		if len(element.contents) == 0 and len(element.text) == 0:
@@ -248,3 +250,74 @@ class BaseParser:
 
 	def _clean_page(self, page: BeautifulSoup) -> str:
 		return self._clean_page_string(str(self._clean_page_soup(page)))
+
+	def _check_card(self, card: dict) -> dict:
+		keys = set(card.keys())
+
+		# Required fields
+		if not "name" in keys:
+			raise("Card missing name!")
+		keys.remove("name")
+
+		if not "provider" in keys or card["provider"] == "":
+			raise(f"Card '{name}' missing provider!")
+		keys.remove("provider")
+
+		if not "network" in keys or card["network"] == "":
+			raise(f"Card '{name}' missing network!")
+		keys.remove("network")
+
+		if not "credit" in keys or card["credit"] == "":
+			raise(f"Card '{name}' missing credit!")
+		keys.remove("credit")
+
+		if not "annual_fee" in keys or card["annual_fee"] == -1:
+			raise(f"Card '{name}' missing annual fee!")
+		keys.remove("annual_fee")
+
+		if not "cash_back" in keys or len(card["cash_back"]) == 0:
+			raise(f"Card '{name}' missing cash back!")
+		keys.remove("cash_back")
+
+		if not "apr" in keys or card["apr"] == -1:
+			raise(f"Card '{name}' missing cash back!")
+		keys.remove("cash_back")
+
+		if not "details_link" in keys or card["details_link"] == "":
+			raise(f"Card '{name}' missing link to card!")
+		keys.remove("details_link")
+
+		if not "reward_type" in keys or card["reward_type"] == "":
+			raise(f"Card '{name}' missing reward type!")
+		keys.remove("reward_type")
+
+		# It's fine if these ones aren't there
+		if not "has_ftf" in keys:
+			card["has_ftf"] = True
+		else:
+			keys.remove("has_ftf")
+
+		if "image" in keys:
+			keys.remove("image")
+
+		if "preapproval_link" in keys:
+			keys.remove("preapproval_link")
+
+		if "application_link" in keys:
+			keys.remove("application_link")
+
+		if not "bonus" in keys:
+			card["bonus"] = []
+		else:
+			keys.remove("bonus")
+
+		if not "other" in keys:
+			card["other"] = []
+		else:
+			keys.remove("other")
+
+		# Extra/unexpected fields?
+		if not len(keys) == 0:
+			raise(f"Unexpected keys: {keys}")
+
+		return card

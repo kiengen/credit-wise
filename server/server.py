@@ -15,7 +15,7 @@ import sys
 
 def main():
 	load_dotenv()
-	servers = [BankOfAmerica()]
+	servers = [Chase()]
 
 	for server in servers:
 		# Nice header
@@ -50,12 +50,17 @@ def main():
 				json.dump(found_cards, f, indent=2, ensure_ascii=False)
 
 		# Remove any that have already been processed
-		final_cards = []
+		name_dict = {}
+		for i in range(len(found_cards)):
+			name_dict[found_cards[i]["name"]] = i
+
+		gemini_cards = []
 		for card in prev_cards:
-			for i in range(len(found_cards)-1, -1, -1):
-				if card["name"] == found_cards[i]["name"]:
-					print(f" > removed {card["name"]}, no need to reprocess")
-					final_cards.append(found_cards[i])
+			if card["name"] in name_dict:
+				print(f" > removed {card["name"]}, no need to reprocess")
+				if not name_dict[card["name"]] == -1:
+					gemini_cards.append(found_cards[i])
+			name_dict[card["name"]] = -1
 
 		# Send any cards that still need to be processed to Gemini
 		if len(found_cards) > 0:
@@ -67,19 +72,29 @@ def main():
 						continue
 					print(f" > {card["name"]}")
 					new_card = parse_unknown_attributes(json.dumps(card, ensure_ascii=False))
-					final_cards.append(new_card)
+					gemini_cards.append(new_card)
 					sleep(4)
 			except Exception as e:
 				print(f"Error: Gemini: {e}")
 
 				# save progress! reduce API calls needed
 				with open(f'output_{server.name}.json', 'w') as f:
-					json.dump(final_cards, f, indent=2, ensure_ascii=False)
+					json.dump(gemini_cards, f, indent=2, ensure_ascii=False)
 				print(f"Processed cards written to output_{server.name}.json")
 				return
 		else:
 			print(f"No new cards to be processed! output_{server.name}.json left untouched")
 			return
+
+		# Vet results
+		final_cards = []
+		if len(final_cards) > 0:
+			print("\nFinal card check against expected fields...")
+			for card in gemini_cards:
+				try:
+					final_cards.append(self._check_card(card))
+				except Error as e:
+					print(e)
 
 		# (save locally for next time)
 		print(f"Writing to output_{server.name}.json...")

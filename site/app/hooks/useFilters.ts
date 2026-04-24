@@ -1,12 +1,9 @@
 "use client";
 
 import { useState, useMemo, useCallback } from "react";
-import capitalOneCards from "../data/capital-one.json";
-import boaCards from "../data/bank-of-america.json";
-import amexCards from "../data/american-express.json";
-import citiCards from "../data/citigroup.json";
+import { american_express, bank_of_america, capital_one, chase, citigroup, wells_fargo } from '../data'
 
-const rawCards = [...capitalOneCards, ...boaCards, ...amexCards, ...citiCards];
+const rawCards = [...american_express, ...bank_of_america, ...capital_one, ...chase, ...citigroup, ...wells_fargo];
 
 
 export const spendingCategories = [

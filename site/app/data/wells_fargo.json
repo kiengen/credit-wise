@@ -1,0 +1,365 @@
+[
+  {
+    "name": "Signify Business Cash® Card",
+    "provider": "wells_fargo",
+    "network": "mastercard",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.02
+    },
+    "cash_back_type": "cash",
+    "apr": 16.74,
+    "has_ftf": true,
+    "image": "https://www.wellsfargo.com/assets/images/cards/signify-business-cash.png",
+    "preapproval_link": "https://www.wellsfargo.com/biz/credit-cards/",
+    "application_link": "https://apply.wellsfargo.com/getting_started?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMHP_MC_RV&FPID=7086BAI6000000&applicationtype=businesscreditcard&product_code=BD&subproduct_code=BCMC&cx_nm=RVAA00001_CSMHP_MC_RV",
+    "details_link": "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card/?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMPD_MC_RV&FPID=7086BAI6000000&product_code=BD&subproduct_code=BCMC&cx_nm=RVAA00001_CSMPD_MC_RV",
+    "bonus": [
+      {
+        "bonus": 500.0,
+        "min_spend": 5000.0,
+        "description": "Earn $500 cash rewards bonus when spending $5,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "0% introductory APR for 12 months",
+      "Employee cards available at no additional cost",
+      "Mastercard ID Theft Protection",
+      "MasterRental insurance coverage"
+    ],
+    "reward_type": "cash"
+  },
+  {
+    "name": "Choice Privileges® Select Mastercard®",
+    "provider": "wells_fargo",
+    "network": "mastercard",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "choice_hotels": 0.1,
+      "gas_stations": 0.05,
+      "grocery_stores": 0.05,
+      "home_improvement_stores": 0.05,
+      "phone_plan_services": 0.05,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 20.24,
+    "has_ftf": false,
+    "image": "",
+    "preapproval_link": "",
+    "application_link": "https://www.choicehotels.com/choice-privileges/earn-points/mastercard-credit-card?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMHP_MC&FPID=0123CBIXP10000&utm_source=WF&app_source=WELLS_FARGO_COM&locale=en_US&product_code=CC&subproduct_code=CE&cx_nm=RVAA00001_CSMHP_MC&referrerurl=creditcardswellsfargocom&lang=en",
+    "details_link": "https://creditcards.wellsfargo.com/choice-hotels-privileges-select-mastercard/?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMPD_MC&FPID=0123CBIXP10000&product_code=CC&subproduct_code=CE&cx_nm=RVAA00001_CSMPD_MC",
+    "bonus": [
+      {
+        "bonus": 60000.0,
+        "min_spend": 3000.0,
+        "description": "60,000 bonus points after spending $3,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "30,000 bonus points every account anniversary",
+      "Automatic Platinum Elite status with 20 Elite Qualifying Nights",
+      "Up to $120 statement credit for Trusted Traveler Program fees every four years",
+      "Cellular telephone protection up to $800 against damage or theft"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Choice Privileges® Mastercard®",
+    "provider": "wells_fargo",
+    "network": "mastercard",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "choice_hotels": 0.05,
+      "gas_stations": 0.03,
+      "grocery_stores": 0.03,
+      "home_improvement_stores": 0.03,
+      "phone_plan_services": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 20.0,
+    "has_ftf": false,
+    "image": "https://creditcards.wellsfargo.com/choice-hotel-privileges-mastercard/",
+    "preapproval_link": "",
+    "application_link": "https://www.choicehotels.com/choice-privileges/earn-points/mastercard-credit-card?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMHP_MC&FPID=0124CEIXP10000&utm_source=WF&app_source=WELLS_FARGO_COM&locale=en_US&product_code=CC&subproduct_code=CP&cx_nm=RVAA00001_CSMHP_MC&referrerurl=creditcardswellsfargocom&lang=en",
+    "details_link": "https://creditcards.wellsfargo.com/choice-hotel-privileges-mastercard/?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMPD_MC&FPID=0124CEIXP10000&product_code=CC&subproduct_code=CP&cx_nm=RVAA00001_CSMPD_MC",
+    "bonus": [
+      {
+        "bonus": 60000.0,
+        "min_spend": 1000.0,
+        "description": "Earn 60,000 bonus points after spending $1,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Automatic Gold Elite status at Choice Hotels",
+      "10 Elite Qualifying Nights per calendar year",
+      "Cellular telephone protection up to $800 with a $25 deductible",
+      "Mastercard World Elite benefits"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "One Key+ Card",
+    "provider": "wells_fargo",
+    "network": "other",
+    "credit": "excellent",
+    "annual_fee": 99.0,
+    "cash_back": {
+      "expedia_hotels_vrbo": 0.03,
+      "gas_stations": 0.03,
+      "grocery_stores": 0.03,
+      "dining": 0.03,
+      "other": 0.02
+    },
+    "cash_back_type": "points",
+    "apr": 0.0,
+    "has_ftf": false,
+    "image": "",
+    "preapproval_link": "https://www.expedia.com/one-key-cards/apply?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMHP_MC&FPID=21271KIXE50000&app_source=WELLS_FARGO_COM&product_code=CC&subproduct_code=OF&cx_nm=RVAA00001_CSMHP_MC&referrerurl=creditcardswellsfargocom&lang=en&langid=1033",
+    "application_link": "https://www.expedia.com/one-key-cards/apply?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMHP_MC&FPID=21271KIXE50000&app_source=WELLS_FARGO_COM&product_code=CC&subproduct_code=OF&cx_nm=RVAA00001_CSMHP_MC&referrerurl=creditcardswellsfargocom&lang=en&langid=1033",
+    "details_link": "https://creditcards.wellsfargo.com/one-key-plus-credit-card/?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMPD_MC&FPID=21271KIXE50000&product_code=CC&subproduct_code=OF&cx_nm=RVAA00001_CSMPD_MC",
+    "bonus": [
+      {
+        "bonus": 350.0,
+        "min_spend": 3000.0,
+        "description": "Earn 350 in OneKeyCash after 3000 in purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cashback"
+      }
+    ],
+    "other": [
+      "Automatic Gold status tier",
+      "100 in annual OneKeyCash credit upon cardholder anniversary",
+      "Up to 120 statement credit for Trusted Traveler programs",
+      "Cellular telephone protection up to 1000"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "One Key Card",
+    "provider": "wells_fargo",
+    "network": "other",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "expedia": 0.03,
+      "hotels.com": 0.03,
+      "vrbo": 0.03,
+      "gas": 0.03,
+      "grocery": 0.03,
+      "dining": 0.03,
+      "other": 0.015
+    },
+    "cash_back_type": "cashback",
+    "apr": 0.0,
+    "has_ftf": false,
+    "image": "https://creditcards.wellsfargo.com/one-key-credit-card/",
+    "preapproval_link": "https://creditcards.wellsfargo.com/one-key-credit-card/",
+    "application_link": "https://www.expedia.com/one-key-cards/apply?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMHP_MC&FPID=21231EIO050000&app_source=WELLS_FARGO_COM&product_code=CC&subproduct_code=OW&cx_nm=RVAA00001_CSMHP_MC&referrerurl=creditcardswellsfargocom&lang=en&langid=1033",
+    "details_link": "https://creditcards.wellsfargo.com/one-key-credit-card/?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMPD_MC&FPID=21231EIO050000&product_code=CC&subproduct_code=OW&cx_nm=RVAA00001_CSMPD_MC",
+    "bonus": [
+      {
+        "bonus": 300.0,
+        "min_spend": 1000.0,
+        "description": "Earn 300 in OneKeyCash after spending 1,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cashback"
+      }
+    ],
+    "other": [
+      "Automatic Silver tier status in One Key loyalty program",
+      "Cellular telephone protection up to 1,000 with a 25 deductible",
+      "Trip cancellation and interruption protection",
+      "Auto rental collision damage waiver up to 50,000"
+    ],
+    "reward_type": "cashback"
+  },
+  {
+    "name": "Attune® Card",
+    "provider": "wells_fargo",
+    "network": "mastercard",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "self_care": 0.04,
+      "sports_recreation_entertainment": 0.04,
+      "impactful_purchases": 0.04,
+      "other": 0.01
+    },
+    "cash_back_type": "cash",
+    "apr": 18.49,
+    "has_ftf": true,
+    "image": "https://creditcards.wellsfargo.com/attune-credit-card/",
+    "preapproval_link": "https://creditcards.wellsfargo.com/attune-credit-card/",
+    "application_link": "https://apply.wellsfargo.com/getting_started?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMHP_MC_RV&FPID=012286I6P10000&applicationtype=consumercreditcard&product_code=CC&subproduct_code=EM&cx_nm=RVAA00001_CSMHP_MC_RV",
+    "details_link": "https://creditcards.wellsfargo.com/attune-credit-card/?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMPD_MC_RV&FPID=012286I6P10000&product_code=CC&subproduct_code=EM&cx_nm=RVAA00001_CSMPD_MC_RV",
+    "bonus": [
+      {
+        "bonus": 100.0,
+        "min_spend": 500.0,
+        "description": "Earn $100 cash rewards bonus when spending $500 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Cell phone protection up to $600 per claim against damage or theft with $25 deductible",
+      "Auto rental collision damage waiver for covered damage or theft",
+      "Concierge service available 24/7",
+      "Card made from recycled plastic"
+    ],
+    "reward_type": "cash"
+  },
+  {
+    "name": "Wells Fargo Reflect® Card",
+    "provider": "wells_fargo",
+    "network": "visa",
+    "credit": "good-excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.0
+    },
+    "cash_back_type": "cash",
+    "apr": 23.0,
+    "has_ftf": true,
+    "image": "https://www.wellsfargo.com/assets/images/contextual/vc/credit-cards/reflect-visa-card-220x139.gif",
+    "preapproval_link": "https://www.wellsfargo.com/credit-cards/preapprove/",
+    "application_link": "https://apply.wellsfargo.com/getting_started?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMHP_MC_RV&FPID=013000IGF80000&applicationtype=consumercreditcard&product_code=CC&subproduct_code=VV&cx_nm=RVAA00001_CSMHP_MC_RV",
+    "details_link": "https://creditcards.wellsfargo.com/reflect-visa-credit-card/?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMPD_MC_RV&FPID=013000IGF80000&product_code=CC&subproduct_code=VV&cx_nm=RVAA00001_CSMPD_MC_RV",
+    "bonus": [
+      {
+        "bonus": 0.0,
+        "min_spend": 0.0,
+        "description": "0% intro APR for 21 months on purchases and qualifying balance transfers",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Cell phone protection up to 600 dollars against damage or theft with 25 dollar deductible",
+      "Roadside Dispatch service available 24/7",
+      "Access to personalized merchant deals through My Wells Fargo Deals",
+      "Credit Close-Up FICO score tracking and insights"
+    ],
+    "reward_type": "cash"
+  },
+  {
+    "name": "Autograph Card",
+    "provider": "wells_fargo",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "restaurants": 0.03,
+      "travel": 0.03,
+      "gas_stations": 0.03,
+      "transit": 0.03,
+      "streaming_services": 0.03,
+      "phone_plans": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 23.49,
+    "has_ftf": false,
+    "image": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/",
+    "preapproval_link": "https://www.wellsfargo.com",
+    "application_link": "https://apply.wellsfargo.com/getting_started?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMHP_MC_RV&FPID=012988I6P10000&applicationtype=consumercreditcard&product_code=CC&subproduct_code=AU&cx_nm=RVAA00001_CSMHP_MC_RV",
+    "details_link": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMPD_MC_RV&FPID=012988I6P10000&product_code=CC&subproduct_code=AU&cx_nm=RVAA00001_CSMPD_MC_RV",
+    "bonus": [
+      {
+        "bonus": 200.0,
+        "min_spend": 1000.0,
+        "description": "Earn 20,000 points after spending $1,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Cellular telephone protection up to $600 against damage or theft with $25 deductible",
+      "Auto rental collision damage waiver",
+      "Roadside dispatch service",
+      "Visa Signature concierge services"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Autograph Journey Card",
+    "provider": "wells_fargo",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 95.0,
+    "cash_back": {
+      "hotels": 0.05,
+      "airlines": 0.04,
+      "restaurants": 0.03,
+      "travel": 0.03,
+      "other": 0.01
+    },
+    "cash_back_type": "points",
+    "apr": 19.99,
+    "has_ftf": false,
+    "image": "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card/",
+    "preapproval_link": "https://www.wellsfargo.com/credit-cards/preapprove/",
+    "application_link": "https://apply.wellsfargo.com/getting_started?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMHP_MC_RV&FPID=0127E1I0P10000&applicationtype=consumercreditcard&product_code=CC&subproduct_code=MT&cx_nm=RVAA00001_CSMHP_MC_RV",
+    "details_link": "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card/?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMPD_MC_RV&FPID=0127E1I0P10000&product_code=CC&subproduct_code=MT&cx_nm=RVAA00001_CSMPD_MC_RV",
+    "bonus": [
+      {
+        "bonus": 60000.0,
+        "min_spend": 4000.0,
+        "description": "Earn 60,000 bonus points after spending $4,000 in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "points"
+      }
+    ],
+    "other": [
+      "Cell phone protection up to $1,000 with $25 deductible",
+      "Trip cancellation and interruption protection up to $15,000",
+      "Lost baggage reimbursement up to $3,000 per trip",
+      "Worldwide automatic travel accident insurance up to $1,000,000"
+    ],
+    "reward_type": "points"
+  },
+  {
+    "name": "Active Cash Card",
+    "provider": "wells_fargo",
+    "network": "visa",
+    "credit": "excellent",
+    "annual_fee": 0.0,
+    "cash_back": {
+      "other": 0.02
+    },
+    "cash_back_type": "cash",
+    "apr": 20.24,
+    "has_ftf": true,
+    "image": "https://www.wellsfargo.com/assets/images/credit-cards/active-cash-card.png",
+    "preapproval_link": "https://www.wellsfargo.com/credit-cards/preapprove/",
+    "application_link": "https://apply.wellsfargo.com/getting_started?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMHP_MC_RV&FPID=0126D7I6F40000&applicationtype=consumercreditcard&product_code=CC&subproduct_code=AC&cx_nm=RVAA00001_CSMHP_MC_RV",
+    "details_link": "https://creditcards.wellsfargo.com/active-cash-credit-card/?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00001_CSMPD_MC_RV&FPID=0126D7I6F40000&product_code=CC&subproduct_code=AC&cx_nm=RVAA00001_CSMPD_MC_RV",
+    "bonus": [
+      {
+        "bonus": 200.0,
+        "min_spend": 500.0,
+        "description": "Earn 200 cash rewards bonus when spending 500 in purchases in the first 3 months",
+        "is_welcome": true,
+        "bonus_type": "cash"
+      }
+    ],
+    "other": [
+      "Cellular telephone protection up to 600 against damage or theft with 25 deductible",
+      "Auto rental collision damage waiver",
+      "Roadside dispatch available 24/7",
+      "Visa Signature Concierge services"
+    ],
+    "reward_type": "cash"
+  }
+]

@@ -101,7 +101,7 @@ const CreditCardItem = ({
     <div className="rounded-lg bg-[var(--color-card)] shadow-md transition-all duration-200 hover:shadow-xl">
       <div className="flex gap-6 p-5">
         <div className="w-52 shrink-0">
-          <TiltCard src={card.image} alt={card.name} details_link={card.details_link} />
+          <TiltCard src={card.image == "" ? "/default_cc.png" : card.image} alt={card.name} details_link={card.details_link} default_src="/default_cc.png" />
         </div>
 
         <div className="flex flex-1 flex-col">

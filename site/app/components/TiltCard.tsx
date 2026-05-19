@@ -7,7 +7,7 @@ const TiltCard = ({ src, alt, details_link, default_src }: { src: string; alt: s
   const [style, setStyle] = useState<React.CSSProperties>({});
   const [display_src, setSrc] = useState<string>(src);
 
-  const handleImageLoadError = (e: Error) => {
+  const handleImageLoadError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     if (default_src !== display_src) {
       setSrc(default_src);
     }

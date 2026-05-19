@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Space_Mono, Lobster_Two } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -36,6 +37,7 @@ export default function RootLayout({
       className={`${jakarta.variable} ${spaceMono.variable} ${lobsterTwo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
+      <GoogleAnalytics gaId="G-MJC5ETSETX" />
     </html>
   );
 }

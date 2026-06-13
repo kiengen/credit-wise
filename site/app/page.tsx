@@ -60,10 +60,10 @@ const ComparePage = () => {
               <div className="flex flex-col gap-5">
                 {filters.filtered.map((card) => (
                   <CreditCardItem
-                    key={card.name}
+                    key={card.slug}
                     card={card}
-                    estimatedReward={filters.rewardsMap[card.name]}
-                    firstYearReward={filters.firstYearMap[card.name]}
+                    estimatedReward={filters.rewardsMap[card.slug]}
+                    firstYearReward={filters.firstYearMap[card.slug]}
                     monthlySpend={filters.monthlySpend}
                     spending={filters.spending}
                     pointValueMap={filters.pointValueMap}

@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import Link from "next/link";
 import { Check, Info } from "lucide-react";
 import TiltCard from "./TiltCard";
+import TrackedLink from "./TrackedLink";
 import { spendingCategories, type CreditCard, type SpendingInput } from "../hooks/useFilters";
 
 const formatCashBackKey = (key: string) =>
@@ -101,14 +103,19 @@ const CreditCardItem = ({
     <div className="rounded-lg bg-[var(--color-card)] shadow-md transition-all duration-200 hover:shadow-xl">
       <div className="flex gap-6 p-5">
         <div className="w-52 shrink-0">
-          <TiltCard src={card.image == "" ? "/default_cc.png" : card.image} alt={card.name} details_link={card.details_link} default_src="/default_cc.png" />
+          <TiltCard src={card.image == "" ? "/default_cc.png" : card.image} alt={card.name} href={`/cards/${card.slug}`} default_src="/default_cc.png" />
         </div>
 
         <div className="flex flex-1 flex-col">
           <div className="flex items-start justify-between">
             <div>
               <h3 className="text-lg font-bold text-[var(--color-primary)]">
-                {card.name}
+                <Link
+                  href={`/cards/${card.slug}`}
+                  className="hover:text-[var(--color-accent)] hover:underline"
+                >
+                  {card.name}
+                </Link>
               </h3>
               <p className="text-sm text-[var(--color-muted)] capitalize">{card.provider.replace(/_/g, " ")}</p>
             </div>
@@ -355,34 +362,34 @@ const CreditCardItem = ({
 
       <div className="flex items-center gap-3 border-t border-[var(--color-border)] px-5 py-3">
         {card.application_link && (
-          <a
+          <TrackedLink
             href={card.application_link}
-            target="_blank"
-            rel="noopener noreferrer"
+            event="apply_now_click"
+            params={{ card_name: card.name, card_slug: card.slug, provider: card.provider, annual_fee: card.annual_fee }}
             className="flex-1 rounded-md bg-[var(--color-primary)] py-2.5 text-center text-xs font-semibold tracking-wide text-white uppercase transition-colors hover:bg-teal-800"
           >
             Apply Now
-          </a>
+          </TrackedLink>
         )}
         {card.preapproval_link && (
-          <a
+          <TrackedLink
             href={card.preapproval_link}
-            target="_blank"
-            rel="noopener noreferrer"
+            event="preapproval_click"
+            params={{ card_name: card.name, card_slug: card.slug, provider: card.provider }}
             className="flex-1 rounded-md border border-[var(--color-border)] py-2.5 text-center text-xs font-semibold tracking-wide text-[var(--color-primary)] uppercase transition-colors hover:bg-[var(--color-surface)]"
           >
             Check Pre-Approval
-          </a>
+          </TrackedLink>
         )}
         {card.details_link && (
-          <a
+          <TrackedLink
             href={card.details_link}
-            target="_blank"
-            rel="noopener noreferrer"
+            event="details_click"
+            params={{ card_name: card.name, card_slug: card.slug, provider: card.provider }}
             className="flex-1 rounded-md border border-[var(--color-border)] py-2.5 text-center text-xs font-semibold tracking-wide text-[var(--color-primary)] uppercase transition-colors hover:bg-[var(--color-surface)]"
           >
             More Details
-          </a>
+          </TrackedLink>
         )}
       </div>
 

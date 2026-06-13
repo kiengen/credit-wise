@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { usePlaidLink } from "react-plaid-link";
 import AmountInput from "./AmountInput";
@@ -281,7 +282,7 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
                 onChange={() => filters.toggleNetwork(n.key)}
                 className="h-3.5 w-3.5 rounded"
               />
-              <img src={n.logo} alt={n.label} className="h-5 w-5 object-contain" />
+              <Image src={n.logo} alt={n.label} width={20} height={20} unoptimized className="h-5 w-5 object-contain" />
               {n.label}
             </label>
           ))}
@@ -311,7 +312,7 @@ const Sidebar = ({ filters }: { filters: Filters }) => {
                   onChange={() => filters.selectAlliance(a.key)}
                   className="h-3.5 w-3.5 rounded"
                 />
-                <img src={a.logo} alt={a.label} className="h-5 w-5 object-contain" />
+                <Image src={a.logo} alt={a.label} width={20} height={20} unoptimized className="h-5 w-5 object-contain" />
                 {a.label}
               </label>
             );

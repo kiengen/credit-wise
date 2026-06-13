@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useMemo, useCallback } from "react";
-import { american_express, bank_of_america, capital_one, chase, citigroup, wells_fargo } from '../data'
+import { ALL_CARDS } from "../lib/cards";
 
-const rawCards = [...american_express, ...bank_of_america, ...capital_one, ...chase, ...citigroup, ...wells_fargo];
+const rawCards = ALL_CARDS;
 
 
 export const spendingCategories = [
@@ -236,7 +236,7 @@ export function useFilters() {
       }
 
       const net = totalRewards + perkValue - card.annual_fee;
-      rewards[card.name] = net;
+      rewards[card.slug] = net;
 
       const fyCb = (card as any).first_year_cash_back as Record<string, number> | undefined;
       let firstYearRewards = totalRewards;
@@ -251,7 +251,7 @@ export function useFilters() {
           firstYearRewards += annual * rate * multiplier;
         }
       }
-      firstYear[card.name] = firstYearRewards + perkValue - card.annual_fee + welcomeBonus;
+      firstYear[card.slug] = firstYearRewards + perkValue - card.annual_fee + welcomeBonus;
     }
 
     return { rewardsMap: rewards, firstYearMap: firstYear };
@@ -406,10 +406,10 @@ export function useFilters() {
 
     switch (sortBy) {
       case "bestValue":
-        cards.sort((a, b) => (rewardsMap[b.name] ?? 0) - (rewardsMap[a.name] ?? 0));
+        cards.sort((a, b) => (rewardsMap[b.slug] ?? 0) - (rewardsMap[a.slug] ?? 0));
         break;
       case "bestFirstYear":
-        cards.sort((a, b) => (firstYearMap[b.name] ?? 0) - (firstYearMap[a.name] ?? 0));
+        cards.sort((a, b) => (firstYearMap[b.slug] ?? 0) - (firstYearMap[a.slug] ?? 0));
         break;
       case "annualFee":
         cards.sort((a, b) => a.annual_fee - b.annual_fee);
